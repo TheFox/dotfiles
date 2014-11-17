@@ -370,17 +370,17 @@ chflags nohidden ~/Library
 echo network
 
 # List all Mac's network interfaces
-networksetup -listallnetworkservices
+sudo networksetup -listallnetworkservices
 
 # Disable IPv6 for Wireless
-networksetup -setv6off Wi-Fi
+sudo networksetup -setv6off Wi-Fi
 
 # Disable IPv6 for Ethernet
-networksetup -setv6off Ethernet
+sudo networksetup -setv6off Ethernet
 
 # Re-enable IPv6, use -setv6automatic instead
-networksetup -setv6automatic Wi-Fi
-networksetup -setv6automatic Ethernet
+sudo networksetup -setv6automatic Wi-Fi
+sudo networksetup -setv6automatic Ethernet
 
 # Some commands needs a system reboot or
 #killall SystemUIServer
