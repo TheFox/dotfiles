@@ -8,9 +8,8 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until `.osx` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-# Show Hidden Files in Finder
-#defaults write com.apple.finder AppleShowAllFiles -bool true
 
+echo screenshot
 # Screenshot: Change the location
 defaults write com.apple.screencapture location ~/Downloads
 
@@ -19,6 +18,12 @@ defaults write com.apple.screencapture type png
 
 # Screenshot: Disable shadows
 defaults write com.apple.screencapture disable-shadow -bool true
+
+
+echo finder
+
+# Show Hidden Files in Finder
+#defaults write com.apple.finder AppleShowAllFiles -bool true
 
 # Always open everything in Finder's list view. This is important.
 # Four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`.
@@ -130,6 +135,8 @@ defaults write com.apple.dock showhidden -bool true
 # Safari & WebKit                                                             #
 ###############################################################################
 
+echo safari
+
 # Privacy: don't send search queries to Apple
 defaults write com.apple.Safari UniversalSearchEnabled -bool false
 defaults write com.apple.Safari SuppressSearchSuggestions -bool true
@@ -181,6 +188,8 @@ defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 # Mail                                                                        #
 ###############################################################################
 
+echo mail
+
 # Disable send and reply animations in Mail.app
 defaults write com.apple.mail DisableReplyAnimations -bool true
 defaults write com.apple.mail DisableSendAnimations -bool true
@@ -206,6 +215,8 @@ defaults write com.apple.mail SpellCheckingBehavior -string "NoSpellCheckingEnab
 ###############################################################################
 # Spotlight                                                                   #
 ###############################################################################
+
+echo spotlight
 
 # Disable Spotlight indexing for any volume that gets mounted and has not yet
 # been indexed before.
@@ -269,6 +280,8 @@ hash tmutil &> /dev/null && sudo tmutil disablelocal
 # Activity Monitor                                                            #
 ###############################################################################
 
+echo activity monitor
+
 # Show the main window when launching Activity Monitor
 defaults write com.apple.ActivityMonitor OpenMainWindow -bool true
 
@@ -284,28 +297,10 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
 
 
 ###############################################################################
-# Address Book, Dashboard, iCal, TextEdit, and Disk Utility                   #
-###############################################################################
-
-# Enable the debug menu in iCal (pre-10.8)
-defaults write com.apple.iCal IncludeDebugMenu -bool true
-
-# Use plain text mode for new TextEdit documents
-defaults write com.apple.TextEdit RichText -int 0
-
-# Open and save files as UTF-8 in TextEdit
-defaults write com.apple.TextEdit PlainTextEncoding -int 4
-defaults write com.apple.TextEdit PlainTextEncodingForWrite -int 4
-
-# Enable the debug menu in Disk Utility
-defaults write com.apple.DiskUtility DUDebugMenuEnabled -bool true
-defaults write com.apple.DiskUtility advanced-image-options -bool true
-
-
-###############################################################################
 # Mac App Store                                                               #
 ###############################################################################
 
+echo store
 # Enable the WebKit Developer Tools in the Mac App Store
 defaults write com.apple.appstore WebKitDeveloperExtras -bool true
 
@@ -316,6 +311,8 @@ defaults write com.apple.appstore ShowDebugMenu -bool true
 ###############################################################################
 # Messages                                                                    #
 ###############################################################################
+
+echo messages
 
 # Disable automatic emoji substitution (i.e. use plain text smileys)
 defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "automaticEmojiSubstitutionEnablediMessage" -bool false
@@ -331,6 +328,8 @@ defaults write com.apple.messageshelper.MessageController SOInputLineSettings -d
 # Google Chrome & Google Chrome Canary                                        #
 ###############################################################################
 
+echo chrome
+
 # Disable the all too sensitive backswipe
 defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
 defaults write com.google.Chrome.canary AppleEnableSwipeNavigateWithScrolls -bool false
@@ -340,12 +339,35 @@ defaults write com.google.Chrome.canary AppleEnableSwipeNavigateWithScrolls -boo
 #defaults write com.google.Chrome.canary DisablePrintPreview -bool true
 
 
+###############################################################################
+# Address Book, Dashboard, iCal, TextEdit, and Disk Utility                   #
+###############################################################################
+
+echo misc
+
+# Enable the debug menu in iCal (pre-10.8)
+defaults write com.apple.iCal IncludeDebugMenu -bool true
+
+# Use plain text mode for new TextEdit documents
+defaults write com.apple.TextEdit RichText -int 0
+
+# Open and save files as UTF-8 in TextEdit
+defaults write com.apple.TextEdit PlainTextEncoding -int 4
+defaults write com.apple.TextEdit PlainTextEncodingForWrite -int 4
+
+# Enable the debug menu in Disk Utility
+defaults write com.apple.DiskUtility DUDebugMenuEnabled -bool true
+defaults write com.apple.DiskUtility advanced-image-options -bool true
+
 # Reveal IP address, hostname, OS version, etc. when clicking the clock
 # in the login window
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
 
 # Show the ~/Library folder.
 chflags nohidden ~/Library
+
+
+echo network
 
 # List all Mac's network interfaces
 networksetup -listallnetworkservices
