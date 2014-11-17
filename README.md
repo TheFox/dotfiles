@@ -1,4 +1,4 @@
-# PHPChat
+# DotFiles
 My dotfiles.
 
 ## Install
