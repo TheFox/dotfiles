@@ -1,0 +1,5 @@
+[
+	{ "keys": ["super+n"], "command": "new_window" },
+	{ "keys": ["super+t"], "command": "new_file" },
+	{ "keys": ["super+p"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": false} }
+]

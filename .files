@@ -1,0 +1,6 @@
+curl/.curlrc
+git/.gitignore_global
+shell/.bash_profile
+shell/.bashrc
+vim/.vimrc
+wget/.wgetrc
