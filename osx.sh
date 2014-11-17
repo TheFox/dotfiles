@@ -373,14 +373,16 @@ echo network
 sudo networksetup -listallnetworkservices
 
 # Disable IPv6 for Wireless
-sudo networksetup -setv6off Wi-Fi
+sudo networksetup -setv6off Wi-Fi &> /dev/null
+sudo networksetup -setv6off WLAN &> /dev/null
 
 # Disable IPv6 for Ethernet
-sudo networksetup -setv6off Ethernet
+sudo networksetup -setv6off Ethernet &> /dev/null
 
 # Re-enable IPv6, use -setv6automatic instead
-sudo networksetup -setv6automatic Wi-Fi
-sudo networksetup -setv6automatic Ethernet
+#sudo networksetup -setv6automatic Wi-Fi &> /dev/null
+#sudo networksetup -setv6automatic WLAN &> /dev/null
+#sudo networksetup -setv6automatic Ethernet &> /dev/null
 
 # Some commands needs a system reboot or
 #killall SystemUIServer
