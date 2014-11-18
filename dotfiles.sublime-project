@@ -10,9 +10,9 @@
 	"build_systems":[
 		{
 			"name": "Import",
-			"cmd": [ "import.sh" ],
-			"shell": true,
-			"path": "$PATH:."
+			"cmd": [ "./import.sh" ],
+			"working_dir": "${project_path:${folder}}",
+			"shell": true
 		}
 	]
 }
