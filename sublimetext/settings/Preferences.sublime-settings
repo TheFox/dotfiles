@@ -11,7 +11,7 @@
 	"font_size": 14,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
-	"ignored_packages":[ "SFTP" ],
+	"ignored_packages":[ "Vintage", "SFTP" ],
 	"open_files_in_new_window": false,
 	"detect_indentation": false,
 	"rulers":[ 80, 120, 121 ],
