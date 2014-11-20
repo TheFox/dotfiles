@@ -1,6 +1,6 @@
 <snippet>
     <content><![CDATA[<?${TM_PHP_OPEN_TAG:php} foreach(\$${1:variable} as \$${2:key}${3: => \$${4:value}}): ?>
-	${0}
+	$0
 <?${TM_PHP_OPEN_TAG:php} endforeach ?>]]></content>
     <tabTrigger>foreach</tabTrigger>
     <scope>text.html - source</scope>

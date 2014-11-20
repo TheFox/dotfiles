@@ -2,7 +2,7 @@
     <content><![CDATA[class ${1:ClassName}${2: extends ${3:AnotherClass}}{
 	$4
 	public function ${5:__construct}(${6:argument}){
-		${0:# code...}
+		$0
 	}
 }
 ]]></content>
