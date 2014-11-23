@@ -5,6 +5,12 @@
 			"name": "DotFiles",
 			"folder_exclude_patterns": [ ],
 			"file_exclude_patterns": [ ]
+		},
+		{
+			"path": "~/Library/Application Support/Sublime Text 2/Packages/C++"
+		},
+		{
+			"path": "~/Library/Application Support/Sublime Text 2/Packages/PHP"
 		}
 	],
 	"build_systems":[
