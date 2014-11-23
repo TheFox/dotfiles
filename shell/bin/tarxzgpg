@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# Created @ 07.01.2014 by Christian Mayer <http://fox21.at>
+# Create a .tar.xz.gpg file from a file or directory.
+
+inputfile=$1
+
+inputfile=$(basename $inputfile)
+tarfile=$inputfile.tar
+xzfile=$tarfile.xz
+gpgfile=$xzfile.gpg
+
+
+echo tar
+tar -vpcf $tarfile $inputfile
+
+echo xz
+xz -v -z -f -9 -e $tarfile
+
+echo gpg
+gpg -s -e -r E759BDE3 $xzfile
+
+echo clear
+rm -v $xzfile

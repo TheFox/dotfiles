@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Created @ 28.12.2013 by Christian Mayer <http://fox21.at>
+# Converts a .gpg.gz file into .xz.gpg
+
+for file in $*; do
+	echo $file
+	
+	gzfile=${file/.gpg/}
+	tarfile=${gzfile/.gz/}
+	
+	gpg -d -o $gzfile $file &> /dev/null
+	gzip -d $gzfile 
+	xz -z -f -9 -e $tarfile
+	gpg -s -e -r E759BDE3 $tarfile.xz
+	rm $tarfile.xz
+done

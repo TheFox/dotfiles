@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Store only.
+
+file=$1
+
+if [ -f $file.rar ]; then
+	echo "ERROR: $file.rar exists"
+	exit 1
+else
+	rar a -m0 -v104857600b $file.rar $file
+	exit $?
+fi

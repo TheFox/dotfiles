@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Created @ 03.04.2013 by Christian Mayer <http://fox21.at>
+
+pmset sleepnow

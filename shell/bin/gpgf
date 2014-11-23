@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+gpg -s -e -r E759BDE3 $*
+exit $?

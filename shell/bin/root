@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Created @ 05.08.2011 by Christian Mayer <http://fox21.at>
+
+sudo su -

@@ -4,6 +4,7 @@
 DATE=$(date +"%Y/%m/%d %H:%M:%S")
 SCRIPT_BASEDIR=$(dirname $0)
 CP="cp -vp"
+MKDIR="mkdir -p"
 
 
 set -e
@@ -44,4 +45,9 @@ if [[ -d $SUBLIME_SNIPPET_CPP_DIR ]]; then
 	$CP sublimetext/snippets/C++/*.sublime-snippet "$SUBLIME_SNIPPET_CPP_DIR" || echo failed
 fi
 
-echo done
+if [[ ! -d $HOME/bin ]]; then
+	$MKDIR $HOME/bin
+fi
+$CP shell/bin/* $HOME/bin
+
+echo 'done'
