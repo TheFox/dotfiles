@@ -1,7 +1,12 @@
 
-PS1=':> '
-PATH="${PATH}:$HOME/Dropbox/bin"
-export EDITOR="/usr/bin/vi"
+PS1="\n\[\033[0;34m\]\t \#:\! \[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h\[\033[m\]:\[\033[0;31m\]\w\[\033[m\] \$?\n:> "
+PATH="${PATH}:$HOME/bin:$HOME/Dropbox/bin"
+EDITOR="/usr/bin/vi"
+HISTSIZE=5000
+HISTFILESIZE=10000
+
+export PS1 PATH EDITOR
+
 
 alias l="ls -lG"
 alias ll="ls -laG"
