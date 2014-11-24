@@ -5,6 +5,7 @@ DATE=$(date +"%Y/%m/%d %H:%M:%S")
 SCRIPT_BASEDIR=$(dirname $0)
 CP="cp -vp"
 MKDIR="mkdir -p"
+SUBLIME_SUBL="/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl"
 
 
 set -e
@@ -49,5 +50,9 @@ if [[ ! -d $HOME/bin ]]; then
 	$MKDIR $HOME/bin
 fi
 $CP shell/bin/* $HOME/bin
+
+if [[ -f "$SUBLIME_SUBL" ]]; then
+	ln -s "$SUBLIME_SUBL" $HOME/bin/subl
+fi
 
 echo 'done'
