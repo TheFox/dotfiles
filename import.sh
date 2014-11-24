@@ -51,7 +51,8 @@ if [[ ! -d $HOME/bin ]]; then
 fi
 $CP shell/bin/* $HOME/bin
 
-if [[ -f "$SUBLIME_SUBL" ]]; then
+if [[ -f "$SUBLIME_SUBL" ]] && [[ ! -f $HOME/bin/subl ]]; then
+	echo 'install subl'
 	ln -s "$SUBLIME_SUBL" $HOME/bin/subl
 fi
 
