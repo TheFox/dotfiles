@@ -1,0 +1,26 @@
+{
+	"scope": "source.php",
+	"completions":[
+		{ "trigger": "@codeCoverageIgnore", "contents": "@codeCoverageIgnore" },
+		{ "trigger": "@codeCoverageIgnoreStart", "contents": "@codeCoverageIgnoreStart" },
+		{ "trigger": "@codeCoverageIgnoreEnd", "contents": "@codeCoverageIgnoreEnd" },
+		{ "trigger": "@expectedException", "contents": "@expectedException" },
+		{ "trigger": "@expectedExceptionCode", "contents": "@expectedExceptionCode" },
+		{ "trigger": "@expectedExceptionMessage", "contents": "@expectedExceptionMessage" },
+		{ "trigger": "@expectedExceptionMessageRegExp", "contents": "@expectedExceptionMessageRegExp" },
+		{ "trigger": "Exception", "contents": "Exception" },
+		{ "trigger": "BadFunctionCallException", "contents": "BadFunctionCallException" },
+		{ "trigger": "BadMethodCallException", "contents": "BadMethodCallException" },
+		{ "trigger": "DomainException", "contents": "DomainException" },
+		{ "trigger": "InvalidArgumentException", "contents": "InvalidArgumentException" },
+		{ "trigger": "LengthException", "contents": "LengthException" },
+		{ "trigger": "LogicException", "contents": "LogicException" },
+		{ "trigger": "OutOfBoundsException", "contents": "OutOfBoundsException" },
+		{ "trigger": "OutOfRangeException", "contents": "OutOfRangeException" },
+		{ "trigger": "OverflowException", "contents": "OverflowException" },
+		{ "trigger": "RangeException", "contents": "RangeException" },
+		{ "trigger": "RuntimeException", "contents": "RuntimeException" },
+		{ "trigger": "UnderflowException", "contents": "UnderflowException" },
+		{ "trigger": "UnexpectedValueException", "contents": "UnexpectedValueException" }
+	]
+}
