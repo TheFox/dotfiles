@@ -1,0 +1,6 @@
+<snippet>
+	<content><![CDATA[@codingStandardsIgnoreFile]]></content>
+	<tabTrigger>@cod</tabTrigger>
+	<scope>source.php</scope>
+	<description>Coding Standard Ignore File</description>
+</snippet>
