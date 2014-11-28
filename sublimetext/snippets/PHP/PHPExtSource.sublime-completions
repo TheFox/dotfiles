@@ -1,13 +1,6 @@
 {
 	"scope": "source.php",
 	"completions":[
-		{ "trigger": "@codeCoverageIgnore", "contents": "@codeCoverageIgnore" },
-		{ "trigger": "@codeCoverageIgnoreStart", "contents": "@codeCoverageIgnoreStart" },
-		{ "trigger": "@codeCoverageIgnoreEnd", "contents": "@codeCoverageIgnoreEnd" },
-		{ "trigger": "@expectedException", "contents": "@expectedException" },
-		{ "trigger": "@expectedExceptionCode", "contents": "@expectedExceptionCode" },
-		{ "trigger": "@expectedExceptionMessage", "contents": "@expectedExceptionMessage" },
-		{ "trigger": "@expectedExceptionMessageRegExp", "contents": "@expectedExceptionMessageRegExp" },
 		{ "trigger": "Exception", "contents": "Exception" },
 		{ "trigger": "BadFunctionCallException", "contents": "BadFunctionCallException" },
 		{ "trigger": "BadMethodCallException", "contents": "BadMethodCallException" },
@@ -21,6 +14,8 @@
 		{ "trigger": "RangeException", "contents": "RangeException" },
 		{ "trigger": "RuntimeException", "contents": "RuntimeException" },
 		{ "trigger": "UnderflowException", "contents": "UnderflowException" },
-		{ "trigger": "UnexpectedValueException", "contents": "UnexpectedValueException" }
+		{ "trigger": "UnexpectedValueException", "contents": "UnexpectedValueException" },
+		
+		{ "trigger": "static", "contents": "static::" }
 	]
 }

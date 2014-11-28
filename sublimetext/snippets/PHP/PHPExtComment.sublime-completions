@@ -1,0 +1,12 @@
+{
+	"scope": "comment.block.php,comment.line.double-slash.php,comment.block.documentation.phpdoc.php",
+	"completions":[
+		{ "trigger": "@codeCoverageIgnore", "contents": "@codeCoverageIgnore" },
+		{ "trigger": "@codeCoverageIgnoreStart", "contents": "@codeCoverageIgnoreStart" },
+		{ "trigger": "@codeCoverageIgnoreEnd", "contents": "@codeCoverageIgnoreEnd" },
+		{ "trigger": "@expectedException", "contents": "@expectedException" },
+		{ "trigger": "@expectedExceptionCode", "contents": "@expectedExceptionCode" },
+		{ "trigger": "@expectedExceptionMessage", "contents": "@expectedExceptionMessage" },
+		{ "trigger": "@expectedExceptionMessageRegExp", "contents": "@expectedExceptionMessageRegExp" }
+	]
+}

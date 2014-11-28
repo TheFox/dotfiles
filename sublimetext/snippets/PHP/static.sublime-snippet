@@ -1,6 +1,0 @@
-<snippet>
-	<content><![CDATA[static::]]></content>
-	<tabTrigger>sta</tabTrigger>
-	<scope>source.php</scope>
-	<description>static</description>
-</snippet>
