@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 # Install command-line tools using Homebrew.
 
-INSTALL="install"
+BREW="brew"
+BREW_FLAGS="install"
 
 # Ask for the administrator password upfront.
 sudo -v
@@ -10,28 +11,28 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Make sure we're using the latest Homebrew.
-brew update
+$BREW update
 
 # Upgrade any already-installed formulae.
-brew upgrade
+$BREW upgrade
 
 # Install GNU core utilities (those that come with OS X are outdated).
 # Don't forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
-brew $INSTALL coreutils
-brew $INSTALL binutils
+$BREW $BREW_FLAGS coreutils
+$BREW $BREW_FLAGS binutils
 
-brew $INSTALL bash
-brew $INSTALL wget
-brew $INSTALL curl
-brew $INSTALL nmap
-brew $INSTALL xz
-brew $INSTALL ffmpeg
+$BREW $BREW_FLAGS bash
+$BREW $BREW_FLAGS wget
+$BREW $BREW_FLAGS curl
+$BREW $BREW_FLAGS nmap
+$BREW $BREW_FLAGS xz
+$BREW $BREW_FLAGS ffmpeg
 
-brew $INSTALL php55 --with-thread-safety --without-snmp
-brew $INSTALL php55-pthreads --without-snmp
-brew $INSTALL php55-mcrypt
-brew $INSTALL php55-xdebug
+$BREW $BREW_FLAGS php55 --with-thread-safety --without-snmp
+$BREW $BREW_FLAGS php55-pthreads --without-snmp
+$BREW $BREW_FLAGS php55-mcrypt
+$BREW $BREW_FLAGS php55-xdebug
 
-brew cleanup
+$BREW cleanup
 
 sudo ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
