@@ -58,4 +58,5 @@ if [[ -f "$SUBLIME_SUBL" ]] && [[ ! -f $HOME/bin/subl ]]; then
 	ln -s "$SUBLIME_SUBL" $HOME/bin/subl
 fi
 
+date
 echo 'done'
