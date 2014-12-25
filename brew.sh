@@ -22,8 +22,10 @@ brew $INSTALL binutils
 
 brew $INSTALL bash
 brew $INSTALL wget
+brew $INSTALL curl
 brew $INSTALL nmap
 brew $INSTALL xz
+brew $INSTALL ffmpeg
 
 brew $INSTALL php55 --with-thread-safety --without-snmp
 brew $INSTALL php55-pthreads --without-snmp
