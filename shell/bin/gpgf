@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
 
-gpg -s -e -r E759BDE3 $*
+for file in $*; do
+	gpg -s -e -r E90C33FEE759BDE3 $file
+done
+
 exit $?
