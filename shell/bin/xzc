@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
 
-#xz -z -k -f -9 -e $*
-xz -z -f -9 -e $*
+xz -z -k -f -9 -e $*
 exit $?
