@@ -13,6 +13,9 @@
 			"path": "~/Library/Application Support/Sublime Text 2/Packages/PHP"
 		},
 		{
+			"path": "~/Library/Application Support/Sublime Text 2/Packages/Perl"
+		},
+		{
 			"path": "~/Library/Application Support/Sublime Text 2/Packages/PHPUnit Snippets"
 		}
 	],

@@ -40,6 +40,15 @@ if [[ -d $SUBLIME_SNIPPET_PHP_DIR ]]; then
 	$CP sublimetext/snippets/PHP/*.sublime-completions "$SUBLIME_SNIPPET_PHP_DIR" || echo failed
 fi
 
+SUBLIME_SNIPPET_PERL_DIR="$HOME/Library/Application Support/Sublime Text 2/Packages/Perl"
+if [[ -d $SUBLIME_SNIPPET_PERL_DIR ]]; then
+	echo 'import sublimetext Perl snippet files'
+	#echo $SUBLIME_SNIPPET_PERL_DIR
+	
+	$CP sublimetext/snippets/Perl/*.sublime-snippet "$SUBLIME_SNIPPET_PERL_DIR" || echo failed
+	$CP sublimetext/snippets/Perl/*.sublime-completions "$SUBLIME_SNIPPET_PERL_DIR" || echo failed
+fi
+
 SUBLIME_SNIPPET_CPP_DIR="$HOME/Library/Application Support/Sublime Text 2/Packages/C++"
 if [[ -d $SUBLIME_SNIPPET_CPP_DIR ]]; then
 	echo 'import sublimetext C++ snippet files'
