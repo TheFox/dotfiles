@@ -4,3 +4,4 @@ shell/.bash_profile
 shell/.bashrc
 vim/.vimrc
 wget/.wgetrc
+lldb/.lldbinit
