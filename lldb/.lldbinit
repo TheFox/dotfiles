@@ -6,5 +6,5 @@ settings set frame-format "frame #${frame.index}: ${frame.pc}{ ${module.file.bas
 
 settings set disassembly-format "${current-pc-arrow}\t ${addr-file-or-load}{ <${module.file.basename}`${function.name-without-args}${function.concrete-only-addr-offset-no-padding}>}: "
 
-command alias mr memory read --format x --size 8 --count 16
+command alias mr memory read --format x --size 8 --count 1
 command alias rf re r -f b rflags
