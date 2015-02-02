@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 for file in $*; do
-	gpg -s -e -r E90C33FEE759BDE3 $file
+	gpg -s -e -r F96ED997C9382D47 $file
 done
 
 exit $?

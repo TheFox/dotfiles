@@ -17,7 +17,7 @@ echo xz
 xz -v -z -f -9 -e $tarfile
 
 echo gpg
-gpg -s -e -r E759BDE3 $xzfile
+gpg -s -e -r F96ED997C9382D47 $xzfile
 
 echo clear
 rm -v $xzfile
