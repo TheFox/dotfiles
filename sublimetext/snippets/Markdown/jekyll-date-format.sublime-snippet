@@ -1,0 +1,6 @@
+<snippet>
+	<description>Jekyll Date Format</description>
+	<content><![CDATA[**Update, {{ '' | date: site.date_format }}:**]]></content>
+	<tabTrigger>update</tabTrigger>
+	<scope>text.html.markdown</scope>
+</snippet>
