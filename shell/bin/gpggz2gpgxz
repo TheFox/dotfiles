@@ -2,6 +2,8 @@
 # Created @ 28.12.2013 by Christian Mayer <http://fox21.at>
 # Converts a .gpg.gz file into .xz.gpg
 
+set -e
+
 for file in $*; do
 	echo $file
 	
@@ -14,3 +16,5 @@ for file in $*; do
 	gpg -s -e -r F96ED997C9382D47 $tarfile.xz
 	rm $tarfile.xz
 done
+
+echo done
