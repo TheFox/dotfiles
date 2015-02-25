@@ -1,0 +1,11 @@
+<snippet>
+	<description>Try Catch</description>
+	<content><![CDATA[try{
+	$1
+}
+catch(exception &e){
+	${2:cout << "ERROR: " << e.what() << endl;}
+}]]></content>
+	<tabTrigger>try</tabTrigger>
+	<scope>source.c, source.objc, source.c++, source.objc++</scope>
+</snippet>
