@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[eval{
+	${1}
+};
+if(\$@){
+	${2}
+}
+]]></content>
+	<tabTrigger>eval</tabTrigger>
+	<scope>source.perl</scope>
+	<description>Try/Except</description>
+</snippet>

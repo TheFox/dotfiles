@@ -1,0 +1,15 @@
+<snippet>
+	<content><![CDATA[if($1){
+	${2}
+}
+elsif($3){
+	${4}
+}
+else{
+	${5}
+}
+]]></content>
+	<tabTrigger>ifee</tabTrigger>
+	<scope>source.perl</scope>
+	<description>Conditional if..elsif..else</description>
+</snippet>
