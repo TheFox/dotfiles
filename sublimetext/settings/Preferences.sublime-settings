@@ -20,5 +20,9 @@
 	"trim_automatic_white_space": false,
 	"auto_complete": true,
 	"auto_complete_selector": "source, text",
-	"word_wrap": true
+	"word_wrap": true,
+	"theme": "Afterglow.sublime-theme",
+	"color_scheme": "Packages/Theme - Afterglow/Afterglow.tmTheme",
+	"tabs_small": true,
+	"tabs_padding_small": true
 }
