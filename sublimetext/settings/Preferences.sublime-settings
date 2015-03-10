@@ -3,7 +3,8 @@
 		".DS_Store",
 		"*.swp",
 		"*.sublime-workspace",
-		"composer.lock"
+		"composer.lock",
+		"composer.phar"
 	],
 	"folder_exclude_patterns":[
 		".git"
