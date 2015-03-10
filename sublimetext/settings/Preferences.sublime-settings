@@ -24,5 +24,6 @@
 	"theme": "Afterglow.sublime-theme",
 	"color_scheme": "Packages/Theme - Afterglow/Afterglow.tmTheme",
 	"tabs_small": true,
-	"tabs_padding_small": true
+	"tabs_padding_small": true,
+	"status_bar_brighter": true
 }
