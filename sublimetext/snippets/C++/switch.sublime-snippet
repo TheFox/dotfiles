@@ -1,0 +1,13 @@
+<snippet>
+	<description>switch()</description>
+	<content><![CDATA[switch(${1:var}){
+	case ${2:0}:
+		$3
+		break;
+	
+	default:
+		
+}]]></content>
+	<tabTrigger>switch</tabTrigger>
+	<scope>source.c, source.objc, source.c++, source.objc++</scope> 
+</snippet>
