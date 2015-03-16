@@ -6,6 +6,9 @@
 			"folder_exclude_patterns": [ ],
 			"file_exclude_patterns": [ ]
 		},
+		/*{
+			"path": "~/Library/Application Support/Sublime Text 2/Packages"
+		},*/
 		{
 			"path": "~/Library/Application Support/Sublime Text 2/Packages/C++"
 		},
@@ -20,6 +23,9 @@
 		},
 		{
 			"path": "~/Library/Application Support/Sublime Text 2/Packages/PHPUnit Snippets"
+		},
+		{
+			"path": "~/Library/Application Support/Sublime Text 2/Packages/Markdown"
 		}
 	],
 	"build_systems":[
