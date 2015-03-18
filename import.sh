@@ -19,8 +19,6 @@ echo "HOME: $HOME"
 
 echo 'import default files'
 for file in $(cat .files); do
-	#echo $file
-	
 	$CP $file $HOME || echo failed
 	true
 done
