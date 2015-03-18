@@ -61,6 +61,13 @@ if [[ -d $SUBLIME_SNIPPET_MARKDOWN_DIR ]]; then
 	copytmp 'sublimetext/snippets/Markdown/*.sublime-snippet' "$SUBLIME_SNIPPET_MARKDOWN_DIR" || echo failed
 fi
 
+SUBLIME_SNIPPET_HTML_DIR="$HOME/Library/Application Support/Sublime Text 2/Packages/HTML"
+if [[ -d $SUBLIME_SNIPPET_HTML_DIR ]]; then
+	echo 'import sublimetext HTML snippet files'
+	
+	copytmp 'sublimetext/snippets/HTML/*.sublime-snippet' "$SUBLIME_SNIPPET_HTML_DIR" || echo failed
+fi
+
 if [[ ! -d $HOME/bin ]]; then
 	$MKDIR $HOME/bin
 fi
