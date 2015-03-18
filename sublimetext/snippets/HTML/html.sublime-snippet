@@ -2,10 +2,10 @@
 	<content><![CDATA[<!DOCTYPE html>
 <html>
 <head>
-	<title>$1</title>
+	<title>${1:Title}</title>
 </head>
 <body>
-$0
+	${0:Body}
 </body>
 </html>]]></content>
 	<tabTrigger>html</tabTrigger>
