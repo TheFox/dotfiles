@@ -54,6 +54,13 @@ if [[ -d $SUBLIME_SNIPPET_CPP_DIR ]]; then
 	copytmp 'sublimetext/snippets/C++/*.sublime-snippet' "$SUBLIME_SNIPPET_CPP_DIR" || echo failed
 fi
 
+SUBLIME_SNIPPET_OBJC_DIR="$HOME/Library/Application Support/Sublime Text 2/Packages/Objective-C"
+if [[ -d $SUBLIME_SNIPPET_OBJC_DIR ]]; then
+	echo 'import sublimetext Objective-C snippet files'
+	
+	copytmp 'sublimetext/snippets/Objective-C/*.sublime-snippet' "$SUBLIME_SNIPPET_OBJC_DIR" || echo failed
+fi
+
 SUBLIME_SNIPPET_MARKDOWN_DIR="$HOME/Library/Application Support/Sublime Text 2/Packages/Markdown"
 if [[ -d $SUBLIME_SNIPPET_MARKDOWN_DIR ]]; then
 	echo 'import sublimetext Markdown snippet files'

@@ -1,0 +1,6 @@
+<snippet>
+	<content><![CDATA[NSLog(@"${1:hello_world}");]]></content>
+	<tabTrigger>nslog</tabTrigger>
+	<scope>source.objc</scope>
+	<description>NSLog</description>
+</snippet>
