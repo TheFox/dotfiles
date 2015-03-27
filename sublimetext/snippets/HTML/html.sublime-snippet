@@ -10,4 +10,5 @@
 </html>]]></content>
 	<tabTrigger>html</tabTrigger>
 	<scope>text.html</scope>
+	<description>Default HTML</description>
 </snippet>
