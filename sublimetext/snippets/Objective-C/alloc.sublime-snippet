@@ -1,0 +1,6 @@
+<snippet>
+	<content><![CDATA[${1:NSObject} *${2:objc} = [[${1} alloc] init];]]></content>
+	<tabTrigger>alloc</tabTrigger>
+	<scope>source.objc</scope>
+	<description>Object alloc/init</description>
+</snippet>
