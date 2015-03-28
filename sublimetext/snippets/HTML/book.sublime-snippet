@@ -1,5 +1,5 @@
 <snippet>
-	<content><![CDATA[${1:Author}: <i>${2:BookName}</i>. ${3:PublisherName}, ${4:PublisherLocation}, ${5:x_th} edition, ${6:year}.${7: <a href="https://en.wikipedia.org/wiki/Special:BookSources/${8/-//g}">ISBN ${8:ISBN_v}</a>}]]></content>
+	<content><![CDATA[${1:Author}: <i>${2:BookName}</i>. ${3:PublisherName}, ${4:PublisherLocation}${5:, ${6:x_th} edition}, ${7:year}.${8: <a href="https://en.wikipedia.org/wiki/Special:BookSources/${9/-//g}">ISBN ${9:ISBN_v}</a>}]]></content>
 	<tabTrigger>book</tabTrigger>
 	<scope>text.html</scope>
 	<description>Book Reference EN</description>
