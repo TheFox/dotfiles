@@ -1,0 +1,6 @@
+<snippet>
+	<content><![CDATA[@property (${1:nonatomic, strong}) ${2:NSObject} *${3:obj1};]]></content>
+	<tabTrigger>property</tabTrigger>
+	<scope>source.objc</scope>
+	<description>property (strong) Obj*</description>
+</snippet>

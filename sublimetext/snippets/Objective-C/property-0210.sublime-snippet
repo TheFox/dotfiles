@@ -1,0 +1,6 @@
+<snippet>
+	<content><![CDATA[@property (${1:readonly}) ${2:BOOL} ${3:bool1};]]></content>
+	<tabTrigger>property</tabTrigger>
+	<scope>source.objc</scope>
+	<description>property (readonly) BOOL</description>
+</snippet>

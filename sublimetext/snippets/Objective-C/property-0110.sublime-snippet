@@ -1,0 +1,6 @@
+<snippet>
+	<content><![CDATA[@property (${1:readonly}) ${2:NSUInteger} ${3:uInt};]]></content>
+	<tabTrigger>property</tabTrigger>
+	<scope>source.objc</scope>
+	<description>property (readonly) NSUInt</description>
+</snippet>

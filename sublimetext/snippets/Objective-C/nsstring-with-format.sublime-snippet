@@ -1,5 +1,5 @@
 <snippet>
-	<content><![CDATA[NSString *str = [[NSString alloc] initWithFormat:@"$1"];$0]]></content>
+	<content><![CDATA[NSString *${1:str1} = [[NSString alloc] initWithFormat:@"$2"];]]></content>
 	<tabTrigger>nsstring</tabTrigger>
 	<scope>source.objc</scope>
 	<description>NSString with Format</description>

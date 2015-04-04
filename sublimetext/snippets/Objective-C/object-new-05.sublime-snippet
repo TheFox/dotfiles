@@ -1,0 +1,6 @@
+<snippet>
+	<content><![CDATA[${1:NSObject} *${2:obj} = [$1 new];]]></content>
+	<tabTrigger>new</tabTrigger>
+	<scope>source.objc</scope>
+	<description>Object new</description>
+</snippet>
