@@ -29,6 +29,12 @@
 		},
 		{
 			"path": "~/Library/Application Support/Sublime Text 2/Packages/HTML"
+		},
+		{
+			"path": "~/Library/Application Support/Sublime Text 2/Packages/YAML"
+		},
+		{
+			"path": "~/Library/Application Support/Sublime Text 2/Packages/User"
 		}
 	],
 	"build_systems":[
