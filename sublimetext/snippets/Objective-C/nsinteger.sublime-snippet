@@ -1,0 +1,6 @@
+<snippet>
+	<content><![CDATA[NSInteger]]></content>
+	<tabTrigger>nsinteger</tabTrigger>
+	<scope>source.objc</scope>
+	<description>NSInteger Type</description>
+</snippet>

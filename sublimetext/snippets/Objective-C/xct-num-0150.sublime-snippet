@@ -1,0 +1,6 @@
+<snippet>
+	<content><![CDATA[XCTAssertGreaterThanOrEqual(${1:expression1}, ${2:expression2}${3:, @"${4:failed}"});]]></content>
+	<tabTrigger>xctgr</tabTrigger>
+	<scope>source.objc</scope>
+	<description>XCT &gt;=</description>
+</snippet>

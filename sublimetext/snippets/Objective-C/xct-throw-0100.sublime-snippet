@@ -1,0 +1,6 @@
+<snippet>
+	<content><![CDATA[XCTAssertThrows(${1:expression}${2:, @"${3:failed}"});]]></content>
+	<tabTrigger>xctthrow</tabTrigger>
+	<scope>source.objc</scope>
+	<description>XCT Throws</description>
+</snippet>

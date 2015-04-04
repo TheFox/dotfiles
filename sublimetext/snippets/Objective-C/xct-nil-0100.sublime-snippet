@@ -1,0 +1,6 @@
+<snippet>
+	<content><![CDATA[XCTAssertNil(${1:expression}${2:, @"${3:failed}"});]]></content>
+	<tabTrigger>xctnil</tabTrigger>
+	<scope>source.objc</scope>
+	<description>XCT Nil</description>
+</snippet>

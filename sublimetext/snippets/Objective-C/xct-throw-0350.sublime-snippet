@@ -1,0 +1,6 @@
+<snippet>
+	<content><![CDATA[XCTAssertNoThrowSpecificNamed(${1:expression}, ${2:exception_class}, ${3:exception_name}${4:, @"${5:failed}"});]]></content>
+	<tabTrigger>xctthrow</tabTrigger>
+	<scope>source.objc</scope>
+	<description>XCT No Throw Specific Named</description>
+</snippet>

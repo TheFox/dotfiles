@@ -1,0 +1,6 @@
+<snippet>
+	<content><![CDATA[XCTFail(${1:@"failed"});]]></content>
+	<tabTrigger>xctfail</tabTrigger>
+	<scope>source.objc</scope>
+	<description>XCT Fail</description>
+</snippet>

@@ -1,0 +1,6 @@
+<snippet>
+	<content><![CDATA[XCTAssertLessThanOrEqual(${1:expression1}, ${2:expression2}${3:, @"${4:failed}"});]]></content>
+	<tabTrigger>xctle</tabTrigger>
+	<scope>source.objc</scope>
+	<description>XCT &lt;=</description>
+</snippet>

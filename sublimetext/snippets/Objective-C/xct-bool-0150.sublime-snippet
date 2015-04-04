@@ -1,0 +1,6 @@
+<snippet>
+	<content><![CDATA[XCTAssertFalse(${1:expression}${2:, @"${3:failed}"});]]></content>
+	<tabTrigger>xctfalse</tabTrigger>
+	<scope>source.objc</scope>
+	<description>XCT False</description>
+</snippet>

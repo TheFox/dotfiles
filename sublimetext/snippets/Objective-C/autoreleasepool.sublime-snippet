@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[@autoreleasepool{
+	$0
+}]]></content>
+	<tabTrigger>autoreleasepool</tabTrigger>
+	<scope>source.objc</scope>
+	<description>AutoReleasePool</description>
+</snippet>

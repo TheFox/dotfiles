@@ -1,0 +1,6 @@
+<snippet>
+	<content><![CDATA[XCTAssertThrowsSpecific(${1:expression}, ${2:exception_class}${3:, @"${4:failed}"});]]></content>
+	<tabTrigger>xctthrow</tabTrigger>
+	<scope>source.objc</scope>
+	<description>XCT Throws Specific</description>
+</snippet>

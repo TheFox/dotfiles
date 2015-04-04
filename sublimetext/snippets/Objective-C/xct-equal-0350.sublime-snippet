@@ -1,0 +1,6 @@
+<snippet>
+	<content><![CDATA[XCTAssertNotEqualObjects(${1:expression1}, ${2:expression2}${3:, @"${4:failed}"});]]></content>
+	<tabTrigger>xcteq</tabTrigger>
+	<scope>source.objc</scope>
+	<description>XCT Not ==Objects</description>
+</snippet>

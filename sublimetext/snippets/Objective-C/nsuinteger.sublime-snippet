@@ -1,0 +1,6 @@
+<snippet>
+	<content><![CDATA[NSUInteger]]></content>
+	<tabTrigger>nsuinteger</tabTrigger>
+	<scope>source.objc</scope>
+	<description>NSUInteger Type</description>
+</snippet>

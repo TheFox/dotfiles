@@ -1,0 +1,6 @@
+<snippet>
+	<content><![CDATA[NSMutableArray *${1:array} = [[NSMutableArray alloc] init];]]></content>
+	<tabTrigger>nsmutablearray</tabTrigger>
+	<scope>source.objc</scope>
+	<description>NSMutableArray</description>
+</snippet>
