@@ -44,7 +44,6 @@ if [[ -d $SUBLIME_SNIPPET_PERL_DIR ]]; then
 	echo 'import sublimetext Perl snippet files'
 	
 	copytmp 'sublimetext/snippets/Perl/*.sublime-snippet' "$SUBLIME_SNIPPET_PERL_DIR" || echo failed
-	#copytmp 'sublimetext/snippets/Perl/*.sublime-completions' "$SUBLIME_SNIPPET_PERL_DIR" || echo failed
 fi
 
 SUBLIME_SNIPPET_CPP_DIR="$HOME/Library/Application Support/Sublime Text 2/Packages/C++"
