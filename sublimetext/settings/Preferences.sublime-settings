@@ -10,6 +10,7 @@
 		".git"
 	],
 	"font_size": 14,
+	"spell_check": false,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"ignored_packages":[ "Vintage", "SFTP" ],
