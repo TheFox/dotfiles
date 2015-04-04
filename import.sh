@@ -3,8 +3,8 @@
 
 DATE=$(date +"%Y/%m/%d %H:%M:%S")
 SCRIPT_BASEDIR=$(dirname $0)
-CP="cp -vp"
-MV="mv -v"
+CP="cp -p"
+MV="mv"
 MKDIR="mkdir -p"
 SUBLIME_SUBL="/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl"
 
