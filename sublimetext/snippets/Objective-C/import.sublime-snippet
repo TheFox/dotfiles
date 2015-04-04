@@ -1,5 +1,5 @@
 <snippet>
-	<content><![CDATA[#import "${1:AppDelegate}.h"]]></content>
+	<content><![CDATA[#import "${1:${2:${TM_FILENAME/\..+$//}}.h}"]]></content>
 	<tabTrigger>import</tabTrigger>
 	<scope>source.objc</scope>
 	<description>Import</description>
