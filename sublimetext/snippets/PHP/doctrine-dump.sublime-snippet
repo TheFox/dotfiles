@@ -1,5 +1,5 @@
 <snippet>
-	<content><![CDATA[\Doctrine\Common\Util\Debug::dump($0);]]></content>
+	<content><![CDATA[\Doctrine\Common\Util\Debug::dump(${1:\$data}${2:, ${3:5}});]]></content>
 	<tabTrigger>dump</tabTrigger>
 	<scope>source.php</scope>
 	<description>Doctrine Dump</description>
