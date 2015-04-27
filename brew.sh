@@ -35,6 +35,7 @@ $BREW $BREW_FLAGS php55 --with-thread-safety --without-snmp
 $BREW $BREW_FLAGS php55-pthreads --without-snmp
 $BREW $BREW_FLAGS php55-mcrypt
 $BREW $BREW_FLAGS php55-xdebug
+$BREW $BREW_FLAGS composer
 
 $BREW cleanup
 
