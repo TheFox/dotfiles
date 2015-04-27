@@ -26,5 +26,6 @@
 	"color_scheme": "Packages/Theme - Afterglow/Afterglow.tmTheme",
 	"tabs_small": true,
 	"tabs_padding_small": true,
-	"status_bar_brighter": true
+	"status_bar_brighter": true,
+	"sidebar_no_icon": false
 }
