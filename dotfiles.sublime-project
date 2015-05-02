@@ -35,6 +35,9 @@
 		},
 		{
 			"path": "~/Library/Application Support/Sublime Text 2/Packages/User"
+		},
+		{
+			"path": "~/Library/Application Support/Sublime Text 2/Packages/Twig"
 		}
 	],
 	"build_systems":[

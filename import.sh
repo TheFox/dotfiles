@@ -74,6 +74,13 @@ if [[ -d $SUBLIME_SNIPPET_HTML_DIR ]]; then
 	copytmp 'sublimetext/snippets/HTML/*.sublime-snippet' "$SUBLIME_SNIPPET_HTML_DIR" || echo failed
 fi
 
+SUBLIME_SNIPPET_TWIG_DIR="$HOME/Library/Application Support/Sublime Text 2/Packages/Twig/Snippets"
+if [[ -d $SUBLIME_SNIPPET_TWIG_DIR ]]; then
+	echo 'import sublimetext Twig snippet files'
+	
+	copytmp 'sublimetext/snippets/Twig/*.sublime-snippet' "$SUBLIME_SNIPPET_TWIG_DIR" || echo failed
+fi
+
 if [[ ! -d $HOME/bin ]]; then
 	$MKDIR $HOME/bin
 fi
