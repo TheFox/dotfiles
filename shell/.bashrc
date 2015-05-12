@@ -8,8 +8,14 @@ HISTFILESIZE=10000
 export PS1 PATH EDITOR
 
 
-alias l="ls -lG"
-alias ll="ls -laG"
+if [ "$(uname -s)" = "Darwin" ]; then
+	alias l="ls -lG"
+	alias ll="ls -laG"
+else
+	alias l="ls -l --color=auto"
+	alias ll="ls -la --color=auto"
+fi
+
 alias grep="grep --color=auto"
 alias egrep="egrep --color=auto"
 
