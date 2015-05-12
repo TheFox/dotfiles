@@ -2,6 +2,7 @@ curl/.curlrc
 git/.gitignore_global
 shell/.bash_profile
 shell/.bashrc
+shell/.dotfiles-installed
 vim/.vimrc
 wget/.wgetrc
 lldb/.lldbinit
