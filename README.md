@@ -10,7 +10,11 @@ My dotfiles.
 
 2. Import
 	
-		./import.sh
+		./import.macosx.sh
+	
+	or
+	
+		./import.linux.sh
 
 ## License
 Copyright (C) 2014 Christian Mayer <http://fox21.at>
