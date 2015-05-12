@@ -43,7 +43,7 @@
 	"build_systems":[
 		{
 			"name": "Import",
-			"cmd": [ "./import.sh" ],
+			"cmd": [ "./import.macosx.sh" ],
 			"working_dir": "${project_path:${folder}}",
 			"shell": true
 		}
