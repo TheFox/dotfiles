@@ -10,7 +10,7 @@ export PS1 PATH EDITOR
 
 alias l="ls -lG"
 alias ll="ls -laG"
-alias grep="grep --colour=auto"
+alias grep="grep --color=auto"
 alias egrep="egrep --color=auto"
 
 case "$TERM" in
