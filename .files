@@ -1,3 +1,4 @@
+ansible/.ansible.cfg
 curl/.curlrc
 git/.gitignore_global
 lldb/.lldbinit
