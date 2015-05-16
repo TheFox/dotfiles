@@ -23,6 +23,17 @@ for file in $(cat .files); do
 	true
 done
 
+if [[ ! -d $HOME/bin ]]; then
+	$MKDIR $HOME/bin
+fi
+$CP shell-common/bin/* $HOME/bin
+$CP shell-macosx/bin/* $HOME/bin
+
+if [[ -f "$SUBLIME_SUBL" ]] && [[ ! -f $HOME/bin/subl ]]; then
+	echo 'install subl'
+	ln -s "$SUBLIME_SUBL" $HOME/bin/subl
+fi
+
 SUBLIME_USER_DIR="$HOME/Library/Application Support/Sublime Text 2/Packages/User"
 if [[ -d $SUBLIME_USER_DIR ]]; then
 	echo 'import sublimetext user files'
@@ -79,16 +90,6 @@ if [[ -d $SUBLIME_SNIPPET_TWIG_DIR ]]; then
 	echo 'import sublimetext Twig snippet files'
 	
 	copytmp 'sublimetext/snippets/Twig/*.sublime-snippet' "$SUBLIME_SNIPPET_TWIG_DIR" || echo failed
-fi
-
-if [[ ! -d $HOME/bin ]]; then
-	$MKDIR $HOME/bin
-fi
-$CP shell/bin/* $HOME/bin
-
-if [[ -f "$SUBLIME_SUBL" ]] && [[ ! -f $HOME/bin/subl ]]; then
-	echo 'install subl'
-	ln -s "$SUBLIME_SUBL" $HOME/bin/subl
 fi
 
 date

@@ -2,8 +2,8 @@ ansible/.ansible.cfg
 curl/.curlrc
 git/.gitignore_global
 lldb/.lldbinit
-shell/.bash_profile
-shell/.bashrc
-shell/.dotfiles-installed
+shell-common/.bash_profile
+shell-common/.bashrc
+shell-common/.dotfiles-installed
 vim/.vimrc
 wget/.wgetrc

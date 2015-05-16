@@ -25,7 +25,8 @@ done
 if [[ ! -d $HOME/bin ]]; then
 	$MKDIR $HOME/bin
 fi
-$CP shell/bin/* $HOME/bin
+$CP shell-common/bin/* $HOME/bin
+#$CP shell-linux/bin/* $HOME/bin
 
 date
 echo 'done'
