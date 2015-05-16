@@ -15,5 +15,5 @@ set incsearch
 set noerrorbells
 set ruler
 set showmode
-set title
+" set title
 set showcmd
