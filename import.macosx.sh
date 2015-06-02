@@ -57,6 +57,13 @@ if [[ -d $SUBLIME_SNIPPET_PERL_DIR ]]; then
 	copytmp 'sublimetext/snippets/Perl/*.sublime-snippet' "$SUBLIME_SNIPPET_PERL_DIR" || echo failed
 fi
 
+SUBLIME_SNIPPET_RUBY_DIR="$HOME/Library/Application Support/Sublime Text 2/Packages/Ruby"
+if [[ -d $SUBLIME_SNIPPET_RUBY_DIR ]]; then
+	echo 'import sublimetext Ruby snippet files'
+	
+	copytmp 'sublimetext/snippets/Ruby/*.sublime-snippet' "$SUBLIME_SNIPPET_RUBY_DIR" || echo failed
+fi
+
 SUBLIME_SNIPPET_CPP_DIR="$HOME/Library/Application Support/Sublime Text 2/Packages/C++"
 if [[ -d $SUBLIME_SNIPPET_CPP_DIR ]]; then
 	echo 'import sublimetext C++ snippet files'
