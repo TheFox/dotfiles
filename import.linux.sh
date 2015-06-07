@@ -3,8 +3,9 @@
 
 DATE=$(date +"%Y/%m/%d %H:%M:%S")
 SCRIPT_BASEDIR=$(dirname $0)
-CP="cp -p"
+CP="cp"
 MV="mv"
+RSYNC="rsync -rupt"
 MKDIR="mkdir -p"
 
 
@@ -18,15 +19,15 @@ echo "HOME: $HOME"
 
 echo 'import default files'
 for file in $(cat .files); do
-	$CP $file $HOME || echo failed
+	$RSYNC $file $HOME/ || echo failed
 	true
 done
 
 if [[ ! -d $HOME/bin ]]; then
 	$MKDIR $HOME/bin
 fi
-$CP shell-common/bin/* $HOME/bin
-#$CP shell-linux/bin/* $HOME/bin
+$RSYNC shell-common/bin/* $HOME/bin/
+#$RSYNC shell-linux/bin/* $HOME/bin/
 
 date
 echo 'done'

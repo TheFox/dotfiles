@@ -8,7 +8,7 @@ copytmp(){
 		bn=$(basename "$file")
 		tmp=$bn.tmp
 		#echo "file: '$bn' '$dst'"
-		$CP "$file" "$dst/$tmp" || return $?
+		$RSYNC "$file" "$dst/$tmp" || return $?
 		$MV "$dst/$tmp" "$dst/$bn" || return $?
 	done
 	

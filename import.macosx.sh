@@ -3,8 +3,9 @@
 
 DATE=$(date +"%Y/%m/%d %H:%M:%S")
 SCRIPT_BASEDIR=$(dirname $0)
-CP="cp -p"
+CP="cp"
 MV="mv"
+RSYNC="rsync -rupt"
 MKDIR="mkdir -p"
 SUBLIME_SUBL="/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl"
 
@@ -19,15 +20,15 @@ echo "HOME: $HOME"
 
 echo 'import default files'
 for file in $(cat .files); do
-	$CP $file $HOME || echo failed
+	$RSYNC $file $HOME/ || echo failed
 	true
 done
 
 if [[ ! -d $HOME/bin ]]; then
 	$MKDIR $HOME/bin
 fi
-$CP shell-common/bin/* $HOME/bin
-$CP shell-macosx/bin/* $HOME/bin
+$RSYNC shell-common/bin/* $HOME/bin/
+$RSYNC shell-macosx/bin/* $HOME/bin/
 
 if [[ -f "$SUBLIME_SUBL" ]] && [[ ! -f $HOME/bin/subl ]]; then
 	echo 'install subl'
