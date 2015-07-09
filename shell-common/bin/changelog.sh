@@ -21,7 +21,7 @@ fi
 
 date_range_begin=""
 if [[ "$tag_range_begin" = "" ]]; then
-	tag_range_begin=$(git log --pretty=%H --reverse | head -1)
+	#tag_range_begin=$(git log --pretty=%H --reverse | head -1)
 	date_range_begin=$(git log --pretty=%cd --reverse | head -1)
 else
 	date_range_begin=$(git log -n 1 --pretty=%cd --reverse $tag_range_begin)
