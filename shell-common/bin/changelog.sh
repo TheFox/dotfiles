@@ -5,8 +5,8 @@ set -e
 tags_count=$(git tag 2> /dev/null | wc -l | awk '{ print $1}')
 echo "tags: $tags_count"
 
-tag_range_begin=""
-tag_range_end=""
+tag_range_begin=${1:-}
+tag_range_end=${2:-}
 
 if [[ $tags_count -eq 0 ]]; then
 	echo
@@ -14,7 +14,7 @@ if [[ $tags_count -eq 0 ]]; then
 	exit 1
 elif [[ $tags_count -eq 1 ]]; then
 	tag_range_end=$(git tag)
-else
+elif [[ "$tag_range_begin" = "" ]] && [[ "$tag_range_end" = "" ]]; then
 	tag_range_begin=$(git tag | tail -2 | head -1)
 	tag_range_end=$(git tag | tail -1)
 fi
