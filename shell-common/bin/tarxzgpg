@@ -13,7 +13,7 @@ gpgfile=$xzfile.gpg
 set -e
 
 echo tar
-tar -vpcf $tarfile $inputfile
+tar -vpc --exclude .DS_Store -f $tarfile $inputfile
 
 echo xz
 xz -v -z -f -9 -e $tarfile
