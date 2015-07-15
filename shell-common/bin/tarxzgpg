@@ -24,4 +24,4 @@ gpg -s -e -r F96ED997C9382D47 $xzfile
 echo clear
 rm -v $xzfile
 
-echo done
+echo 'done'
