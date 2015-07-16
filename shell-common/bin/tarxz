@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Created @ 16.07.2015 by Christian Mayer <http://fox21.at>
+# Create a .tar.xz file from a file or directory.
+
+SCRIPT_BASEDIR=$(dirname $0)
+
+inputfile=$1
+inputfile=$(basename $inputfile)
+tarfile=$inputfile.tar
+
+
+set -e
+
+tar -vpc --exclude .DS_Store -f $tarfile $inputfile
+
+$SCRIPT_BASEDIR/xzc $tarfile

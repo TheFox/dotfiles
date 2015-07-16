@@ -2,8 +2,9 @@
 # Created @ 07.01.2014 by Christian Mayer <http://fox21.at>
 # Create a .tar.xz.gpg file from a file or directory.
 
-inputfile=$1
+SCRIPT_BASEDIR=$(dirname $0)
 
+inputfile=$1
 inputfile=$(basename $inputfile)
 tarfile=$inputfile.tar
 xzfile=$tarfile.xz
@@ -12,16 +13,5 @@ gpgfile=$xzfile.gpg
 
 set -e
 
-echo tar
-tar -vpc --exclude .DS_Store -f $tarfile $inputfile
-
-echo xz
-xz -v -z -f -9 -e $tarfile
-
-echo gpg
-gpg -s -e -r F96ED997C9382D47 $xzfile
-
-echo clear
-rm -v $xzfile
-
-echo 'done'
+$SCRIPT_BASEDIR/tarxz $inputfile
+$SCRIPT_BASEDIR/gpgf $xzfile

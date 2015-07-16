@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
 
-xz -v -z -k -f -9 -e $*
+set -e
+inputfile=$1
+
+xz -v -z -k -f -9 -e $inputfile
+
 exit $?
