@@ -19,6 +19,7 @@ fi
 
 alias grep="grep --color=auto"
 alias egrep="egrep --color=auto"
+alias d="date"
 
 case "$TERM" in
 	xterm*|rxvt*)
