@@ -1,5 +1,6 @@
 
-PS1="\n\[\033[0;34m\]\d \t \#:\! \[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h\[\033[m\]:\[\033[0;31m\]\w\[\033[m\] \$?\n:> "
+PS1='[\[\033[0;31m\]\w\[\033[m\]\[\033[32m\]$(__git_ps1 "(%s)")\[\033[m\]]\$ '
+
 PATH="${PATH}:$HOME/bin:$HOME/Dropbox/bin"
 EDITOR="/usr/bin/vi"
 HISTSIZE=5000
@@ -21,7 +22,9 @@ alias egrep="egrep --color=auto"
 
 case "$TERM" in
 	xterm*|rxvt*)
-		PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}:${PWD} ($$)\007"; export DATE="`date +"%Y%m%d"`"'
+		# Use ${PWD} in PROMPT_COMMAND to open a new tab in Mac OS X
+		# Terminal in the same working directory.
+		PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}#$$\007"'
 		;;
 	*)
 		;;
