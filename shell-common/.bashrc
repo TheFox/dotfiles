@@ -1,5 +1,24 @@
 
-PS1='[\[\033[0;31m\]\w\[\033[m\]\[\033[32m\]$(__git_ps1 "(%s)")\[\033[m\]]\$ '
+brew_path=$(brew --prefix 2> /dev/null || true)
+
+PS1='[\[\033[0;31m\]\w\[\033[m\]\[\033[32m\]\[\033[m\]]\$ '
+
+if [ -f $brew_path/etc/bash_completion ]; then
+	. $brew_path/etc/bash_completion
+fi
+
+if [ -f $brew_path/etc/bash_completion.d/git-completion.bash ]; then
+	. $brew_path/etc/bash_completion.d/git-completion.bash
+fi
+
+if [ -f $brew_path/etc/bash_completion.d/git-prompt.sh ]; then
+	. $brew_path/etc/bash_completion.d/git-prompt.sh
+	PS1='[\[\033[0;31m\]\w\[\033[m\]\[\033[32m\]$(__git_ps1 "(%s)")\[\033[m\]]\$ '
+fi
+
+if [ -f $brew_path/etc/bash_completion.d/youtube-dl.bash-completion ]; then
+	. $brew_path/etc/bash_completion.d/youtube-dl.bash-completion
+fi
 
 PATH="${PATH}:$HOME/bin:$HOME/Dropbox/bin"
 EDITOR="/usr/bin/vi"
