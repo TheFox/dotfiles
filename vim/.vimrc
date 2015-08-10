@@ -8,7 +8,6 @@ set binary
 set noeol
 set hlsearch
 set tabstop=4
-set expandtab
 " set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
 " set list
 set incsearch
@@ -17,3 +16,5 @@ set ruler
 set showmode
 " set title
 set showcmd
+
+filetype plugin indent on
