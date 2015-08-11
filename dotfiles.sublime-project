@@ -46,7 +46,7 @@
 	"build_systems":[
 		{
 			"name": "Import",
-			"cmd": [ "./import.macosx.sh" ],
+			"cmd": [ "./import.sh" ],
 			"working_dir": "${project_path:${folder}}",
 			"path": "/usr/local/bin:$PATH",
 			"shell": true
