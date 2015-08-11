@@ -9,7 +9,7 @@ cd $SCRIPT_BASEDIR
 
 un=$(uname -s)
 script_name="linux"
-if [[ "$un" -eq "Darwin" ]]; then
+if [ "$un" = "Darwin" ]; then
 	script_name="macosx"
 fi
 
