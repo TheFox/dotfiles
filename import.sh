@@ -13,4 +13,5 @@ if [ "$un" = "Darwin" ]; then
 	script_name="macosx"
 fi
 
+echo "script_name: '$script_name'"
 ./import.$script_name.sh
