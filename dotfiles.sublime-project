@@ -48,6 +48,7 @@
 			"name": "Import",
 			"cmd": [ "./import.macosx.sh" ],
 			"working_dir": "${project_path:${folder}}",
+			"path": "/usr/local/bin:$PATH",
 			"shell": true
 		}
 	]
