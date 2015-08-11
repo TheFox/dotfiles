@@ -7,6 +7,10 @@ if [ -f $brew_path/etc/bash_completion ]; then
 	. $brew_path/etc/bash_completion
 fi
 
+if [ -f $brew_path/etc/bash_completion.d/git ]; then
+	. $brew_path/etc/bash_completion.d/git
+fi
+
 if [ -f $brew_path/etc/bash_completion.d/git-completion.bash ]; then
 	. $brew_path/etc/bash_completion.d/git-completion.bash
 fi
