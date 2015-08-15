@@ -3,7 +3,7 @@ brew_path=$(brew --prefix 2> /dev/null || true)
 
 GIT_PS1_SHOWDIRTYSTATE="1"
 GIT_PS1_SHOWUPSTREAM="auto"
-PS1='[\[\033[0;31m\]\w\[\033[m\]\[\033[32m\]\[\033[m\]]\$ '
+PS1='\[\033[0;31m\]\w\[\033[m\]\[\033[32m\]\[\033[m\]\$ '
 
 if [ -f $brew_path/etc/bash_completion ]; then
 	. $brew_path/etc/bash_completion
