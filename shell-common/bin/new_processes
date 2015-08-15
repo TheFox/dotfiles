@@ -17,5 +17,5 @@ while true; do
 	mv /tmp/ps.txt /tmp/ps_old.txt
 	
 	# echo
-	sleep 0.1
+	sleep 1
 done
