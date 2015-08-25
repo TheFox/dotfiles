@@ -3,6 +3,7 @@
 # Create a .tar.xz.gpg file from a file or directory.
 
 SCRIPT_BASEDIR=$(dirname $0)
+SCRIPT_BASENAME=$(basename $0)
 
 inputfile=$1
 inputfile=$(basename $inputfile)
@@ -13,5 +14,7 @@ gpgfile=$xzfile.gpg
 
 set -e
 
+. $SCRIPT_BASEDIR/functions.sh
 $SCRIPT_BASEDIR/tarxz $inputfile
 $SCRIPT_BASEDIR/gpgf $xzfile
+notification "$SCRIPT_BASENAME $inputfile done"
