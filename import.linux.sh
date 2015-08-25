@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Overwrite files on the local machine.
 
-DATE=$(date +"%Y/%m/%d %H:%M:%S")
+DATE=$(date +"%Y-%m-%d %H:%M:%S")
 SCRIPT_BASEDIR=$(dirname $0)
 CP="cp"
 MV="mv"

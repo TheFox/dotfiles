@@ -3,6 +3,6 @@
 
 while true
 do
-	date +"%d.%m.%Y %H:%M:%S"
+	date +"%Y-%m-%d %H:%M:%S"
 	sleep 1
 done
