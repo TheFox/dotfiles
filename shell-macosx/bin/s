@@ -1,4 +1,17 @@
 #!/usr/bin/env bash
 # Created @ 03.04.2013 by Christian Mayer <http://fox21.at>
 
+timeout=$1
+
+if [ "$timeout" != "" ]; then
+	for wait in $(seq $timeout 1); do
+		printf "$wait "
+		sleep 1
+	done
+	echo '0'
+	echo
+fi
+
+date
+echo 'sleep'
 pmset sleepnow
