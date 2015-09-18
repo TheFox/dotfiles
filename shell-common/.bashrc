@@ -1,8 +1,9 @@
 
 brew_path=$(brew --prefix 2> /dev/null || true)
 
-GIT_PS1_SHOWDIRTYSTATE="1"
-GIT_PS1_SHOWUPSTREAM="auto"
+# GIT_PS1_SHOWDIRTYSTATE="0"
+# GIT_PS1_SHOWUNTRACKEDFILES="0"
+# GIT_PS1_SHOWUPSTREAM="0"
 PS1='\[\033[0;31m\]\w\[\033[m\]\[\033[32m\]\[\033[m\]\$ '
 
 if [ -f $brew_path/etc/bash_completion ]; then
