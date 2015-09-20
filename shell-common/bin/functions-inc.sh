@@ -1,7 +1,7 @@
 
 slack_notification(){
 	text=$1
-	bin=~/work/dev/slack/bin/msg
+	bin=~/work/dev/slack/bin/message
 	if [ -f $bin ]; then
 		$bin "$text"
 	fi
