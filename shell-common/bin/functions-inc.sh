@@ -1,14 +1,14 @@
 
 slack_notification(){
-	msg=$1
+	text=$1
 	bin=~/work/dev/slack/bin/msg
 	if [ -f $bin ]; then
-		$bin "$msg"
+		$bin "$text"
 	fi
 }
 
 notification(){
-	msg=$1
+	text=$1
 	
-	slack_notification "$msg"
+	slack_notification "$text"
 }
