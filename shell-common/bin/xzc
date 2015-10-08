@@ -3,6 +3,6 @@
 set -e
 inputfile=$1
 
-xz -v -z -k -f -9 -e $inputfile
+xz -z -k -f -9 -e -T 5 -v $inputfile
 
 exit $?
