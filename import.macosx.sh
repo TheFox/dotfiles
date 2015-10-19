@@ -100,5 +100,12 @@ if [[ -d $SUBLIME_SNIPPET_TWIG_DIR ]]; then
 	copytmp 'sublimetext/snippets/Twig/*.sublime-snippet' "$SUBLIME_SNIPPET_TWIG_DIR" || echo failed
 fi
 
+SUBLIME_SNIPPET_JAVASCRIPT_DIR="$HOME/Library/Application Support/Sublime Text 2/Packages/JavaScript"
+if [[ -d $SUBLIME_SNIPPET_JAVASCRIPT_DIR ]]; then
+	echo 'import sublimetext JavaScript snippet files'
+	
+	copytmp 'sublimetext/snippets/JavaScript/*.sublime-snippet' "$SUBLIME_SNIPPET_JAVASCRIPT_DIR" || echo failed
+fi
+
 date
 echo 'done'
