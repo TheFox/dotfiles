@@ -11,7 +11,7 @@ MKDIR="mkdir -p"
 
 set -e
 cd $SCRIPT_BASEDIR
-source functions.sh
+source ./functions.sh
 
 echo "WD:   $PWD"
 echo "HOME: $HOME"

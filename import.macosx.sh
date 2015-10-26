@@ -12,7 +12,7 @@ SUBLIME_SUBL="/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl"
 
 set -e
 cd $SCRIPT_BASEDIR
-source functions.sh
+source ./functions.sh
 
 echo "WD:   $PWD"
 echo "HOME: $HOME"
