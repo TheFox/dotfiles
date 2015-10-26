@@ -1,6 +1,7 @@
 ansible/.ansible.cfg
 curl/.curlrc
 git/.gitignore_global
+git/.tigrc
 lldb/.lldbinit
 shell-common/.bash_profile
 shell-common/.bashrc
