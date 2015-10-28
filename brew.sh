@@ -25,8 +25,8 @@ $BREW upgrade
 $BREW install coreutils
 $BREW install binutils
 
+$BREW install automake
 $BREW install bash
-
 $BREW install curl
 $BREW install ffmpeg
 $BREW install nmap
