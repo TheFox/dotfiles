@@ -38,6 +38,10 @@ $BREW install php55-mcrypt
 $BREW install php55-xdebug
 $BREW install composer
 
+$BREW install ruby
+gem install -v 1.10.5 bundler
+gem install -v 4.2.3 rails
+
 #$BREW install gnuplot --with-cairo --with-pdflib-lite --with-qt --with-x11
 
 $BREW cleanup
