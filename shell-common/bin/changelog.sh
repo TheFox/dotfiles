@@ -10,7 +10,7 @@ tag_range_end=${2:-}
 
 if [[ $tags_count -eq 0 ]]; then
 	echo
-	echo 'no tags found'
+	echo 'WARNING: no tags found'
 	exit 1
 elif [[ $tags_count -eq 1 ]]; then
 	tag_range_end=$(git tag)
@@ -67,10 +67,10 @@ if [[ $commits_count -gt 0 ]]; then
 		echo
 		echo "new file: $dst"
 	else
-		echo "file '$dst' already exist"
+		echo "FATAL ERROR: file '$dst' already exist"
 		exit 1
 	fi
 else
-	echo 'no commits found'
+	echo 'WARNING: no commits found'
 	exit 1
 fi
