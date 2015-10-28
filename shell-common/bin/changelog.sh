@@ -15,8 +15,8 @@ if [[ $tags_count -eq 0 ]]; then
 elif [[ $tags_count -eq 1 ]]; then
 	tag_range_end=$(git tag)
 elif [[ "$tag_range_begin" = "" ]] && [[ "$tag_range_end" = "" ]]; then
-	tag_range_begin=$(git tag | tail -2 | head -1)
-	tag_range_end=$(git tag | tail -1)
+	tag_range_begin=$(git tag | tr -d 'v' | tr '.' ' ' | awk '{ printf "%03d.%03d.%03d v%s.%s.%s\n", $1, $2, $3, $1, $2, $3 }' | sort -n | awk '{ print $2 }' | tail -2 | head -1)
+	tag_range_end=$(git tag | tr -d 'v' | tr '.' ' ' | awk '{ printf "%03d.%03d.%03d v%s.%s.%s\n", $1, $2, $3, $1, $2, $3 }' | sort -n | awk '{ print $2 }' | tail -1)
 fi
 
 date_range_begin=""
@@ -39,6 +39,7 @@ fi
 echo "tag begin: '$tag_range_begin' ($date_range_begin)"
 echo "tag end:   '$tag_range_end' ($date_range_end)"
 echo "tag range: '$tag_range_total'"
+# exit
 
 version=$(echo "$tag_range_end" | sed 's/v//')
 dst="CHANGELOG-$tag_range_end.txt"
