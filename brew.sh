@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
+
 # Install command-line tools using Homebrew.
+# https://gist.github.com/TheFox/07f9077063e20a098001
 
 BREW="brew"
 
