@@ -42,7 +42,11 @@ $BREW install ruby
 gem install -v 1.10.5 bundler
 gem install -v 4.2.3 rails
 
-#$BREW install gnuplot --with-cairo --with-pdflib-lite --with-qt --with-x11
+# $BREW install gnuplot --with-cairo --with-pdflib-lite --with-qt --with-x11
+
+# brew install dbus
+# cp /usr/local/Cellar/d-bus/1.8.8/org.freedesktop.dbus-session.plist ~/Library/LaunchAgents
+# launchctl load -w ~/Library/LaunchAgents/org.freedesktop.dbus-session.plist
 
 $BREW cleanup
 
