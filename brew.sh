@@ -38,6 +38,8 @@ $BREW install php55-mcrypt
 $BREW install php55-xdebug
 $BREW install composer
 
+#$BREW install gnuplot --with-cairo --with-pdflib-lite --with-qt --with-x11
+
 $BREW cleanup
 
 sudo ln -s /usr/local/bin/grealpath /usr/local/bin/realpath
