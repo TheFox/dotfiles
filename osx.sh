@@ -336,6 +336,12 @@ echo chrome
 defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
 defaults write com.google.Chrome.canary AppleEnableSwipeNavigateWithScrolls -bool false
 
+# Change update interval to 2 days.
+# https://support.google.com/a/answer/187207?hl=en&topic=1064255
+# https://support.google.com/installer/answer/147176
+defaults read com.google.Keystone.Agent checkInterval
+defaults write com.google.Keystone.Agent checkInterval 172800
+
 # Use the system-native print preview dialog
 #defaults write com.google.Chrome DisablePrintPreview -bool true
 #defaults write com.google.Chrome.canary DisablePrintPreview -bool true
