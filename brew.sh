@@ -2,7 +2,6 @@
 # Install command-line tools using Homebrew.
 
 BREW="brew"
-BREW_FLAGS="install"
 
 # Ask for the administrator password upfront.
 sudo -v
@@ -21,21 +20,21 @@ $BREW upgrade
 
 # Install GNU core utilities (those that come with OS X are outdated).
 # Don't forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
-$BREW $BREW_FLAGS coreutils
-$BREW $BREW_FLAGS binutils
+$BREW install coreutils
+$BREW install binutils
 
-$BREW $BREW_FLAGS bash
-$BREW $BREW_FLAGS wget
-$BREW $BREW_FLAGS curl
-$BREW $BREW_FLAGS nmap
-$BREW $BREW_FLAGS xz
-$BREW $BREW_FLAGS ffmpeg
+$BREW install bash
+$BREW install wget
+$BREW install curl
+$BREW install nmap
+$BREW install xz
+$BREW install ffmpeg
 
-$BREW $BREW_FLAGS php55 --with-thread-safety --without-snmp
-$BREW $BREW_FLAGS php55-pthreads --without-snmp
-$BREW $BREW_FLAGS php55-mcrypt
-$BREW $BREW_FLAGS php55-xdebug
-$BREW $BREW_FLAGS composer
+$BREW install php55 --with-thread-safety --without-snmp
+$BREW install php55-pthreads --without-snmp
+$BREW install php55-mcrypt
+$BREW install php55-xdebug
+$BREW install composer
 
 $BREW cleanup
 
