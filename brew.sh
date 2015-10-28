@@ -24,12 +24,13 @@ $BREW install coreutils
 $BREW install binutils
 
 $BREW install bash
-$BREW install wget
+
 $BREW install curl
-$BREW install nmap
-$BREW install xz
 $BREW install ffmpeg
+$BREW install nmap
 $BREW install pstree
+$BREW install wget
+$BREW install xz
 
 $BREW install php55 --with-thread-safety --without-snmp
 $BREW install php55-pthreads --without-snmp
