@@ -36,8 +36,8 @@ else
 	tag_range_total="$tag_range_begin..$tag_range_end"
 fi
 
-echo "tag begin: '$tag_range_begin' ($date_range_begin)"
-echo "tag end:   '$tag_range_end' ($date_range_end)"
+printf "tag begin: %8s    %s\n" "$tag_range_begin" "$date_range_begin"
+printf "tag end:   %8s    %s\n" "$tag_range_end" "$date_range_end"
 echo "tag range: '$tag_range_total'"
 # exit
 
