@@ -39,4 +39,5 @@ $BREW $BREW_FLAGS composer
 
 $BREW cleanup
 
+sudo ln -s /usr/local/bin/grealpath /usr/local/bin/realpath
 sudo ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
