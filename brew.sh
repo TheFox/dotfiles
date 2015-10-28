@@ -29,6 +29,7 @@ $BREW install curl
 $BREW install nmap
 $BREW install xz
 $BREW install ffmpeg
+$BREW install pstree
 
 $BREW install php55 --with-thread-safety --without-snmp
 $BREW install php55-pthreads --without-snmp
