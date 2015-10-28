@@ -48,25 +48,27 @@ echo "commits: $commits_count"
 echo
 
 if [[ $commits_count -gt 0 ]]; then
-	if [[ -f $dst ]]; then
-		rm $dst
+	if [[ ! -f $dst ]]; then
+		touch $dst
+		
+		date +"%Y-%m-%d %H:%M:%S %Z" >> $dst
+		echo >> $dst
+		
+		echo "Version $version" >> $dst
+		echo >> $dst
+		
+		if [[ "$tag_range_begin" != "" ]]; then
+			echo "Changes since $tag_range_begin" | tee -a $dst
+		fi
+		
+		git log --pretty='- %s' --grep='#RN' --reverse $tag_range_total | sed 's/ #RN//' | tee -a $dst
+		
+		echo
+		echo "new file: $dst"
+	else
+		echo "file '$dst' already exist"
+		exit 1
 	fi
-	touch $dst
-
-	date +"%Y-%m-%d %H:%M:%S %Z" >> $dst
-	echo >> $dst
-
-	echo "Version $version" >> $dst
-	echo >> $dst
-	
-	if [[ "$tag_range_begin" != "" ]]; then
-		echo "Changes since $tag_range_begin" | tee -a $dst
-	fi
-	
-	git log --pretty='- %s' --grep='#RN' --reverse $tag_range_total | sed 's/ #RN//' | tee -a $dst
-	
-	echo
-	echo "new file: $dst"
 else
 	echo 'no commits found'
 	exit 1
