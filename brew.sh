@@ -29,6 +29,7 @@ $BREW install automake
 $BREW install bash
 $BREW install curl
 $BREW install ffmpeg
+$BREW install mutt
 $BREW install ninja
 $BREW install nmap
 $BREW install pstree
