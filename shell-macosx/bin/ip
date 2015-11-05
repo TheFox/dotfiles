@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+echo $(curl -s http://tools.fox21.at/ip.php)
