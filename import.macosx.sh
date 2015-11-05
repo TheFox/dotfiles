@@ -27,8 +27,8 @@ done
 if [[ ! -d $HOME/bin ]]; then
 	$MKDIR $HOME/bin
 fi
-$RSYNC shell-common/bin/* $HOME/bin/
-$RSYNC shell-macosx/bin/* $HOME/bin/
+$RSYNC shell/common/bin/* $HOME/bin/
+$RSYNC shell/osx/bin/* $HOME/bin/
 
 if [[ -f "$SUBLIME_SUBL" ]] && [[ ! -f $HOME/bin/subl ]]; then
 	echo 'install subl'
