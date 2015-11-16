@@ -1,8 +1,6 @@
 
 brew_path=$(brew --prefix 2> /dev/null || true)
 
-PS1='\[\033[0;31m\]\w\[\033[m\]\[\033[32m\]\[\033[m\]\$ '
-
 if [ -f $brew_path/etc/bash_completion ]; then
 	. $brew_path/etc/bash_completion
 fi
@@ -20,6 +18,7 @@ if [ -f $brew_path/etc/bash_completion.d/youtube-dl.bash-completion ]; then
 fi
 
 PATH="${PATH}:$HOME/bin:$HOME/Dropbox/bin"
+PS1='\W\$ '
 EDITOR="/usr/bin/vi"
 HISTSIZE=5000
 HISTFILESIZE=10000
