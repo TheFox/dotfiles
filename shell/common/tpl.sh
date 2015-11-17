@@ -6,4 +6,4 @@ SCRIPT_BASEDIR=$(dirname $0)
 SCRIPT_BASENAME=$(basename $0)
 
 
-cd $SCRIPT_BASEDIR
+cd "${SCRIPT_BASEDIR}"
