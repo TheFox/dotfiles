@@ -18,7 +18,7 @@ if [ -f $brew_path/etc/bash_completion.d/youtube-dl.bash-completion ]; then
 fi
 
 PATH="${PATH}:$HOME/bin:$HOME/Dropbox/bin"
-PS1='\W\$ '
+PS1='\033[31m\W\033[0m\$ '
 EDITOR="/usr/bin/vi"
 HISTSIZE=5000
 HISTFILESIZE=10000
