@@ -33,6 +33,7 @@ $BREW install mutt
 $BREW install ninja
 $BREW install nmap
 $BREW install pstree
+$BREW install rename
 $BREW install tree
 $BREW install w3m
 $BREW install wget
