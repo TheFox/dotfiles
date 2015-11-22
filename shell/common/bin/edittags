@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# Usage:
+#	edittags '*.mp3'
+
+
+set -e
+
+files="$*"
+uxterm -geometry 130x40-2900+400 -e id3dit $files
