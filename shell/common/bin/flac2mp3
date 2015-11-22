@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+# Convert .flac files to .mp3.
+
+
+set -e
+
+for file in $*; do
+	basename=$(basename $file)
+	name=$(basename -s .flac $file)
+	wav="$name.wav"
+	mp3="$name.mp3"
+	
+	echo "file: '$file' '$name'"
+	[ ! -f "$wav" ] && flac -d "$file"
+	[ ! -f "$mp3" ] && lame -V0 "$wav" "$mp3"
+	
+	rm "$wav"
+	# id3info "$mp3"
+done
