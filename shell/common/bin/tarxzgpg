@@ -17,4 +17,3 @@ set -e
 . $SCRIPT_BASEDIR/functions-inc.sh
 $SCRIPT_BASEDIR/tarxz $inputfile
 $SCRIPT_BASEDIR/gpgf $xzfile
-notification "$SCRIPT_BASENAME $inputfile done"
