@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Created @ 2009-05-30 by Christian Mayer <http://fox21.at>
+
+perl -e 'map print("$_\n"), sort split(/:/, $ENV{PATH})'
