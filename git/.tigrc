@@ -3,7 +3,7 @@ set show-changes = yes
 set commit-order = topo
 set refresh-mode = auto
 set main-view = \
-	date:default \
+	date:local \
 	author:abbreviated \
 	id:yes,color \
 	commit-title:graph=yes,refs=yes
