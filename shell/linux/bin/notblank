@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Created @ 2014-03-19 by Christian Mayer <http://fox21.at>
+
+# http://raspberrypi.stackexchange.com/questions/752/how-do-i-prevent-the-screen-from-going-blank
+
+sudo sh -c "TERM=linux setterm -blank 0 >/dev/tty0"
