@@ -1,0 +1,22 @@
+#!/usr/bin/env ruby
+
+# Rename files to title case.
+# Example: 'artist - xyz.mp3' to 'Artist - Xyz.mp3'
+
+
+ARGV.each do |file_path_old|
+	dir_name_old = File.dirname(file_path_old)
+	file_ext = File.extname(file_path_old)
+	file_name_old = File.basename(file_path_old, file_ext)
+	file_name_new = file_name_old.gsub(/\w+/){ |word| word.capitalize }
+	
+	file_name_old += file_ext
+	file_name_new += file_ext
+	
+	if file_name_old != file_name_new
+		Dir.chdir(dir_name_old) do
+			puts "'#{file_name_old}' -> '#{file_name_new}'"
+			File.rename(file_name_old, file_name_new)
+		end
+	end
+end
