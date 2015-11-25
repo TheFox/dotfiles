@@ -5,6 +5,13 @@
 
 
 set -e
+# set -x
 
-files="$*"
-uxterm -geometry 130x40-2900+400 -e id3dit $files
+dir="$1"
+if [ "$dir" != "" ]; then
+	cd "$dir"
+	# pwd
+fi
+
+ls -la *.mp3 > /dev/null
+uxterm -geometry 130x40-2900+400 -e id3dit *.mp3 &
