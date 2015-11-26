@@ -8,7 +8,7 @@ ARGV.each do |file_path_old|
 	dir_name_old = File.dirname(file_path_old)
 	file_ext = File.extname(file_path_old)
 	file_name_old = File.basename(file_path_old, file_ext)
-	file_name_new = file_name_old.gsub(/\w+/){ |word| word.capitalize }
+	file_name_new = file_name_old.split(/ /).map{ |word| word.capitalize }.join(' ')
 	
 	file_name_old += file_ext
 	file_name_new += file_ext
