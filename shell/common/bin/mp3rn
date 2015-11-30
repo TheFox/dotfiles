@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+#set -x
+
+rename -e 's|^\d\d\. ||' *.mp3
+rename -e 's|^\d\d\ - ||' *.mp3
+rename -e 's|^\d\d\-||' *.mp3
+rename -e 's|^\d\d\ ||' *.mp3
