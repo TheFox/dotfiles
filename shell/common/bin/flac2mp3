@@ -5,9 +5,9 @@
 
 set -e
 
-for file in $*; do
-	basename=$(basename $file)
-	name=$(basename -s .flac $file)
+for file in *.flac; do
+	basename=$(basename "$file")
+	name=$(basename -s .flac "$file")
 	wav="$name.wav"
 	mp3="$name.mp3"
 	
