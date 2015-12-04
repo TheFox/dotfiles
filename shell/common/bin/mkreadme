@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+set -x
+pandoc -f markdown_github -t html -c http://fox21.at/style.css -o README.html README.md
