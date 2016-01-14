@@ -45,7 +45,8 @@ case "$TERM" in
 	xterm*|rxvt*)
 		# Use ${PWD} in PROMPT_COMMAND to open a new tab in Mac OS X
 		# Terminal in the same working directory.
-		PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}#$$\007"'
+		hostn=${HOSTNAME/.local/}
+		PROMPT_COMMAND='echo -ne "\033]0;${USER}@${hostn}#$$\007"'
 		;;
 	*)
 		;;
