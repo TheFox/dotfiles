@@ -25,6 +25,8 @@ HISTFILESIZE=10000
 
 export PS1 PATH EDITOR
 
+shopt -s histappend
+
 
 if [ "$(uname -s)" = "Darwin" ]; then
 	alias l="ls -lG"
