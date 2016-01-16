@@ -25,6 +25,7 @@ $BREW upgrade
 $BREW install coreutils
 $BREW install binutils
 
+$BREW install ack
 $BREW install automake
 $BREW install bash
 $BREW install curl
