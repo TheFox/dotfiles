@@ -29,14 +29,14 @@ $BREW install ack
 $BREW install automake
 $BREW install bash
 $BREW install curl
-$BREW install ffmpeg
+#$BREW install ffmpeg
 $BREW install mutt
-$BREW install ninja
-$BREW install nmap
+# $BREW install ninja
+# $BREW install nmap
 $BREW install pstree
 $BREW install rename
 $BREW install tree
-$BREW install w3m
+# $BREW install w3m
 $BREW install wget
 $BREW install xz
 
