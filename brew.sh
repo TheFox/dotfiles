@@ -34,7 +34,8 @@ $BREW install curl
 $BREW install htop
 $BREW install mutt
 # $BREW install ninja
-# $BREW install nmap
+$BREW install nmap
+$BREW install npm
 $BREW install pstree
 $BREW install rename
 $BREW install tig
