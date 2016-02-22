@@ -28,6 +28,7 @@ $BREW install binutils
 $BREW install ack
 $BREW install automake
 $BREW install bash
+$BREW install cmake
 $BREW install curl
 #$BREW install ffmpeg
 $BREW install htop
