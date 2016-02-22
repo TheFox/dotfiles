@@ -69,3 +69,8 @@ $BREW cleanup
 
 sudo ln -s /usr/local/bin/grealpath /usr/local/bin/realpath
 sudo ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
+
+# NodeJS
+
+npm install -g json # json command-line tool
+
