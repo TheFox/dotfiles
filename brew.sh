@@ -44,9 +44,9 @@ $BREW install tree
 $BREW install wget
 $BREW install xz
 
-$BREW install php55 --with-thread-safety --without-snmp
-$BREW install php55-mcrypt
-$BREW install php55-xdebug
+$BREW install php56 --with-thread-safety --without-snmp
+#$BREW install php56-mcrypt
+#$BREW install php56-xdebug
 $BREW install composer
 
 $BREW install ruby
