@@ -41,6 +41,7 @@ $BREW install rename
 $BREW install tig
 $BREW install tree
 # $BREW install w3m
+#$BREW install watch
 $BREW install wget
 $BREW install xz
 
