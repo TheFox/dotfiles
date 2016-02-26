@@ -156,7 +156,8 @@ defaults read com.apple.dock mru-spaces >> $LOG
 defaults write com.apple.dock mru-spaces -bool false
 
 # Remove the auto-hiding Dock delay
-#defaults write com.apple.dock autohide-delay -float 0
+defaults read com.apple.dock autohide-delay >> $LOG
+defaults write com.apple.dock autohide-delay -float 0
 
 # Remove the animation when hiding/showing the Dock
 defaults read com.apple.dock autohide-time-modifier >> $LOG
