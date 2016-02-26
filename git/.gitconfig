@@ -1,0 +1,8 @@
+
+[user]
+	name = Christian Mayer
+	email = christian@fox21.at
+[core]
+	excludesfile = /Users/thefox/.gitignore_global
+[push]
+	default = simple

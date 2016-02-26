@@ -28,21 +28,26 @@ $BREW install binutils
 $BREW install ack
 $BREW install automake
 $BREW install bash
+$BREW install cmake
 $BREW install curl
 #$BREW install ffmpeg
+$BREW install htop
 $BREW install mutt
 # $BREW install ninja
-# $BREW install nmap
+$BREW install nmap
+$BREW install npm
 $BREW install pstree
 $BREW install rename
+$BREW install tig
 $BREW install tree
 # $BREW install w3m
+#$BREW install watch
 $BREW install wget
 $BREW install xz
 
-$BREW install php55 --with-thread-safety --without-snmp
-$BREW install php55-mcrypt
-$BREW install php55-xdebug
+$BREW install php56 --with-thread-safety --without-snmp
+#$BREW install php56-mcrypt
+#$BREW install php56-xdebug
 $BREW install composer
 
 $BREW install ruby
@@ -65,3 +70,8 @@ $BREW cleanup
 
 sudo ln -s /usr/local/bin/grealpath /usr/local/bin/realpath
 sudo ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
+
+# NodeJS
+
+npm install -g json # json command-line tool
+
