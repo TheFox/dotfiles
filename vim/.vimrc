@@ -16,5 +16,6 @@ set ruler
 set showmode
 " set title
 set showcmd
+set nolist
 
 filetype plugin indent on

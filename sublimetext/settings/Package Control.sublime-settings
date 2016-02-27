@@ -1,0 +1,29 @@
+{
+	"debug": true,
+	"auto_upgrade": false,
+	"auto_upgrade_frequency": 24,
+	"auto_upgrade_last_run": null,
+	"submit_usage": false,
+	"remove_orphaned": true,
+	
+	"install_missing": true,
+	"installed_packages":
+	[
+		"Package Control",
+		
+		"All Autocomplete",
+		"Awk",
+		"CMake",
+		"Doctrine Snippets",
+		"GAS-x86 (or x64) highlighting scheme",
+		"Git",
+		"Git Config",
+		"GitGutter",
+		"Gnuplot",
+		"IcedCoffeeScript",
+		"Liquid",
+		"PHPUnit Snippets",
+		"SFTP",
+		"Twig"
+	]
+}
