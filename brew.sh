@@ -31,6 +31,7 @@ $BREW install bash
 $BREW install cmake
 $BREW install curl
 #$BREW install ffmpeg
+$BREW install gpg2
 $BREW install htop
 $BREW install mutt
 # $BREW install ninja
@@ -70,6 +71,7 @@ $BREW cleanup
 
 sudo ln -s /usr/local/bin/grealpath /usr/local/bin/realpath
 sudo ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
+sudo ln -s /usr/local/bin/gpg2 /usr/local/bin/gpg
 
 # NodeJS
 
