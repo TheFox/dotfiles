@@ -26,6 +26,7 @@ $BREW install coreutils
 $BREW install binutils
 
 $BREW install ack
+#$BREW install ansible
 $BREW install automake
 $BREW install bash
 $BREW install cmake
