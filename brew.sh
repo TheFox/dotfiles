@@ -30,6 +30,7 @@ brew install bash
 brew install cmake
 brew install curl
 #brew install ffmpeg
+brew install gnu-sed
 brew install gpg2
 brew install htop
 brew install mutt
