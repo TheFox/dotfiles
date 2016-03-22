@@ -3,8 +3,6 @@
 # Install command-line tools using Homebrew.
 # https://gist.github.com/TheFox/07f9077063e20a098001
 
-BREW="brew"
-
 # Ask for the administrator password upfront.
 sudo -v
 
@@ -12,63 +10,63 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Exit when brew is not available.
-which $BREW || exit 1
+which brew || exit 1
 
 # Make sure we're using the latest Homebrew.
-$BREW update
+brew update
 
 # Upgrade any already-installed formulae.
-$BREW upgrade
+brew upgrade
 
 # Install GNU core utilities (those that come with OS X are outdated).
 # Don't forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
-$BREW install coreutils
-$BREW install binutils
+brew install coreutils
+brew install binutils
 
-$BREW install ack
-#$BREW install ansible
-$BREW install automake
-$BREW install bash
-$BREW install cmake
-$BREW install curl
-#$BREW install ffmpeg
-$BREW install gpg2
-$BREW install htop
-$BREW install mutt
-# $BREW install ninja
-$BREW install nmap
-$BREW install npm
-$BREW install pstree
-$BREW install rename
-$BREW install tig
-$BREW install tree
-# $BREW install w3m
-#$BREW install watch
-$BREW install wget
-$BREW install xz
+brew install ack
+#brew install ansible
+brew install automake
+brew install bash
+brew install cmake
+brew install curl
+#brew install ffmpeg
+brew install gpg2
+brew install htop
+brew install mutt
+# brew install ninja
+brew install nmap
+brew install npm
+brew install pstree
+brew install rename
+brew install tig
+brew install tree
+# brew install w3m
+#brew install watch
+brew install wget
+brew install xz
 
-$BREW install php56 --with-thread-safety --without-snmp
-#$BREW install php56-mcrypt
-#$BREW install php56-xdebug
-$BREW install composer
+brew install php56 --with-thread-safety --without-snmp
+#brew install php56-mcrypt
+#brew install php56-xdebug
+brew install composer
 
-$BREW install ruby
+brew install ruby
 gem install -v 1.10.5 bundler
 gem install -v 4.2.3 rails
 
 which -a git
 git --version
-$BREW install git
+brew install git
 which -a git
 git --version
 
-# $BREW install gnuplot --with-cairo --with-pdflib-lite --with-qt --with-x11
+# brew install gnuplot --with-cairo --with-pdflib-lite --with-qt --with-x11
 
 # brew install dbus
 # cp /usr/local/Cellar/d-bus/1.8.8/org.freedesktop.dbus-session.plist ~/Library/LaunchAgents
 # launchctl load -w ~/Library/LaunchAgents/org.freedesktop.dbus-session.plist
 
-$BREW cleanup
+brew cleanup
 
 sudo ln -s /usr/local/bin/grealpath /usr/local/bin/realpath
 sudo ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
