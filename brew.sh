@@ -67,6 +67,8 @@ git --version
 # cp /usr/local/Cellar/d-bus/1.8.8/org.freedesktop.dbus-session.plist ~/Library/LaunchAgents
 # launchctl load -w ~/Library/LaunchAgents/org.freedesktop.dbus-session.plist
 
+brew install Caskroom/cask/firefox
+
 brew cleanup
 
 sudo ln -s /usr/local/bin/grealpath /usr/local/bin/realpath
