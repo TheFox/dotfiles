@@ -4,7 +4,7 @@
 set -e
 DATE=$(date +"%Y%m%d_%H%M%S")
 EXT="png"
-BASE_PATH="${HOME}/Downloads"
+BASE_PATH="${HOME}/tmp"
 
 format="$1"
 file_name=$(echo "${format}" | sed "s/%D/${DATE}/g;")
