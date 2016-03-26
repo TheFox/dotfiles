@@ -19,4 +19,3 @@ echo "file path: '$file_path'"
 #for n in 1 2 3; do printf "$n "; sleep 1; done; echo
 
 screencapture -i -o -a -tpng -x $file_path
-open $file_path
