@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Create a new tag and commit files.
+
+
 version="$1"
 shift
 files="$*"
