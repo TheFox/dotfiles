@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+if [ -f "${HOME}/.gpg-agent-info" ]; then
+	
+	. "${HOME}/.gpg-agent-info"
+	
+	if [[ $(ps -p ${SSH_AGENT_PID} | wc -l) -le 1 ]]; then
+		echo "no pid: ${SSH_AGENT_PID}"
+		eval $(gpg-agent --daemon --enable-ssh-support --write-env-file "${HOME}/.gpg-agent-info")
+	else
+		echo "still running: ${SSH_AGENT_PID}"
+	fi
+else
+	echo 'start gpg-agent'
+	eval $(gpg-agent --daemon --enable-ssh-support --write-env-file "${HOME}/.gpg-agent-info")
+fi
