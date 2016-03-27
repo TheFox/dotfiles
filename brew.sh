@@ -69,6 +69,7 @@ git --version
 # launchctl load -w ~/Library/LaunchAgents/org.freedesktop.dbus-session.plist
 
 brew tap caskroom/cask
+#brew install Caskroom/cask/adium
 brew install Caskroom/cask/firefox
 brew install Caskroom/cask/forklift
 #brew install Caskroom/cask/gimp
