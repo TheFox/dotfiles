@@ -77,6 +77,7 @@ brew install Caskroom/cask/kaleidoscope
 brew install Caskroom/cask/keepassx
 #brew install Caskroom/cask/limechat
 brew install Caskroom/cask/sequel-pro
+#brew install Caskroom/cask/skype
 brew install Caskroom/cask/thunderbird
 
 
