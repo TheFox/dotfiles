@@ -7,8 +7,8 @@ version="$1"
 shift
 files="$*"
 
-if [ "$version" = "" ] || [ "$files" = "" ]; then
-	echo "Usage: $(basename $0) VERSION FILES"
+if [ "$version" = "" ]; then
+	echo "Usage: $(basename $0) VERSION [FILES]"
 	exit 3
 fi
 if [ "${version:0:1}" = "v" ]; then
@@ -21,11 +21,11 @@ fi
 echo "version: '$version'"
 echo "files:   '$files'"
 
-git add $files
-git status
+if [[ "$files" != "" ]]; then
+	git add $files
+	git commit -m "Version $version."
+fi
 
-git commit -m "Version $version."
 git tag -a -m "Version $version" "v$version"
 
-git tag
-git status
+git log -n 1 --decorate=short
