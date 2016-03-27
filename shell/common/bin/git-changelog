@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-# Search for '#RN' (Release Note) between tags and write
-# the output to CHANGELOG-x.txt.
+# Search for '#RN' (Release Note) in commit messages
+# between tags and write the output to CHANGELOG-x.txt.
 
 
 set -e
