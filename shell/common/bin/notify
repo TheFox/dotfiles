@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+
+SCRIPT_BASEDIR=$(dirname $0)
+SCRIPT_BASENAME=$(basename $0)
+
+function notify(){
+	to="$1"
+	subject="$2"
+	body="$3"
+	
+	notify_email "$to" "$subject" "$body"
+}
+
+function notify_email(){
+	to="$1"
+	subject="$2"
+	body="$3"
+	
+	echo "'$to' '$subject' '$body'"
+	
+	bin_file=~/work/dev/mail-notify/bin/send
+	if [[ -f ${bin_file} ]]; then
+		${bin_file} "$to" "$subject" "$body" > /dev/null &
+	fi
+}
+
+to="$1"
+subject="$2"
+body="$3"
+
+if [[ "$to" = "" ]]; then
+	echo "Usage: ${SCRIPT_BASENAME} TO SUBJECT BODY"
+	exit 1
+fi
+
+notify "$to" "$subject" "$body"

@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# Set the author of the latest commit.
+
+
+name="$1"
+email="$2"
+
+git commit --amend --author "${name} <${email}>" -C HEAD

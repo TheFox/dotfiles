@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+# Search for '#RN' (Release Note) in commit messages
+# between tags and write the output to CHANGELOG-x.txt.
+
+
 set -e
 
 tags_count=$(git tag 2> /dev/null | wc -l | awk '{ print $1}')

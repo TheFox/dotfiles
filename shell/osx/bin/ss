@@ -4,7 +4,7 @@
 set -e
 DATE=$(date +"%Y%m%d_%H%M%S")
 EXT="png"
-BASE_PATH="${HOME}/Downloads"
+BASE_PATH="${HOME}/tmp"
 
 format="$1"
 file_name=$(echo "${format}" | sed "s/%D/${DATE}/g;")
@@ -19,4 +19,3 @@ echo "file path: '$file_path'"
 #for n in 1 2 3; do printf "$n "; sleep 1; done; echo
 
 screencapture -i -o -a -tpng -x $file_path
-open $file_path
