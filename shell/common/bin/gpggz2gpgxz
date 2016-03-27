@@ -13,7 +13,7 @@ for file in $*; do
 	gpg -d -o $gzfile $file &> /dev/null
 	gzip -d $gzfile 
 	xz -z -f -9 -e $tarfile
-	gpg -s -e -r F96ED997C9382D47 $tarfile.xz
+	gpg -s -e $tarfile.xz
 	rm $tarfile.xz
 done
 
