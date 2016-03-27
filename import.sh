@@ -34,6 +34,7 @@ if [[ ! -d $HOME/bin ]]; then
 fi
 
 $RSYNC shell/common/bin/* $HOME/bin/
+$RSYNC gpg/ $HOME/.gnupg/
 
 echo "script_name: '${script_name}'"
 ./import_${script_name}.sh
