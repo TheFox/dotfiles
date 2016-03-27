@@ -70,6 +70,7 @@ git --version
 
 brew tap caskroom/cask
 #brew install Caskroom/cask/adium
+brew install Caskroom/cask/dropbox
 brew install Caskroom/cask/firefox
 brew install Caskroom/cask/forklift
 #brew install Caskroom/cask/gimp
