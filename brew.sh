@@ -74,6 +74,7 @@ brew install Caskroom/cask/forklift
 #brew install Caskroom/cask/gimp
 brew install Caskroom/cask/google-chrome
 brew install Caskroom/cask/kaleidoscope
+brew install Caskroom/cask/keepassx
 #brew install Caskroom/cask/limechat
 
 
