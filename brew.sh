@@ -68,6 +68,7 @@ git --version
 # cp /usr/local/Cellar/d-bus/1.8.8/org.freedesktop.dbus-session.plist ~/Library/LaunchAgents
 # launchctl load -w ~/Library/LaunchAgents/org.freedesktop.dbus-session.plist
 
+brew tap caskroom/cask
 brew install Caskroom/cask/firefox
 brew install Caskroom/cask/forklift
 #brew install Caskroom/cask/gimp
