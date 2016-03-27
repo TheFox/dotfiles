@@ -17,16 +17,6 @@ echo "WD:   $PWD"
 echo "HOME: $HOME"
 
 
-echo 'import default files'
-for file in $(cat .files); do
-	$RSYNC $file $HOME/ || echo failed
-	true
-done
-
-if [[ ! -d $HOME/bin ]]; then
-	$MKDIR $HOME/bin
-fi
-$RSYNC shell/common/bin/* $HOME/bin/
 #$RSYNC shell/linux/bin/* $HOME/bin/
 
 date
