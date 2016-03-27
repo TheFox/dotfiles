@@ -76,6 +76,7 @@ brew install Caskroom/cask/forklift
 brew install Caskroom/cask/google-chrome
 brew install Caskroom/cask/kaleidoscope
 brew install Caskroom/cask/keepassx
+brew install Caskroom/cask/libreoffice
 #brew install Caskroom/cask/limechat
 #brew install Caskroom/cask/mysqlworkbench
 brew install Caskroom/cask/sequel-pro
