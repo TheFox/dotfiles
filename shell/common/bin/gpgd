@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+set -e
+
+for file in $*; do
+	basename=${file:0:${#file}-4}
+	echo "${file} (${#file}) -> ${basename}"
+	gpg -d -o "${basename}" "${file}"
+done
+
+exit $?
