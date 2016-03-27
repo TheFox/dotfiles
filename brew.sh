@@ -80,6 +80,7 @@ brew install Caskroom/cask/keepassx
 brew install Caskroom/cask/sequel-pro
 #brew install Caskroom/cask/skype
 brew install Caskroom/cask/thunderbird
+#brew install Caskroom/cask/vlc
 
 
 brew cleanup
