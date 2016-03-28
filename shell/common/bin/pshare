@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-base_dir=~/work/dev/pictures
+base_dir=~/work/dev/pshare
 if [[ -d $base_dir ]]; then
 	$base_dir/bin/share $*
 fi
