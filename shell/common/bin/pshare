@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+if [[ -d ~/work/dev/pictures ]]; then
+	~/work/dev/pictures/bin/share $*
+fi
