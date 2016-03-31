@@ -16,11 +16,13 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 echo root
 sudo chsh -s /bin/bash
 
+echo 'create ~/tmp'
+mkdir -p ~/tmp
 
 echo screenshot
 # Screenshot: Change the location
 defaults read com.apple.screencapture location >> $LOG
-defaults write com.apple.screencapture location ~/Downloads
+defaults write com.apple.screencapture location ~/tmp
 
 # Screenshot: Change the File Format
 defaults read com.apple.screencapture type >> $LOG
