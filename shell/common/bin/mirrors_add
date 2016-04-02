@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+if [[ -d ~/work/dev/mirrors ]]; then
+	~/work/dev/mirrors/bin/url_add $*
+	exit $?
+fi
+
+exit 1
