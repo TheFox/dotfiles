@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+if [[ ! -d ~/work/dev/inscouts-projects ]]; then
+	echo 'base dir not available'
+	exit 1
+fi
+
+ssh -F ~/work/dev/inscouts-projects/ssh_config $*
