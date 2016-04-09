@@ -7,5 +7,5 @@ if [[ ! -d ${base_dir} ]]; then
 	exit 1
 fi
 
-${base_dir}/bin/share $*
+${base_dir}/bin/pshare $*
 echo $?
