@@ -1,8 +1,11 @@
 #!/usr/bin/env bash
 
-if [[ ! -d ~/work/dev/inscouts-projects ]]; then
+base_dir=~/work/dev/inscouts-projects
+
+if [[ ! -d ${base_dir} ]]; then
 	echo 'base dir not available'
 	exit 1
 fi
 
-ssh -F ~/work/dev/inscouts-projects/ssh_config $*
+ssh -F ${base_dir}/ssh_config $*
+exit $?

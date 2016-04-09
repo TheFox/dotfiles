@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
 
-if [[ ! -d ~/work/dev/mirrors ]]; then
+base_dir=~/work/dev/mirrors
+
+if [[ ! -d ${base_dir} ]]; then
 	echo 'base dir not available'
 	exit 1
 fi
 
-~/work/dev/mirrors/bin/url_add $*
+${base_dir}/bin/url_add $*
 exit $?
