@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+#sudo -R _mysql:_mysql /usr/local/var/mysql
+#sudo rm /usr/local/var/mysql/*.err /usr/local/var/mysql/*.pid
+
+sudo mysql.server start
