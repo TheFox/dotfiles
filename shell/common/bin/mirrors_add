@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 
-if [[ -d ~/work/dev/mirrors ]]; then
-	~/work/dev/mirrors/bin/url_add $*
-	exit $?
+if [[ ! -d ~/work/dev/mirrors ]]; then
+	echo 'base dir not available'
+	exit 1
 fi
 
-exit 1
+~/work/dev/mirrors/bin/url_add $*
+exit $?
