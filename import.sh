@@ -22,6 +22,18 @@ rm -f ~/bin/changelog.sh
 rm -f ~/bin/functions.sh
 rm -f ~/bin/functions-inc.sh
 rm -f ~/bin/release
+rm -f ~/bin/gpg-agent-start
+rm -f ~/bin/divx-uninstall.sh
+rm -f ~/bin/fish-uninstall.sh
+rm -f ~/bin/flip4mac-uninstall.sh
+rm -f ~/bin/ghostscript-uninstall.sh
+rm -f ~/bin/silverlight-uninstall.sh
+rm -f ~/bin/tex-uninstall.sh
+rm -f ~/bin/traktor-uninstall.sh
+rm -f ~/bin/route-192.sh
+rm -f ~/bin/route-iphone.sh
+rm -f ~/bin/route-normal.sh
+
 
 echo 'import default files'
 for file in $(cat .files); do
