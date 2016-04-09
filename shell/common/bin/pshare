@@ -8,4 +8,4 @@ if [[ ! -d ${base_dir} ]]; then
 fi
 
 ${base_dir}/bin/pshare $*
-echo $?
+exit $?
