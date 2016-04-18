@@ -5,45 +5,6 @@
 			"name": "DotFiles",
 			"folder_exclude_patterns": [ ],
 			"file_exclude_patterns": [ ]
-		},
-		/*{
-			"path": "~/Library/Application Support/Sublime Text 2/Packages"
-		},*/
-		{
-			"path": "~/Library/Application Support/Sublime Text 2/Packages/C++"
-		},
-		{
-			"path": "~/Library/Application Support/Sublime Text 2/Packages/JavaScript"
-		},
-		{
-			"path": "~/Library/Application Support/Sublime Text 2/Packages/Objective-C"
-		},
-		{
-			"path": "~/Library/Application Support/Sublime Text 2/Packages/PHP"
-		},
-		{
-			"path": "~/Library/Application Support/Sublime Text 2/Packages/Perl"
-		},
-		{
-			"path": "~/Library/Application Support/Sublime Text 2/Packages/PHPUnit Snippets"
-		},
-		{
-			"path": "~/Library/Application Support/Sublime Text 2/Packages/Ruby"
-		},
-		{
-			"path": "~/Library/Application Support/Sublime Text 2/Packages/Markdown"
-		},
-		{
-			"path": "~/Library/Application Support/Sublime Text 2/Packages/HTML"
-		},
-		{
-			"path": "~/Library/Application Support/Sublime Text 2/Packages/YAML"
-		},
-		{
-			"path": "~/Library/Application Support/Sublime Text 2/Packages/User"
-		},
-		{
-			"path": "~/Library/Application Support/Sublime Text 2/Packages/Twig"
 		}
 	],
 	"build_systems":[
