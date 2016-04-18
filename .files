@@ -6,6 +6,6 @@ git/.tigrc
 lldb/.lldbinit
 shell/common/.bash_profile
 shell/common/.bashrc
-shell/common/.dotfiles-installed
+shell/common/.dotfiles_installed
 vim/.vimrc
 wget/.wgetrc

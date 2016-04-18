@@ -33,6 +33,7 @@ rm -f ~/bin/traktor-uninstall.sh
 rm -f ~/bin/route-192.sh
 rm -f ~/bin/route-iphone.sh
 rm -f ~/bin/route-normal.sh
+rm -f ~/.dotfiles-installed
 
 
 echo 'import default files'
