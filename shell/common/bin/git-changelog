@@ -10,7 +10,7 @@ tags_count=$(git tag 2> /dev/null | wc -l | awk '{ print $1}')
 echo "tags: $tags_count"
 
 tag_range_begin=${1:-}
-tag_range_end=${2:-}
+tag_range_end=${2:-HEAD}
 
 if [[ $tags_count -eq 0 ]]; then
 	echo
