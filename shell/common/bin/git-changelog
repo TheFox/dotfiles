@@ -68,7 +68,7 @@ if [[ $commits_count -gt 0 ]]; then
 			echo "Changes since $tag_range_begin" | tee -a $dst
 		fi
 		
-		git log --pretty='- %s' --grep='#RN' -i --reverse $tag_range_total | sed 's/ #[Rr][Nn]//' | tee -a $dst
+		git log --pretty='- %s' --grep='#RN' -i --reverse $tag_range_total | sed 's/ #[Rr][Nn]//' | uniq | tee -a $dst
 		
 		echo
 		echo "new file: $dst"
