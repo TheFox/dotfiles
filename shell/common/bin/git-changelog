@@ -10,7 +10,7 @@ tags_count=$(git tag 2> /dev/null | wc -l | awk '{ print $1}')
 echo "tags: $tags_count"
 
 tag_range_begin=${1:-}
-tag_range_end=${2:-HEAD}
+tag_range_end=${2:-}
 
 if [[ $tags_count -eq 0 ]]; then
 	echo
@@ -21,6 +21,8 @@ elif [[ $tags_count -eq 1 ]]; then
 elif [[ "$tag_range_begin" = "" ]] && [[ "$tag_range_end" = "" ]]; then
 	tag_range_begin=$(git tag | tr -d 'v' | tr '.' ' ' | awk '{ printf "%03d.%03d.%03d v%s.%s.%s\n", $1, $2, $3, $1, $2, $3 }' | sort -n | awk '{ print $2 }' | tail -2 | head -1)
 	tag_range_end=$(git tag | tr -d 'v' | tr '.' ' ' | awk '{ printf "%03d.%03d.%03d v%s.%s.%s\n", $1, $2, $3, $1, $2, $3 }' | sort -n | awk '{ print $2 }' | tail -1)
+elif [[ "$tag_range_begin" != "" ]] && [[ "$tag_range_end" = "" ]]; then
+	tag_range_end="HEAD"
 fi
 
 date_range_begin=""
