@@ -48,6 +48,9 @@ brew install tree
 brew install wget
 brew install xz
 
+#brew install gettext
+#brew link --force gettext
+
 brew install php56 --with-thread-safety --without-snmp
 #brew install php56-mcrypt
 #brew install php56-xdebug
