@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+if [[ -f ~/work/dev/dotfiles/.editorconfig.tpl ]]; then
+	cp ~/work/dev/dotfiles/.editorconfig.tpl .editorconfig
+fi
