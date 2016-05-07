@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Commit files and create a new tag.
+# Create a signed commit and a new signed tag.
 
 version="$1"
 shift
@@ -22,9 +22,9 @@ echo "files:   '$files'"
 
 if [[ "$files" != "" ]]; then
 	git add $files
-	git commit -m "Version $version."
+	git commit -S -m "Version $version."
 fi
 
-git tag -a -m "Version $version" "v$version"
+git tag -a -s -m "Version $version" "v$version"
 
 git log -n 1 --decorate=short
