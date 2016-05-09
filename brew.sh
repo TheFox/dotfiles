@@ -90,6 +90,7 @@ brew install Caskroom/cask/sublime-text
 brew install Caskroom/cask/thunderbird
 #brew install Caskroom/cask/virtualbox
 #brew install Caskroom/cask/vlc
+#brew install Caskroom/cask/xquartz
 
 
 brew cleanup
