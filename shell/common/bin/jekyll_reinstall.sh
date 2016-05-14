@@ -9,7 +9,7 @@ set -e
 function list(){
 	for gem_name in github-pages-health-check jekyll jekyll-coffeescript jekyll-feed jekyll-gist jekyll-github-metadata jekyll-mentions jekyll-paginate jekyll-redirect-from jekyll-sass-converter jekyll-seo-tag jekyll-sitemap jemoji kramdown liquid listen mercenary rouge terminal-table; do
 		echo $gem_name
-		sudo gem list --local | ack $gem_name || true
+		sudo gem list --local $gem_name || true
 		#sudo gem uninstall $gem_name -a -x -I
 	done
 }
