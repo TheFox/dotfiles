@@ -87,6 +87,7 @@ brew install Caskroom/cask/libreoffice
 brew install Caskroom/cask/sequel-pro
 #brew install Caskroom/cask/skype
 brew install Caskroom/cask/sublime-text
+brew install Caskroom/cask/the-unarchiver
 brew install Caskroom/cask/thunderbird
 #brew install Caskroom/cask/virtualbox
 #brew install Caskroom/cask/vlc
