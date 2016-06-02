@@ -3,6 +3,7 @@
 # Reinstall Jekyll
 
 # https://rubygems.org/gems/github-pages
+# https://rubygems.org/gems/redcarpet
 
 set -e
 
@@ -14,16 +15,18 @@ function list(){
 	done
 }
 
-#list
-sudo gem list --local | ack github-pages || true
+#list; exit
+
+sudo gem list --local github-pages || true
 echo '------'
 echo
 
 echo 'INSTALL'
 sudo gem uninstall github-pages -a -x -I
 sudo gem install github-pages -v 78
+sudo gem install redcarpet -v 3.3.3
 
 echo '------'
 echo
 list
-sudo gem list --local | ack github-pages
+sudo gem list --local github-pages
