@@ -8,6 +8,7 @@ set binary
 set noeol
 set hlsearch
 set tabstop=4
+set shiftwidth=4
 " set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
 " set list
 set incsearch
