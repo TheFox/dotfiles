@@ -47,6 +47,7 @@ brew install tree
 #brew install watch
 brew install wget
 brew install xz
+#brew install youtube-dl
 
 #brew install gettext
 #brew link --force gettext
