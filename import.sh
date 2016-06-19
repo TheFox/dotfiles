@@ -33,6 +33,12 @@ rm -f ~/bin/traktor-uninstall.sh
 rm -f ~/bin/route-192.sh
 rm -f ~/bin/route-iphone.sh
 rm -f ~/bin/route-normal.sh
+rm -f ~/bin/bitmessage
+rm -f ~/bin/homecleanup.sh
+rm -f ~/bin/lowprio.sh
+rm -f ~/bin/route_192.sh
+rm -f ~/bin/route_iphone.sh
+rm -f ~/bin/route_normal.sh
 rm -f ~/.dotfiles-installed
 
 

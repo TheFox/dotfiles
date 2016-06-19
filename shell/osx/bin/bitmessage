@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-python ~/Software/PyBitmessage/src/bitmessagemain.py &> /dev/null &
