@@ -58,7 +58,7 @@ if [[ $commits_count -gt 0 ]]; then
 	if [[ ! -f $dst ]]; then
 		touch $dst
 		
-		date +"%Y-%m-%d %H:%M:%S %Z" >> $dst
+		date +"%Y-%m-%d %H:%M:%S %z" >> $dst
 		echo >> $dst
 		
 		echo "Version $version" >> $dst
