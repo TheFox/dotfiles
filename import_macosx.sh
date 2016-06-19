@@ -97,5 +97,12 @@ if [[ -d $SUBLIME_SNIPPET_JAVASCRIPT_DIR ]]; then
 	copytmp 'sublimetext/snippets/JavaScript/*.sublime-snippet' "$SUBLIME_SNIPPET_JAVASCRIPT_DIR" || echo failed
 fi
 
+SUBLIME_SNIPPET_SHELLSCRIPT_DIR="$HOME/Library/Application Support/Sublime Text 2/Packages/ShellScript"
+if [[ -d $SUBLIME_SNIPPET_SHELLSCRIPT_DIR ]]; then
+	echo 'import sublimetext ShellScript snippet files'
+	
+	copytmp 'sublimetext/snippets/ShellScript/*.sublime-snippet' "$SUBLIME_SNIPPET_SHELLSCRIPT_DIR" || echo failed
+fi
+
 date
 echo 'done'
