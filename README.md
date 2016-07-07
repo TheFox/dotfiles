@@ -1,4 +1,5 @@
 # DotFiles
+
 My dotfiles.
 
 ## Install
@@ -10,11 +11,11 @@ My dotfiles.
 
 2. Import
 	
-		./import.macosx.sh
+		./import_macosx.sh
 	
 	or
 	
-		./import.linux.sh
+		./import_linux.sh
 
 ## License
 Copyright (C) 2014 Christian Mayer <http://fox21.at>
