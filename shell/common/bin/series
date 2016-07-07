@@ -136,7 +136,7 @@ dir_paths.map{ |p| File.expand_path(p) }.each do |dir_path|
 				end
 				
 				#pp files.map{ |f| f.to_s }
-				pp files
+				#pp files
 			end
 		end
 	end
