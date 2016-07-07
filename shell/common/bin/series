@@ -1,0 +1,144 @@
+#!/usr/bin/env ruby
+
+require 'pp'
+require 'fileutils'
+require 'io/console'
+
+EXTENSIONS = [
+	'mp4'
+]
+
+class Series
+	
+	REPLACEMENTS = {
+		'-' => '_',
+		
+		'_x264_' => '_',
+		/_dl_/ => '_',
+		/_ded_/ => '_',
+		/_ithd_/ => '_',
+		/tvs_/ => '_',
+	}
+	EPISODES = [
+		/([12])([012][0-9])/,
+	]
+	
+	def initialize
+	end
+	
+	def name
+		''
+	end
+	
+	def patterns
+		[]
+	end
+	
+	def filter(files)
+		files.select do |file_path|
+			keep = false
+			patterns.each do |pattern|
+				#puts "check pattern #{pattern} => '#{file_path}'"
+				if pattern.match(file_path)
+					#return true
+					keep = true
+					break
+				end
+			end
+			keep
+		end.map do |old_file_path|
+			file_ext = File.extname(old_file_path)
+			new_file_path = old_file_path.clone
+			new_file_path = File.basename(new_file_path, file_ext)
+			#puts "ext: '#{file_ext}'"
+			#puts "new A: '#{new_file_path}'"
+			patterns.each do |pattern|
+				new_file_path.gsub!(pattern, '_')
+			end
+			REPLACEMENTS.each do |search, replacement|
+				new_file_path.gsub!(search, replacement)
+			end
+			episode = nil
+			EPISODES.each do |epi|
+				if res = epi.match(new_file_path)
+					#pp res
+					episode = 's%02de%02d' % [res[1], res[2]]
+					break
+				end
+			end
+			if episode.nil?
+				nil
+			else
+				#puts "new B: '#{name}'"
+				new_file_path = name
+				#puts "new C: '#{new_file_path}'"
+				new_file_path.gsub!('%ext%', file_ext)
+				new_file_path.gsub!('%epi%', episode)
+				
+				#puts "epi: '#{episode}'"
+				
+				[old_file_path, new_file_path]
+			end
+		end.select do |file|
+			!file.nil?
+		end.to_h
+	end
+end
+
+class BlackMirrorSeries < Series
+	def name
+		'black_mirror_%epi%%ext%'
+	end
+	def patterns
+		[
+			/-black-mirror-/i,
+			/^blami/i,
+		]
+	end
+end
+
+classes = [
+	BlackMirrorSeries
+]
+
+dir_paths = ARGV.length > 0 ? ARGV : ['.']
+dir_paths.map{ |p| File.expand_path(p) }.each do |dir_path|
+	#puts "path: #{dir_path}"
+	
+	Dir.chdir(dir_path) do
+		EXTENSIONS.each do |file_ext|
+			#puts "ext: #{file_ext}"
+			
+			files = Dir["*.#{file_ext}"]
+			classes.each do |sclass|
+				series = sclass.new
+				series.filter(files).each do |old_file_path, new_file_path|
+					if !File.exist?(new_file_path)
+						puts "#{old_file_path} => #{new_file_path}"
+						print 'y/N? '
+						#answer = STDIN.getc
+						answer = STDIN.getch.strip.downcase
+						answer = 'n' if answer.length == 0
+						puts "answer: '#{answer}' '#{answer.ord}'"
+						
+						case answer.ord
+						when 121 # y
+							puts 'ok, rename it'
+							FileUtils.mv(old_file_path, new_file_path)
+							files.delete(old_file_path)
+						when 3, 4 # ctrl-c, ctrl-d
+							exit 1
+						else
+							puts 'nothing done'
+						end
+						puts
+					end
+				end
+				
+				#pp files.map{ |f| f.to_s }
+				pp files
+			end
+		end
+	end
+	
+end
