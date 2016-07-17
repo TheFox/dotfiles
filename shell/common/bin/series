@@ -19,9 +19,10 @@ class Series
 		/_ded_/ => '_',
 		/_ithd_/ => '_',
 		/tvs_/ => '_',
+		/rsg_/ => '_',
 	}
 	EPISODES = [
-		/S0([1-9])E([012][0-9])/,
+		/S0([1-9])E([012][0-9])/i,
 		/([12])([012][0-9])/,
 	]
 	
@@ -62,6 +63,7 @@ class Series
 			REPLACEMENTS.each do |search, replacement|
 				new_file_path.gsub!(search, replacement)
 			end
+			#puts "new B: '#{new_file_path}'"
 			episode = nil
 			EPISODES.each do |epi|
 				if res = epi.match(new_file_path)
@@ -73,9 +75,8 @@ class Series
 			if episode.nil?
 				nil
 			else
-				#puts "new B: '#{name}'"
+				#puts "new C: '#{name}'"
 				new_file_path = name
-				#puts "new C: '#{new_file_path}'"
 				
 				new_file_path.gsub!('%ext%', file_ext)
 				new_file_path.gsub!('%epi%', episode)
@@ -124,10 +125,22 @@ class MrRobotSeries < Series
 	end
 end
 
+class SuitsSeries < Series
+	def name
+		'suits_%epi%%ext%'
+	end
+	def patterns
+		[
+			/^rsg-suits-/,
+		]
+	end
+end
+
 classes = [
 	BlackMirrorSeries,
 	HannibalSeries,
 	MrRobotSeries,
+	SuitsSeries,
 ]
 
 dir_paths = ARGV.length > 0 ? ARGV : ['.']
@@ -139,7 +152,7 @@ dir_paths.map{ |p| File.expand_path(p) }.each do |dir_path|
 			#puts "ext: #{file_ext}"
 			
 			files = Dir["*.#{file_ext}"]
-			#files.each do |file_path|
+			# files.each do |file_path|
 			# 	puts "file: #{file_path}"
 			# end
 			
