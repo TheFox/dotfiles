@@ -5,7 +5,8 @@ require 'fileutils'
 require 'io/console'
 
 EXTENSIONS = [
-	'mp4'
+	'flv',
+	'mp4',
 ]
 
 class Series
@@ -20,7 +21,7 @@ class Series
 		/tvs_/ => '_',
 	}
 	EPISODES = [
-		/S0([12])E([012][0-9])/,
+		/S0([1-9])E([012][0-9])/,
 		/([12])([012][0-9])/,
 	]
 	
@@ -65,7 +66,7 @@ class Series
 			EPISODES.each do |epi|
 				if res = epi.match(new_file_path)
 					#puts "#{res}"
-					episode = 's%02de%02d' % [res[1], res[2]]
+					episode = 's%02de%02d' % [res[1].to_i, res[2].to_i]
 					break
 				end
 			end
@@ -101,6 +102,17 @@ class BlackMirrorSeries < Series
 	end
 end
 
+class HannibalSeries < Series
+	def name
+		'hannibal_%epi%%ext%'
+	end
+	def patterns
+		[
+			/^Hannibal/,
+		]
+	end
+end
+
 class MrRobotSeries < Series
 	def name
 		'mr_robot_%epi%%ext%'
@@ -114,6 +126,7 @@ end
 
 classes = [
 	BlackMirrorSeries,
+	HannibalSeries,
 	MrRobotSeries,
 ]
 
