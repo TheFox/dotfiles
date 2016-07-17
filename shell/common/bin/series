@@ -20,6 +20,7 @@ class Series
 		/tvs_/ => '_',
 	}
 	EPISODES = [
+		/S0([12])E([012][0-9])/,
 		/([12])([012][0-9])/,
 	]
 	
@@ -45,7 +46,9 @@ class Series
 					break
 				end
 			end
+			#puts "return #{keep}"
 			keep
+			#return false
 		end.map do |old_file_path|
 			file_ext = File.extname(old_file_path)
 			new_file_path = old_file_path.clone
@@ -61,7 +64,7 @@ class Series
 			episode = nil
 			EPISODES.each do |epi|
 				if res = epi.match(new_file_path)
-					#pp res
+					#puts "#{res}"
 					episode = 's%02de%02d' % [res[1], res[2]]
 					break
 				end
@@ -72,6 +75,7 @@ class Series
 				#puts "new B: '#{name}'"
 				new_file_path = name
 				#puts "new C: '#{new_file_path}'"
+				
 				new_file_path.gsub!('%ext%', file_ext)
 				new_file_path.gsub!('%epi%', episode)
 				
@@ -97,8 +101,20 @@ class BlackMirrorSeries < Series
 	end
 end
 
+class MrRobotSeries < Series
+	def name
+		'mr_robot_%epi%%ext%'
+	end
+	def patterns
+		[
+			/^Mr Robot /,
+		]
+	end
+end
+
 classes = [
-	BlackMirrorSeries
+	BlackMirrorSeries,
+	MrRobotSeries,
 ]
 
 dir_paths = ARGV.length > 0 ? ARGV : ['.']
@@ -110,9 +126,17 @@ dir_paths.map{ |p| File.expand_path(p) }.each do |dir_path|
 			#puts "ext: #{file_ext}"
 			
 			files = Dir["*.#{file_ext}"]
+			#files.each do |file_path|
+			# 	puts "file: #{file_path}"
+			# end
+			
 			classes.each do |sclass|
+				#puts "sclass: #{sclass}"
+				
 				series = sclass.new
 				series.filter(files).each do |old_file_path, new_file_path|
+					#puts "#{old_file_path} => #{new_file_path}"
+					
 					if !File.exist?(new_file_path)
 						puts "#{old_file_path} => #{new_file_path}"
 						print 'y/N? '
