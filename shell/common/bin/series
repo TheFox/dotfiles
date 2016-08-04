@@ -127,7 +127,7 @@ class MrRobotSeries < Series
 	end
 	def patterns
 		[
-			/^Mr Robot /,
+			/^Mr.Robot/,
 		]
 	end
 end
