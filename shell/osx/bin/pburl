@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+url=""
+
+while true; do
+	paste=$(pbpaste)
+	
+	if echo "${paste}" | grep -q '^http'; then
+		
+		if [ "${paste}" != "${url}" ]; then
+			echo "${paste}"
+		fi
+		
+		url="${paste}"
+	fi
+	
+	sleep 0.2
+done
