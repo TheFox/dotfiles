@@ -114,7 +114,7 @@ class FamilyGuySeries < Series
 		[
 			/^....Family.?Guy/i,
 			/^Family.Guy/i,
-			/^Guy - /,
+			/^Guy /,
 			/^tvs-fg-ded-dl-ithd-x264/,
 			/^isd-fgdxvid/,
 		]
