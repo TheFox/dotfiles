@@ -101,6 +101,8 @@ class AmericanDadSeries < Series
 	def patterns
 		[
 			/^American.Dad/,
+			/^ad/,
+			/^gerad/,
 		]
 	end
 end
