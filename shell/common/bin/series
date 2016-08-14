@@ -94,6 +94,17 @@ class Series
 	end
 end
 
+class AmericanDadSeries < Series
+	def name
+		'american_dad_%epi%%ext%'
+	end
+	def patterns
+		[
+			/^American.Dad/,
+		]
+	end
+end
+
 class BlackMirrorSeries < Series
 	def name
 		'black_mirror_%epi%%ext%'
@@ -155,6 +166,7 @@ class SuitsSeries < Series
 end
 
 classes = [
+	AmericanDadSeries,
 	BlackMirrorSeries,
 	FamilyGuySeries,
 	HannibalSeries,
