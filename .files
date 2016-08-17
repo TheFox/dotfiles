@@ -1,3 +1,4 @@
+ack/.ackrc
 ansible/.ansible.cfg
 curl/.curlrc
 git/.gitconfig

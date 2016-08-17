@@ -1,0 +1,6 @@
+
+--sort-files
+
+--ignore-dir=vendor
+--ignore-dir=.idea
+--ignore-dir=node_modules
