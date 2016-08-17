@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[function(\$${1:var})${2: use(\$${3:var})}{
+	return$0;
+}]]></content>
+	<tabTrigger>fun</tabTrigger>
+	<scope>source.php</scope>
+	<description>closure function</description>
+</snippet>
