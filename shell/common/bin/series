@@ -156,6 +156,17 @@ class MrRobotSeries < Series
 	end
 end
 
+class SiliconValleySeries < Series
+	def name
+		'silicon_valley_%epi%%ext%'
+	end
+	def patterns
+		[
+			/^Silicon.Valley/i,
+		]
+	end
+end
+
 class SuitsSeries < Series
 	def name
 		'suits_%epi%%ext%'
@@ -173,6 +184,7 @@ classes = [
 	FamilyGuySeries,
 	HannibalSeries,
 	MrRobotSeries,
+	SiliconValleySeries,
 	SuitsSeries,
 ]
 
