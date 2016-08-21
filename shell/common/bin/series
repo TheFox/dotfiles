@@ -145,6 +145,17 @@ class HannibalSeries < Series
 	end
 end
 
+class LuciferSeries < Series
+	def name
+		'lucifer_%epi%%ext%'
+	end
+	def patterns
+		[
+			/^Lucifer/,
+		]
+	end
+end
+
 class MrRobotSeries < Series
 	def name
 		'mr_robot_%epi%%ext%'
@@ -183,6 +194,7 @@ classes = [
 	BlackMirrorSeries,
 	FamilyGuySeries,
 	HannibalSeries,
+	LuciferSeries,
 	MrRobotSeries,
 	SiliconValleySeries,
 	SuitsSeries,
