@@ -4,3 +4,6 @@
 --ignore-dir=vendor
 --ignore-dir=.idea
 --ignore-dir=node_modules
+
+--type-set=sblws:ext:sublime-workspace
+--type=nosblws
