@@ -1,0 +1,17 @@
+<snippet>
+	<content><![CDATA[public function provider${1:FunctionName}(){
+	return array(
+		array(),
+	);
+}
+
+/**
+ * @dataProvider provider${1:FunctionName}
+ */
+public function test${1:FunctionName}(){
+	$0
+}]]></content>
+	<tabTrigger>fun</tabTrigger>
+	<scope>source.php</scope>
+	<description>test function</description>
+</snippet>
