@@ -3,6 +3,10 @@ set show-changes = yes
 set commit-order = topo
 set refresh-mode = auto
 set main-view = \
+	date:custom \
 	author:abbreviated \
 	id:yes,color \
 	commit-title:graph=yes,refs=yes
+
+set main-view-date-local = true
+set main-view-date-format = "%Y-%m-%d %H:%M"
