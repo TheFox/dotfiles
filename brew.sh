@@ -97,12 +97,16 @@ brew install Caskroom/cask/thunderbird
 
 brew cleanup
 
-sudo ln -s /usr/local/bin/grealpath /usr/local/bin/realpath
+
+# Not used anymore because in coreutils 8.25 grealpath is
+# already linked to /usr/local/bin/realpath.
+# sudo ln -s /usr/local/bin/grealpath /usr/local/bin/realpath 
+
+# From coreutils, all bins starting with a 'g'. GNU.
 sudo ln -s /usr/local/bin/gsed /usr/local/bin/sed
 sudo ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
 sudo ln -s /usr/local/bin/gpg2 /usr/local/bin/gpg
 
+
 # NodeJS
-
 npm install -g json # json command-line tool
-
