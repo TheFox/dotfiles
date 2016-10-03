@@ -10,7 +10,7 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Exit when brew is not available.
-which brew || { echo 'no brew installed'; exit 1; }
+which brew &> /dev/null || { echo 'no brew installed'; exit 1; }
 
 # Make sure we're using the latest Homebrew.
 brew update

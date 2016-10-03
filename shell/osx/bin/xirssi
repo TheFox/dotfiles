@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-which irssi || { echo 'no irssi installed'; exit 1; }
+which irssi &> /dev/null || { echo 'no irssi installed'; exit 1; }
 uxterm -geometry 80x60 -e irssi &
