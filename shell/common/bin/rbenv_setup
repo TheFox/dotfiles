@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+which -a rbenv &> /dev/null || { echo 'rbenv not installed'; exit 1; }
+
+# rbenv install 2.0.0-p648 --skip-existing
+# rbenv install 2.1.10 --skip-existing
+rbenv install 2.2.5 --skip-existing
+rbenv install 2.3.1 --skip-existing
+rbenv install 2.4.0-preview2 --skip-existing
+
+rbenv global 2.3.1
+rbenv versions
