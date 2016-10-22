@@ -62,4 +62,4 @@ if [ -f "${HOME}/.gpg-agent-info" ]; then
 	export SSH_AUTH_SOCK
 fi
 
-eval "$(rbenv init -)"
+which rbenv &> /dev/null && eval "$(rbenv init -)"
