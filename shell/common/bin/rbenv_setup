@@ -11,6 +11,8 @@ for version in ${VERSIONS}; do
 	rbenv install "${version}" --skip-existing
 done
 
+eval "$(rbenv init -)"
+
 for version in ${VERSIONS}; do
 	echo "install bundler for version '${version}'"
 	RBENV_VERSION="${version}" gem install bundler
