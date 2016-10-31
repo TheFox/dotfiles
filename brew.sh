@@ -92,6 +92,7 @@ brew install Caskroom/cask/the-unarchiver
 brew install Caskroom/cask/thunderbird
 #brew install Caskroom/cask/virtualbox
 #brew install Caskroom/cask/vlc
+#brew install Caskroom/cask/wkhtmltopdf
 #brew install Caskroom/cask/xquartz
 
 
