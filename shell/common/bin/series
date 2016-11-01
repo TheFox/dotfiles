@@ -233,6 +233,17 @@ class TheHundredSeries < Series
 	end
 end
 
+class TheWalkingDeadSeries < Series
+	def name
+		'the_walking_dead_%epi%%ext%'
+	end
+	def patterns
+		[
+			/^The.Walking.Dead/i,
+		]
+	end
+end
+
 classes = [
 	AmericanDadSeries,
 	BlackMirrorSeries,
@@ -246,6 +257,7 @@ classes = [
 	SuitsSeries,
 	TheClevelandShowSeries,
 	TheHundredSeries,
+	TheWalkingDeadSeries,
 ]
 
 dir_paths = ARGV.length > 0 ? ARGV : ['.']
