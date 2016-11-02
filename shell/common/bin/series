@@ -115,6 +115,7 @@ class BlackMirrorSeries < Series
 		[
 			/-black-mirror/i,
 			/^blami/i,
+			/^Black.Mirror/,
 		]
 	end
 end
