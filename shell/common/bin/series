@@ -20,12 +20,11 @@ class Series
 		/-([0-9]{2})([0-9]{2})-/,
 		/([12])([012][0-9])/,
 		/ ([0-9]{2})-([0-9]{2}) /,
+		
 		/_([0-9]{1,2})x([0-9]{1,2})_/,
 		/ ([0-9]{1,2})x([0-9]{1,2}) /,
+		/ ([0-9]{1,2})x([0-9]{1,2})/,
 	]
-	
-	def initialize
-	end
 	
 	def name
 		''
@@ -39,7 +38,7 @@ class Series
 		files.select do |file_path|
 			keep = false
 			patterns.each do |pattern|
-				#puts "check pattern #{pattern} => '#{file_path}'"
+				# puts "check pattern #{pattern} => '#{file_path}'"
 				res = pattern.match(file_path)
 				if res
 					#pp res
@@ -54,8 +53,7 @@ class Series
 			new_file_path = File.basename(new_file_path, file_ext)
 			
 			#puts "ext: '#{file_ext}'"
-			#puts "new A: '#{new_file_path}'"
-			#puts "new A: '#{new_file_path}'"
+			# puts "new A: '#{new_file_path}'"
 			
 			patterns.each do |pattern|
 				new_file_path.gsub!(pattern, '')
@@ -69,12 +67,13 @@ class Series
 			episode = nil
 			EPISODES.each do |epi|
 				if res = epi.match(new_file_path)
-					#puts "#{res}"
+					# puts "#{res}"
 					episode = 's%02de%02d' % [res[1].to_i, res[2].to_i]
 					break
 				end
 			end
 			if episode.nil?
+				puts "episode pattern not found: '#{new_file_path}'"
 				nil
 			else
 				#puts "new C: '#{name}'"
@@ -168,6 +167,18 @@ class MrRobotSeries < Series
 	end
 end
 
+class OrphanBlackSeries < Series
+	def name
+		'orphan_black_%epi%%ext%'
+	end
+	def patterns
+		[
+			/^orphan black/,
+			/^rsg-orphan-black/,
+		]
+	end
+end
+
 class PersonOfInterestSeries < Series
 	def name
 		'person_of_interest_%epi%%ext%'
@@ -252,6 +263,7 @@ classes = [
 	HannibalSeries,
 	LuciferSeries,
 	MrRobotSeries,
+	OrphanBlackSeries,
 	PersonOfInterestSeries,
 	RayDonovanSeries,
 	SiliconValleySeries,
@@ -270,9 +282,7 @@ dir_paths.map{ |p| File.expand_path(p) }.each do |dir_path|
 			#puts "ext: #{file_ext}"
 			
 			files = Dir["*.#{file_ext}"]
-			# files.each do |file_path|
-			# 	puts "file: #{file_path}"
-			# end
+			pp files
 			
 			classes.each do |sclass|
 				#puts "sclass: #{sclass}"
@@ -281,7 +291,7 @@ dir_paths.map{ |p| File.expand_path(p) }.each do |dir_path|
 				filtered_files = series.filter(files)
 				#puts "#{sclass} -> #{filtered_files}"
 				filtered_files.each do |old_file_path, new_file_path|
-					if !File.exist?(new_file_path)
+					unless File.exist?(new_file_path)
 						puts "#{old_file_path} => #{new_file_path}"
 						print 'y/N? '
 						#answer = STDIN.getc
