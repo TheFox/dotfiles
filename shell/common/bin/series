@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
-require 'pp'
-require 'fileutils'
+# require 'pp'
+require 'pathname'
 require 'io/console'
 
 EXTENSIONS = [
@@ -11,8 +11,6 @@ EXTENSIONS = [
 
 class Series
 	
-	REPLACEMENTS = {
-	}
 	EPISODES = [
 		/S([012][0-9])E([0123][0-9])/i,
 		/S([0-9])E([012][0-9])/i,
@@ -38,36 +36,24 @@ class Series
 		files.select do |file_path|
 			keep = false
 			patterns.each do |pattern|
-				# puts "check pattern #{pattern} => '#{file_path}'"
-				res = pattern.match(file_path)
+				res = pattern.match(file_path.to_s)
 				if res
-					#pp res
 					keep = true
 					break
 				end
 			end
 			keep
 		end.map do |old_file_path|
-			file_ext = File.extname(old_file_path)
-			new_file_path = old_file_path.clone
-			new_file_path = File.basename(new_file_path, file_ext)
-			
-			#puts "ext: '#{file_ext}'"
-			# puts "new A: '#{new_file_path}'"
+			file_ext = old_file_path.extname
+			new_file_path = old_file_path.basename(file_ext).to_s
 			
 			patterns.each do |pattern|
 				new_file_path.gsub!(pattern, '')
 			end
-			REPLACEMENTS.each do |search, replacement|
-				new_file_path.gsub!(search, replacement)
-			end
-			
-			#puts "old A: '#{old_file_path}'"
 			
 			episode = nil
 			EPISODES.each do |epi|
 				if res = epi.match(new_file_path)
-					# puts "#{res}"
 					episode = 's%02de%02d' % [res[1].to_i, res[2].to_i]
 					break
 				end
@@ -76,16 +62,12 @@ class Series
 				puts "episode pattern not found: '#{new_file_path}'"
 				nil
 			else
-				#puts "new C: '#{name}'"
+				new_file_path =
+					name
+					.gsub('%ext%', file_ext)
+					.gsub('%epi%', episode)
 				
-				new_file_path = name
-				
-				new_file_path.gsub!('%ext%', file_ext)
-				new_file_path.gsub!('%epi%', episode)
-				
-				#puts "epi: '#{episode}'"
-				
-				[old_file_path, new_file_path]
+				[old_file_path, Pathname.new(new_file_path)]
 			end
 		end.select do |file|
 			!file.nil?
@@ -256,6 +238,17 @@ class TheWalkingDeadSeries < Series
 	end
 end
 
+class TestSeries < Series
+	def name
+		'test_%epi%%ext%'
+	end
+	def patterns
+		[
+			/^mytest/i,
+		]
+	end
+end
+
 classes = [
 	AmericanDadSeries,
 	BlackMirrorSeries,
@@ -271,38 +264,32 @@ classes = [
 	TheClevelandShowSeries,
 	TheHundredSeries,
 	TheWalkingDeadSeries,
+	# TestSeries,
 ]
 
 dir_paths = ARGV.length > 0 ? ARGV : ['.']
-dir_paths.map{ |p| File.expand_path(p) }.each do |dir_path|
-	#puts "path: #{dir_path}"
-	
+dir_paths.map{ |p| Pathname.new(p).expand_path }.each do |dir_path|
 	Dir.chdir(dir_path) do
 		EXTENSIONS.each do |file_ext|
-			#puts "ext: #{file_ext}"
-			
-			files = Dir["*.#{file_ext}"]
-			pp files
+			files = dir_path.entries.select{ |p| p.file? && p.extname == ".#{file_ext}" }
 			
 			classes.each do |sclass|
-				#puts "sclass: #{sclass}"
-				
 				series = sclass.new
-				filtered_files = series.filter(files)
-				#puts "#{sclass} -> #{filtered_files}"
-				filtered_files.each do |old_file_path, new_file_path|
-					unless File.exist?(new_file_path)
+				series.filter(files).each do |old_file_path, new_file_path|
+					
+					unless new_file_path.exist?
 						puts "#{old_file_path} => #{new_file_path}"
 						print 'y/N? '
-						#answer = STDIN.getc
 						answer = STDIN.getch.strip.downcase
-						answer = 'n' if answer.length == 0
+						if answer.length == 0
+							answer = 'n'
+						end
 						puts "answer: '#{answer}' '#{answer.ord}'"
 						
 						case answer.ord
 						when 121 # y
 							puts 'ok, rename it'
-							FileUtils.mv(old_file_path, new_file_path)
+							old_file_path.rename(new_file_path)
 							files.delete(old_file_path)
 						when 3, 4 # ctrl-c, ctrl-d
 							exit 1
@@ -311,12 +298,9 @@ dir_paths.map{ |p| File.expand_path(p) }.each do |dir_path|
 						end
 						puts
 					end
+					
 				end
-				
-				#pp files.map{ |f| f.to_s }
-				#pp files
 			end
 		end
 	end
-	
 end
