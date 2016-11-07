@@ -163,6 +163,17 @@ class MrRobotSeries < Series
 	end
 end
 
+class OrangeIsTheNewBlackSeries < Series
+	def name
+		'orange_is_the_new_black_%epi%%ext%'
+	end
+	def patterns
+		[
+			/^Orange.is.the.New.Black/i,
+		]
+	end
+end
+
 class OrphanBlackSeries < Series
 	def name
 		'orphan_black_%epi%%ext%'
@@ -271,6 +282,7 @@ classes = [
 	HannibalSeries,
 	LuciferSeries,
 	MrRobotSeries,
+	OrangeIsTheNewBlackSeries,
 	OrphanBlackSeries,
 	PersonOfInterestSeries,
 	RayDonovanSeries,
