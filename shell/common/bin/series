@@ -85,6 +85,7 @@ class AgentsOfShieldSeries < Series
 			/^Agents.of.SHIELD/i,
 			/^Marvels.Agents.of.S.H.I.E.L.D/i,
 			/^SHIELD/,
+			/^tvp.shield/,
 		]
 	end
 end
