@@ -5,11 +5,11 @@ RM="rm"
 
 
 set -e
-cd $SCRIPT_BASEDIR
+cd "${SCRIPT_BASEDIR}"
 
 echo 'uninstall default files'
 for file in $(cat .files); do
-	bn=$(basename $file)
+	bn=$(basename ${file})
 	
-	$RM $HOME/$bn
+	${RM} "${HOME}/${bn}"
 done

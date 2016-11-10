@@ -41,7 +41,7 @@ alias egrep="egrep --color=auto"
 alias d="date"
 alias tarc="tar -vpc --exclude .DS_Store -f"
 
-case "$TERM" in
+case "${TERM}" in
 	xterm*|rxvt*)
 		# Use ${PWD} in PROMPT_COMMAND to open a new tab in Mac OS X
 		# Terminal in the same working directory.
