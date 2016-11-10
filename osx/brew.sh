@@ -40,8 +40,10 @@ brew install mutt
 brew install nmap
 brew install npm
 brew install pstree
+brew install reattach-to-user-namespace # used by tmux
 brew install rename
 brew install tig
+brew install tmux
 brew install tree
 # brew install w3m
 #brew install watch
@@ -58,8 +60,8 @@ brew install php56 --with-thread-safety --without-snmp
 brew install composer
 
 brew install ruby
-gem install -v 1.10.5 bundler
-gem install -v 4.2.3 rails
+gem install bundler
+gem install tmuxinator
 
 which -a git
 git --version

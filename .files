@@ -8,5 +8,6 @@ lldb/.lldbinit
 shell/common/.bash_profile
 shell/common/.bashrc
 shell/common/.dotfiles_installed
+tmux/.tmux.conf
 vim/.vimrc
 wget/.wgetrc
