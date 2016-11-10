@@ -7,7 +7,7 @@ CP="cp"
 MV="mv"
 RSYNC="rsync -rupt"
 MKDIR="mkdir -p"
-SUBLIME_SUBL="/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl"
+SUBLIME_SUBL="${HOME}/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl"
 
 
 set -e
