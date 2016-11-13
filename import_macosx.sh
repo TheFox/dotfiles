@@ -22,7 +22,7 @@ $RSYNC shell/osx/bin/* "${HOME}/bin/"
 
 if [[ -f "${SUBLIME_SUBL}" ]] && [[ ! -f "${HOME}/bin/subl" ]]; then
 	echo 'install subl'
-	ln -s "${SUBLIME_SUBL}" "${HOME}/bin/subl"
+	ln -sf "${SUBLIME_SUBL}" "${HOME}/bin/subl"
 fi
 
 SUBLIME_USER_DIR="$HOME/Library/Application Support/Sublime Text 2/Packages/User"
