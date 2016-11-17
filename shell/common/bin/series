@@ -131,6 +131,19 @@ class BlackMirrorSeries < Series
 	end
 end
 
+class ElementarySeries < Series
+	def name
+		'elementary_%epi%%ext%'
+	end
+	def patterns
+		[
+			/^Elementary/,
+			/^sof-elementary-/,
+			/^euhd-elementary-/,
+		]
+	end
+end
+
 class FamilyGuySeries < Series
 	def name
 		'family_guy_%epi%%ext%'
@@ -295,6 +308,7 @@ classes = [
 	AgentsOfShieldSeries,
 	AmericanDadSeries,
 	BlackMirrorSeries,
+	ElementarySeries,
 	FamilyGuySeries,
 	HannibalSeries,
 	LuciferSeries,
