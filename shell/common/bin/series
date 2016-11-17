@@ -79,6 +79,17 @@ class Series
 	end
 end
 
+class AgentCarterSeries < Series
+	def name
+		'agent_carter_%epi%%ext%'
+	end
+	def patterns
+		[
+			/^Marvels.Agent.Carter/i,
+		]
+	end
+end
+
 class AgentsOfShieldSeries < Series
 	def name
 		'agents_of_shield_%epi%%ext%'
@@ -280,6 +291,7 @@ class TestSeries < Series
 end
 
 classes = [
+	AgentCarterSeries,
 	AgentsOfShieldSeries,
 	AmericanDadSeries,
 	BlackMirrorSeries,
