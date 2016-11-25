@@ -63,3 +63,9 @@ if [ -f "${HOME}/.gpg-agent-info" ]; then
 fi
 
 which rbenv &> /dev/null && eval "$(rbenv init -)"
+
+PHP5=/usr/local/Cellar/php56/5.6.25_1/bin/php
+PHP7=/usr/local/Cellar/php70/7.0.11_2/bin/php
+PHP70=/usr/local/Cellar/php70/7.0.11_2/bin/php
+PHP71=/usr/local/Cellar/php71/7.1.0-rc.5_9/bin/php
+export PHP5 PHP7 PHP70 PHP71
