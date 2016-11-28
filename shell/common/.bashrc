@@ -69,3 +69,6 @@ PHP7=/usr/local/Cellar/php70/7.0.11_2/bin/php
 PHP70=/usr/local/Cellar/php70/7.0.11_2/bin/php
 PHP71=/usr/local/Cellar/php71/7.1.0-rc.5_9/bin/php
 export PHP5 PHP7 PHP70 PHP71
+
+HOMEBREW_NO_ANALYTICS=1
+export HOMEBREW_NO_ANALYTICS
