@@ -58,6 +58,8 @@ class Series
 			EPISODES.each do |epi|
 				# puts "'#{epi}' '#{new_file_path}'"
 				if res = epi.match(new_file_path)
+					# pp res
+					
 					episode = 's%02de%02d' % [res[1].to_i, res[2].to_i]
 					break
 				end
@@ -70,6 +72,8 @@ class Series
 					name
 					.gsub('%ext%', file_ext)
 					.gsub('%epi%', episode)
+				
+				# puts "new_file_path '#{new_file_path}'"
 				
 				[old_file_path, Pathname.new(new_file_path)]
 			end
@@ -97,8 +101,7 @@ class AgentsOfShieldSeries < Series
 	def patterns
 		[
 			/^Agents.of.SHIELD/i,
-			/^Agents.of.S.H.I.E.L.D/i,
-			/^Marvels.Agents.of.S.H.I.E.L.D/i,
+			/Agents.of.S.H.I.E.L.D/i,
 			/^SHIELD/,
 			/^tvp.shield/,
 		]
@@ -347,7 +350,9 @@ dir_paths.map{ |p| Pathname.new(p).expand_path }.each do |dir_path|
 				series = sclass.new
 				series.filter(files).each do |old_file_path, new_file_path|
 					
-					unless new_file_path.exist?
+					if new_file_path.exist?
+						puts "WARNING: file already exists: #{new_file_path}"
+					else
 						puts "  #{old_file_path}"
 						puts "  #{new_file_path}"
 						puts
