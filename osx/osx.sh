@@ -2,9 +2,10 @@
 
 DATE=$(date +"%Y%m%d-%H%M%S")
 LOG="old_${DATE}.log"
-LOG="old.log"
 
-echo > ${LOG}
+
+echo > "${LOG}"
+date >> "${LOG}"
 
 # Ask for the administrator password upfront
 sudo -v
@@ -21,15 +22,15 @@ mkdir -p ~/tmp
 
 echo screenshot
 # Screenshot: Change the location
-defaults read com.apple.screencapture location >> $LOG
+defaults read com.apple.screencapture location >> "${LOG}"
 defaults write com.apple.screencapture location ~/tmp
 
 # Screenshot: Change the File Format
-defaults read com.apple.screencapture type >> $LOG
+defaults read com.apple.screencapture type >> "${LOG}"
 defaults write com.apple.screencapture type png
 
 # Screenshot: Disable shadows
-defaults read com.apple.screencapture disable-shadow >> $LOG
+defaults read com.apple.screencapture disable-shadow >> "${LOG}"
 defaults write com.apple.screencapture disable-shadow -bool true
 
 echo
@@ -39,7 +40,7 @@ echo finder
 
 # Always open everything in Finder's list view. This is important.
 # Four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`.
-defaults read com.apple.Finder FXPreferredViewStyle >> $LOG
+defaults read com.apple.Finder FXPreferredViewStyle >> "${LOG}"
 defaults write com.apple.Finder FXPreferredViewStyle Nlsv
 
 # Set a really fast key repeat.
@@ -57,19 +58,19 @@ defaults write com.apple.Finder FXPreferredViewStyle Nlsv
 #defaults write com.apple.dock wvous-bl-modifier -int 0
 
 # Finder: disable window animations and Get Info animations
-defaults read com.apple.finder DisableAllAnimations >> $LOG
+defaults read com.apple.finder DisableAllAnimations >> "${LOG}"
 defaults write com.apple.finder DisableAllAnimations -bool true
 
 # Finder: show all filename extensions
-defaults read NSGlobalDomain AppleShowAllExtensions >> $LOG
+defaults read NSGlobalDomain AppleShowAllExtensions >> "${LOG}"
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
 # Finder: show status bar
-defaults read com.apple.finder ShowStatusBar >> $LOG
+defaults read com.apple.finder ShowStatusBar >> "${LOG}"
 defaults write com.apple.finder ShowStatusBar -bool true
 
 # Finder: show path bar
-defaults read com.apple.finder ShowPathbar >> $LOG
+defaults read com.apple.finder ShowPathbar >> "${LOG}"
 defaults write com.apple.finder ShowPathbar -bool true
 
 # Finder: allow text selection in Quick Look
@@ -81,15 +82,15 @@ defaults write com.apple.finder ShowPathbar -bool true
 #defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 
 # When performing a search, search the current folder by default
-defaults read com.apple.finder FXDefaultSearchScope >> $LOG
+defaults read com.apple.finder FXDefaultSearchScope >> "${LOG}"
 defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 
 # Disable the warning when changing a file extension
-defaults read com.apple.finder FXEnableExtensionChangeWarning >> $LOG
+defaults read com.apple.finder FXEnableExtensionChangeWarning >> "${LOG}"
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
 # Disable spring loading for directories
-defaults read NSGlobalDomain com.apple.springing.enabled >> $LOG
+defaults read NSGlobalDomain com.apple.springing.enabled >> "${LOG}"
 defaults write NSGlobalDomain com.apple.springing.enabled -bool false
 
 # Disable spring loading for all Dock items
@@ -97,31 +98,31 @@ defaults write NSGlobalDomain com.apple.springing.enabled -bool false
 #defaults write com.apple.dock enable-spring-load-actions-on-all-items -bool false
 
 # Avoid creating .DS_Store files on network volumes
-defaults read com.apple.desktopservices DSDontWriteNetworkStores >> $LOG
+defaults read com.apple.desktopservices DSDontWriteNetworkStores >> "${LOG}"
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
 # Disable disk image verification
-defaults read com.apple.frameworks.diskimages skip-verify >> $LOG
+defaults read com.apple.frameworks.diskimages skip-verify >> "${LOG}"
 defaults write com.apple.frameworks.diskimages skip-verify -bool true
-defaults read com.apple.frameworks.diskimages skip-verify-locked >> $LOG
+defaults read com.apple.frameworks.diskimages skip-verify-locked >> "${LOG}"
 defaults write com.apple.frameworks.diskimages skip-verify-locked -bool true
-defaults read com.apple.frameworks.diskimages skip-verify-remote >> $LOG
+defaults read com.apple.frameworks.diskimages skip-verify-remote >> "${LOG}"
 defaults write com.apple.frameworks.diskimages skip-verify-remote -bool true
 
 # Automatically open a new Finder window when a volume is mounted
-defaults read com.apple.frameworks.diskimages auto-open-ro-root >> $LOG
+defaults read com.apple.frameworks.diskimages auto-open-ro-root >> "${LOG}"
 defaults write com.apple.frameworks.diskimages auto-open-ro-root -bool false
-defaults read com.apple.frameworks.diskimages auto-open-rw-root >> $LOG
+defaults read com.apple.frameworks.diskimages auto-open-rw-root >> "${LOG}"
 defaults write com.apple.frameworks.diskimages auto-open-rw-root -bool false
-defaults read com.apple.finder OpenWindowForNewRemovableDisk >> $LOG
+defaults read com.apple.finder OpenWindowForNewRemovableDisk >> "${LOG}"
 defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool false
 
 # Disable the warning before emptying the Trash
-defaults read com.apple.finder WarnOnEmptyTrash >> $LOG
+defaults read com.apple.finder WarnOnEmptyTrash >> "${LOG}"
 defaults write com.apple.finder WarnOnEmptyTrash -bool false
 
 # Empty Trash securely
-defaults read com.apple.finder EmptyTrashSecurely >> $LOG
+defaults read com.apple.finder EmptyTrashSecurely >> "${LOG}"
 defaults write com.apple.finder EmptyTrashSecurely -bool false
 
 # Enable AirDrop over Ethernet and on unsupported Macs running Lion
@@ -129,19 +130,19 @@ defaults write com.apple.finder EmptyTrashSecurely -bool false
 #defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool false
 
 # Set the icon size of Dock items to 26 pixels
-defaults read com.apple.dock tilesize >> $LOG
+defaults read com.apple.dock tilesize >> "${LOG}"
 defaults write com.apple.dock tilesize -int 26
 
 # Change minimize/maximize window effect
-defaults read com.apple.dock mineffect >> $LOG
+defaults read com.apple.dock mineffect >> "${LOG}"
 defaults write com.apple.dock mineffect -string "scale"
 
 # Minimize windows into their application's icon
-#defaults read com.apple.dock minimize-to-application >> $LOG
+#defaults read com.apple.dock minimize-to-application >> "${LOG}"
 #defaults write com.apple.dock minimize-to-application -bool false
 
 # Don't animate opening applications from the Dock
-defaults read com.apple.dock launchanim >> $LOG
+defaults read com.apple.dock launchanim >> "${LOG}"
 defaults write com.apple.dock launchanim -bool false
 
 # Wipe all (default) app icons from the Dock
@@ -150,23 +151,23 @@ defaults write com.apple.dock launchanim -bool false
 #defaults write com.apple.dock persistent-apps -array ""
 
 # Show Dashboard as a Space
-defaults read com.apple.dock dashboard-in-overlay >> $LOG
+defaults read com.apple.dock dashboard-in-overlay >> "${LOG}"
 defaults write com.apple.dock dashboard-in-overlay -bool false
 
 # Don't automatically rearrange Spaces based on most recent use
-defaults read com.apple.dock mru-spaces >> $LOG
+defaults read com.apple.dock mru-spaces >> "${LOG}"
 defaults write com.apple.dock mru-spaces -bool false
 
 # Remove the auto-hiding Dock delay
-defaults read com.apple.dock autohide-delay >> $LOG
+defaults read com.apple.dock autohide-delay >> "${LOG}"
 defaults write com.apple.dock autohide-delay -float 0
 
 # Remove the animation when hiding/showing the Dock
-defaults read com.apple.dock autohide-time-modifier >> $LOG
+defaults read com.apple.dock autohide-time-modifier >> "${LOG}"
 defaults write com.apple.dock autohide-time-modifier -float 0
 
 # Automatically hide and show the Dock
-defaults read com.apple.dock autohide >> $LOG
+defaults read com.apple.dock autohide >> "${LOG}"
 defaults write com.apple.dock autohide -bool true
 
 # Make Dock icons of hidden applications translucent
@@ -395,7 +396,7 @@ echo chrome
 # Change update interval to 2 days.
 # https://support.google.com/a/answer/187207?hl=en&topic=1064255
 # https://support.google.com/installer/answer/147176
-defaults read com.google.Keystone.Agent checkInterval >> $LOG
+defaults read com.google.Keystone.Agent checkInterval >> "${LOG}"
 defaults write com.google.Keystone.Agent checkInterval 172800
 
 # Use the system-native print preview dialog
@@ -415,7 +416,7 @@ echo misc
 #defaults write com.apple.iCal IncludeDebugMenu -bool true
 
 # Use plain text mode for new TextEdit documents
-defaults read com.apple.TextEdit RichText >> $LOG
+defaults read com.apple.TextEdit RichText >> "${LOG}"
 defaults write com.apple.TextEdit RichText -int 0
 
 # Open and save files as UTF-8 in TextEdit
@@ -439,7 +440,7 @@ echo
 echo network
 
 # List all Mac's network interfaces
-sudo networksetup -listallnetworkservices >> $LOG
+sudo networksetup -listallnetworkservices >> "${LOG}"
 
 # Disable IPv6 for Wireless
 sudo networksetup -setv6off Wi-Fi
