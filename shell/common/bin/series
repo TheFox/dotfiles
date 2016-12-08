@@ -251,6 +251,17 @@ class RayDonovanSeries < Series
 	end
 end
 
+class RevengeSeries < Series
+	def name
+		'revenge_%epi%%ext%'
+	end
+	def patterns
+		[
+			/^Revenge/i,
+		]
+	end
+end
+
 class SiliconValleySeries < Series
 	def name
 		'silicon_valley_%epi%%ext%'
@@ -332,6 +343,7 @@ classes = [
 	OrphanBlackSeries,
 	PersonOfInterestSeries,
 	RayDonovanSeries,
+	RevengeSeries,
 	SiliconValleySeries,
 	SuitsSeries,
 	TheClevelandShowSeries,
