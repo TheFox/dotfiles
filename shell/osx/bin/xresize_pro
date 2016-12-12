@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# Move Terminal
+printf '\e[3;810;0t'
+
+# Resize Terminal
+resize -s 65 100
