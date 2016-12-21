@@ -1,0 +1,6 @@
+<snippet>
+	<content><![CDATA[NSMutableString *${1:str1} = [[NSMutableString alloc] init];]]></content>
+	<tabTrigger>nsmut</tabTrigger>
+	<scope>source.objc</scope>
+	<description>NSMutableString init</description>
+</snippet>

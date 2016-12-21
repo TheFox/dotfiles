@@ -1,0 +1,6 @@
+<snippet>
+	<content><![CDATA[[[NSString alloc] initWithCString:$0 encoding:NSUTF8StringEncoding]]]></content>
+	<tabTrigger>nsstring</tabTrigger>
+	<scope>source.objc</scope>
+	<description>NSString init CString</description>
+</snippet>
