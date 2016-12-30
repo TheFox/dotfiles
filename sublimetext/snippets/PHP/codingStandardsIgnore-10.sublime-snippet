@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[@codingStandardsIgnoreStart]]></content>
-	<tabTrigger>@cod</tabTrigger>
-	<scope>source.php</scope>
+	<tabTrigger>coding</tabTrigger>
+	<scope>comment.line.double-slash.php</scope>
 	<description>Coding Standard Ignore Start</description>
 </snippet>

@@ -1,6 +1,6 @@
 <snippet>
-    <content><![CDATA[\$${1:retVal} = ${2:condition} ? $3 : $4;]]></content>
+    <content><![CDATA[\$${1:retVal} = ${2:condition} ? ${3:$SELECTION} : $4;]]></content>
     <tabTrigger>if?</tabTrigger>
     <scope>source.php</scope>
-    <description>$… = … ? … : …</description>
+    <description>if $... = ... ? ... : ...</description>
 </snippet>

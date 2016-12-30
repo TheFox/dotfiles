@@ -1,5 +1,6 @@
 [
 	{ "keys": ["super+n"], "command": "new_window" },
 	{ "keys": ["super+t"], "command": "new_file" },
-	{ "keys": ["super+p"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": false} }
+	{ "keys": ["super+p"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": false} },
+	{ "keys": ["ctrl+w"], "command": "show_overlay", "args": {"overlay": "command_palette", "text": "Snippet: "}}
 ]
