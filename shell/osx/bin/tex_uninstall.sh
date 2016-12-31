@@ -18,11 +18,11 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 for dir in $DIRS; do
-	( $LS $dir 2> /dev/null; [ -d $dir ] && echo sudo $RM $dir )
+	( $LS $dir 2> /dev/null; [ -d $dir ] && echo sudo $RM $dir && sudo $RM $dir )
 done
 
 for file in $FILES $MAN_FILES_DE $MAN_FILES_C; do
-	( $LS $file 2> /dev/null; [ -f $file ] && echo sudo $RM $file )
+	( $LS $file 2> /dev/null; [ -f $file ] && echo sudo $RM $file && sudo $RM $file )
 done
 
 echo 'done'
