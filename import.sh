@@ -40,6 +40,9 @@ rm -f ~/bin/route_192.sh
 rm -f ~/bin/route_iphone.sh
 rm -f ~/bin/route_normal.sh
 rm -f ~/.dotfiles-installed
+rm -f ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/PHP/codingStandardsIgnore-10.sublime-snippet
+rm -f ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/PHP/codingStandardsIgnore-20.sublime-snippet
+rm -f ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/PHP/codingStandardsIgnore-30.sublime-snippet
 
 
 echo 'import default files'
