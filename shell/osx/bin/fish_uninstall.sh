@@ -6,7 +6,7 @@
 RM="rm -vrfd"
 LS="ls -lad"
 DIRS="/usr/local/etc/fish /usr/local/share/fish"
-BIN_FILES="/usr/local/bin/fish /usr/local/bin/fish_indent"
+FILES="/usr/local/bin/fish /usr/local/bin/fish_indent"
 MAN_FILES_DE=""
 MAN_FILES_C="/usr/local/share/man/man1/fish.1 /usr/local/share/man/man1/fish_indent.1 /usr/local/share/man/man1/fish_pager.1 /usr/local/share/man/man1/fishd.1 /usr/local/share/man/man1/set_color.1"
 
@@ -21,7 +21,7 @@ for dir in $DIRS; do
 	( $LS $dir 2> /dev/null; [ -d $dir ] && sudo $RM $dir )
 done
 
-for file in $BIN_FILES $MAN_FILES_DE $MAN_FILES_C; do
+for file in $FILES $MAN_FILES_DE $MAN_FILES_C; do
 	( $LS $file 2> /dev/null; [ -f $file ] && sudo $RM $file )
 done
 
