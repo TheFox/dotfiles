@@ -1,0 +1,38 @@
+{
+	"patterns": {
+		"TODO": "TODO[\\s]*?:?[\\s]*(?P<todo>.*)$",
+		"FIXME": "FIX ?ME[\\s]*?:?[\\s]*(?P<fixme>.*)$",
+		"DEBUG": "@DEBUG[\\s]*?:?[\\s]*(?P<debug>.*)$",
+		"DEPRECATED": "@DEPRECATED[\\s]*?:?[\\s]*(?P<deprecated>.*)$",
+		"DISABLED": "@DISABLED[\\s]*?:?[\\s]*(?P<disabled>.*)$"
+	},
+	"patterns_weight": {
+		"TODO": 10,
+		"FIXME": 20,
+		"DEBUG": 30,
+		"DEPRECATED": 40,
+		"DISABLED": 40
+	},
+	"exclude_folders": [
+		"*.git*",
+		"build/*",
+		"cache/*",
+		"*/cache/*",
+		"coverage/*",
+		"docu/*",
+		"documentation/*",
+		"log/*",
+		"logs/*",
+		"tmp/*",
+		"translations/*",
+		"vendor/*"
+	],
+	"exclude_files": [
+		"*.sublime-workspace",
+		"*.sublime-project",
+		"*.xml",
+		"*.sh"
+	],
+	"render_header_date": "%F %T",
+	"render_folder_depth": 1
+}
