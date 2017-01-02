@@ -1,8 +1,10 @@
 <snippet>
 	<content><![CDATA[public function provider${1:FunctionName}(){
-	return array(
-		array(),
-	);
+	\$provider = array();
+	
+	\$provider[] = array();
+	
+	return \$provider;
 }
 
 /**

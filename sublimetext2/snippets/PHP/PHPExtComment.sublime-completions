@@ -9,6 +9,7 @@
 		{ "trigger": "@codingStandardsIgnoreStart", "contents": "@codingStandardsIgnoreStart" },
 		{ "trigger": "@codingStandardsIgnoreEnd", "contents": "@codingStandardsIgnoreEnd" },
 		{ "trigger": "@codingStandardsIgnoreFile", "contents": "@codingStandardsIgnoreFile" },
+		{ "trigger": "@codingStandardsIgnoreLine", "contents": "@codingStandardsIgnoreLine" },
 		
 		{ "trigger": "@dataProvider", "contents": "@dataProvider" },
 		
