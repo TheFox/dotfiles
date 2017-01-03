@@ -4,14 +4,16 @@
 		"FIXME": "FIX ?ME[\\s]*?:?[\\s]*(?P<fixme>.*)$",
 		"DEBUG": "@DEBUG[\\s]*?:?[\\s]*(?P<debug>.*)$",
 		"DEPRECATED": "@DEPRECATED[\\s]*?:?[\\s]*(?P<deprecated>.*)$",
-		"DISABLED": "@DISABLED[\\s]*?:?[\\s]*(?P<disabled>.*)$"
+		"DISABLED": "@DISABLED[\\s]*?:?[\\s]*(?P<disabled>.*)$",
+		"NOTICE": "@NOTICE[\\s]*?:?[\\s]*(?P<notice>.*)$"
 	},
 	"patterns_weight": {
 		"TODO": 10,
 		"FIXME": 20,
 		"DEBUG": 30,
 		"DEPRECATED": 40,
-		"DISABLED": 40
+		"DISABLED": 50,
+		"NOTICE": 60
 	},
 	"exclude_folders": [
 		"*.git*",
