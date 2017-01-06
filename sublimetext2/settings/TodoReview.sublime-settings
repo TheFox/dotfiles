@@ -17,9 +17,11 @@
 	},
 	"exclude_folders": [
 		"*.git*",
+		"_OLD/*",
 		"build/*",
 		"cache/*",
 		"*/cache/*",
+		"components/*",
 		"coverage/*",
 		"docu/*",
 		"documentation/*",
