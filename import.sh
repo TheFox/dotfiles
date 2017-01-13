@@ -43,6 +43,7 @@ rm -f ~/.dotfiles-installed
 rm -f ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/PHP/codingStandardsIgnore-10.sublime-snippet
 rm -f ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/PHP/codingStandardsIgnore-20.sublime-snippet
 rm -f ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/PHP/codingStandardsIgnore-30.sublime-snippet
+rm -f ~/bin/mirrors_add
 
 
 echo 'import default files'
