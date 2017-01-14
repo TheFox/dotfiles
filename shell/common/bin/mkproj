@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+SCRIPT_BASENAME=$(basename $0)
+
+name_file=$1
+name_title=$2
+
+if [ -z ${name_file} ] || [ -z ${name_title} ]; then
+	echo "Usage: ${SCRIPT_BASENAME} <name_file> <name_title>"
+	exit 3
+fi
+
+echo "{
+	\"folders\":[
+		{
+			\"path\": \".\",
+			\"name\": \"${name_title}\",
+			\"folder_exclude_patterns\": [ ],
+			\"file_exclude_patterns\": [ ]
+		}
+	]
+}" > ${name_file}.sublime-project
