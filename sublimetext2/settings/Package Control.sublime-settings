@@ -27,6 +27,7 @@
 		"PHPUnit Snippets",
 		"SFTP",
 		"TodoReview",
-		"Twig"
+		"Twig",
+		"Xdebug Client"
 	]
 }
