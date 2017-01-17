@@ -4,6 +4,7 @@ SCRIPT_BASENAME=$(basename $0)
 
 name_file=$1
 name_title=$2
+path=${3:-.}
 
 if [ -z ${name_file} ] || [ -z ${name_title} ]; then
 	echo "Usage: ${SCRIPT_BASENAME} <name_file> <name_title>"
@@ -13,10 +14,14 @@ fi
 echo "{
 	\"folders\":[
 		{
-			\"path\": \".\",
+			\"path\": \"${path}\",
 			\"name\": \"${name_title}\",
 			\"folder_exclude_patterns\": [ ],
 			\"file_exclude_patterns\": [ ]
 		}
-	]
+	],
+	\"settings\": {
+		\"tab_size\": 4,
+		\"translate_tabs_to_spaces\": false
+	}
 }" > ${name_file}.sublime-project
