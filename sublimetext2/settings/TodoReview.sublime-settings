@@ -27,9 +27,12 @@
 		"documentation/*",
 		"log/*",
 		"logs/*",
+		"public/*",
+		"*/public/*",
 		"tmp/*",
 		"translations/*",
-		"vendor/*"
+		"vendor/*",
+		"*/vendor/*"
 	],
 	"exclude_files": [
 		"*.sublime-workspace",
