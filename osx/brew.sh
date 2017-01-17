@@ -76,26 +76,26 @@ git --version
 # launchctl load -w ~/Library/LaunchAgents/org.freedesktop.dbus-session.plist
 
 brew tap caskroom/cask
-#brew install Caskroom/cask/adium
-brew install Caskroom/cask/dropbox
-brew install Caskroom/cask/firefox
-brew install Caskroom/cask/forklift
-#brew install Caskroom/cask/gimp
-brew install Caskroom/cask/google-chrome
-brew install Caskroom/cask/kaleidoscope
-brew install Caskroom/cask/keepassx
-brew install Caskroom/cask/libreoffice
-#brew install Caskroom/cask/limechat
-#brew install Caskroom/cask/mysqlworkbench
-brew install Caskroom/cask/sequel-pro
-#brew install Caskroom/cask/skype
-brew install Caskroom/cask/sublime-text
-brew install Caskroom/cask/the-unarchiver
-brew install Caskroom/cask/thunderbird
-#brew install Caskroom/cask/virtualbox
-#brew install Caskroom/cask/vlc
-#brew install Caskroom/cask/wkhtmltopdf
-#brew install Caskroom/cask/xquartz
+#brew cask install adium
+brew cask install dropbox
+brew cask install firefox
+brew cask install forklift
+#brew cask install gimp
+brew cask install google-chrome
+brew cask install kaleidoscope
+brew cask install keepassx
+brew cask install libreoffice
+#brew cask install limechat
+#brew cask install mysqlworkbench
+brew cask install sequel-pro
+#brew cask install skype
+brew cask install sublime-text
+brew cask install the-unarchiver
+brew cask install thunderbird
+#brew cask install virtualbox
+#brew cask install vlc
+#brew cask install wkhtmltopdf
+#brew cask install xquartz
 
 
 brew cleanup
