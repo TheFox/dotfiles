@@ -17,6 +17,7 @@ if [ -f $brew_path/etc/bash_completion.d/youtube-dl.bash-completion ]; then
 	. $brew_path/etc/bash_completion.d/youtube-dl.bash-completion
 fi
 
+echo "$PATH"
 PATH="$HOME/bin:$HOME/Dropbox/bin:${PATH}"
 PS1='\[\033[0;31m\]\W\[\033[0m\]\$ '
 EDITOR="/usr/bin/vi"
@@ -29,17 +30,30 @@ shopt -s histappend
 set -o vi
 
 if [ "$(uname -s)" = "Darwin" ]; then
-	alias l="ls -lG"
-	alias ll="ls -laG"
+	alias l='ls -lG'
+	alias ll='ls -laG'
 else
-	alias l="ls -l --color=auto"
-	alias ll="ls -la --color=auto"
+	alias l='ls -l --color=auto'
+	alias ll='ls -la --color=auto'
 fi
 
-alias grep="grep --color=auto"
-alias egrep="egrep --color=auto"
-alias d="date"
-alias tarc="tar -vpc --exclude .DS_Store -f"
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias d='date'
+alias tarc='tar -vpc --exclude .DS_Store -f'
+
+# Git Aliases
+alias ga='git add'
+alias gb='git branch'
+alias gco='git checkout'
+alias gc='git commit'
+alias gca='git commit --amend'
+alias gd='git diff'
+alias gl="git log -n 15 --pretty=format:'%h %ae %ad %s' --date=iso"
+alias gm='git merge'
+alias gv='git pull'
+alias gp='git push'
+alias gs='git status'
 
 case "${TERM}" in
 	xterm*|rxvt*)

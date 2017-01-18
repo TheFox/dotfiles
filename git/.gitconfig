@@ -6,3 +6,6 @@
 	excludesfile = /Users/thefox/.gitignore_global
 [push]
 	default = simple
+[alias]
+	co = checkout
+	b = branch
