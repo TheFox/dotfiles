@@ -184,6 +184,17 @@ class HannibalSeries < Series
 	end
 end
 
+class HowToGetAwayWithMurderSeries < Series
+	def name
+		'how_to_get_away_with_murder_%epi%%ext%'
+	end
+	def patterns
+		[
+			/^How.to.Get.Away.with.Murder/,
+		]
+	end
+end
+
 class LuciferSeries < Series
 	def name
 		'lucifer_%epi%%ext%'
@@ -337,6 +348,7 @@ classes = [
 	ElementarySeries,
 	FamilyGuySeries,
 	HannibalSeries,
+	HowToGetAwayWithMurderSeries,
 	LuciferSeries,
 	MrRobotSeries,
 	OrangeIsTheNewBlackSeries,
