@@ -4,8 +4,20 @@
 	email = christian@fox21.at
 [core]
 	excludesfile = /Users/thefox/.gitignore_global
+	autocrlf = input
 [push]
 	default = simple
 [alias]
 	co = checkout
 	b = branch
+[diff]
+	tool = Kaleidoscope
+[difftool "Kaleidoscope"]
+	cmd = /usr/local/bin/ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[difftool]
+	prompt = false
+[merge]
+	tool = Kaleidoscope
+[mergetool "Kaleidoscope"]
+	cmd = /usr/local/bin/ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustExitCode = true
