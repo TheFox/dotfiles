@@ -93,6 +93,7 @@ brew cask install libreoffice
 brew cask install sublime-text
 brew cask install the-unarchiver
 brew cask install thunderbird
+brew cask install tunnelblick
 #brew cask install virtualbox
 #brew cask install vlc
 #brew cask install wkhtmltopdf
