@@ -23,16 +23,16 @@
 	"max_depth": 2,
 	"super_globals": false,
 	"debug_layout" : {
-		"cols": [0.0, 0.7, 1.0],
+		"cols": [0.0, 1.0, 1.0],
 		"rows": [0.0, 0.5, 1.0],
 		"cells": [[0, 0, 2, 1], [0, 1, 1, 2], [1, 1, 2, 2]]
 	},
-	"breakpoint_group": 2,
-    "breakpoint_index": 1,
+	"breakpoint_group": 1,
+    "breakpoint_index": 0,
     "context_group": 1,
-    "context_index": 0,
-    "stack_group": 2,
-    "stack_index": 0,
-    "watch_group": 2,
-    "watch_index": 1
+    "context_index": 1,
+    "stack_group": 1,
+    "stack_index": 2,
+    "watch_group": 1,
+    "watch_index": 3
 }
