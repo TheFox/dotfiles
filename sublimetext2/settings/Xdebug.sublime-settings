@@ -19,5 +19,20 @@
 		// default
 		"Unknown error"
 	],
-	"close_on_stop": true
+	"close_on_stop": true,
+	"max_depth": 2,
+	"super_globals": false,
+	"debug_layout" : {
+		"cols": [0.0, 0.7, 1.0],
+		"rows": [0.0, 0.5, 1.0],
+		"cells": [[0, 0, 2, 1], [0, 1, 1, 2], [1, 1, 2, 2]]
+	},
+	"breakpoint_group": 2,
+    "breakpoint_index": 1,
+    "context_group": 1,
+    "context_index": 0,
+    "stack_group": 2,
+    "stack_index": 0,
+    "watch_group": 2,
+    "watch_index": 1
 }
