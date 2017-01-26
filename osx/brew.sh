@@ -77,6 +77,7 @@ git --version
 
 brew tap caskroom/cask
 #brew cask install adium
+#brew cask install datagrip
 brew cask install dropbox
 brew cask install firefox
 brew cask install forklift
@@ -87,7 +88,7 @@ brew cask install keepassx
 brew cask install libreoffice
 #brew cask install limechat
 #brew cask install mysqlworkbench
-brew cask install sequel-pro
+#brew cask install sequel-pro
 #brew cask install skype
 brew cask install sublime-text
 brew cask install the-unarchiver
