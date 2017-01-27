@@ -1,5 +1,7 @@
 
 --sort-files
 
+--with-filename
+
 --type-set=sblws:ext:sublime-workspace
 --type=nosblws
