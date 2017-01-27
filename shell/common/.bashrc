@@ -45,6 +45,7 @@ alias oo='open .'
 # Git Aliases
 alias ga='git add'
 alias gap='git add -p'
+alias gau='git add -u'
 alias gb='git branch'
 alias gco='git checkout'
 alias gc='git commit'
