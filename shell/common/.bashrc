@@ -56,6 +56,7 @@ alias gm='git merge'
 alias gv='git pull'
 alias gp='git push'
 alias gs='git status'
+alias gr='git remote -v'
 
 case "${TERM}" in
 	xterm*|rxvt*)
