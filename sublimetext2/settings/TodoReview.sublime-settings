@@ -1,7 +1,7 @@
 {
 	"patterns": {
-		"TODO": "TODO[\\s]*?:?[\\s]*(?P<todo>.*)$",
-		"FIXME": "FIX ?ME[\\s]*?:?[\\s]*(?P<fixme>.*)$",
+		"TODO": "@TODO[\\s]*?:?[\\s]*(?P<todo>.*)$",
+		"FIXME": "@FIX ?ME[\\s]*?:?[\\s]*(?P<fixme>.*)$",
 		"DEBUG": "@DEBUG[\\s]*?:?[\\s]*(?P<debug>.*)$",
 		"DEPRECATED": "@DEPRECATED[\\s]*?:?[\\s]*(?P<deprecated>.*)$",
 		"DISABLED": "@DISABLED[\\s]*?:?[\\s]*(?P<disabled>.*)$",
