@@ -38,7 +38,14 @@
 		"*.sublime-workspace",
 		"*.sublime-project",
 		"*.xml",
-		"*.sh"
+		"*.yml",
+		"*.twig",
+		"*.txt",
+		"*.sh",
+		"*.js",
+		"*.css",
+		"*.lock",
+		"*.cache"
 	],
 	"render_header_date": "%F %T",
 	"render_folder_depth": 1
