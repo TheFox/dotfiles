@@ -5,6 +5,7 @@
 [core]
 	excludesfile = /Users/thefox/.gitignore_global
 	autocrlf = input
+	whitespace = cr-at-eol
 [push]
 	default = simple
 [alias]
