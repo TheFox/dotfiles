@@ -11,14 +11,11 @@ My dotfiles.
 
 2. Import
 	
-		./import_macosx.sh
+		./import.sh
 	
-	or
-	
-		./import_linux.sh
-
 ## License
-Copyright (C) 2014 Christian Mayer <http://fox21.at>
+
+Copyright (C) 2014 Christian Mayer <https://fox21.at>
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
