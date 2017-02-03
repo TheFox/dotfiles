@@ -3,6 +3,7 @@
 		"TODO": "@TODO[\\s]*?:?[\\s]*(?P<todo>.*)$",
 		"FIXME": "@FIX ?ME[\\s]*?:?[\\s]*(?P<fixme>.*)$",
 		"DEBUG": "@DEBUG[\\s]*?:?[\\s]*(?P<debug>.*)$",
+		"TEST": "@TEST[\\s]*?:?[\\s]*(?P<test>.*)$",
 		"DEPRECATED": "@DEPRECATED[\\s]*?:?[\\s]*(?P<deprecated>.*)$",
 		"DISABLED": "@DISABLED[\\s]*?:?[\\s]*(?P<disabled>.*)$",
 		"NOTICE": "@NOTICE[\\s]*?:?[\\s]*(?P<notice>.*)$"
@@ -11,9 +12,10 @@
 		"TODO": 10,
 		"FIXME": 20,
 		"DEBUG": 30,
-		"DEPRECATED": 40,
-		"DISABLED": 50,
-		"NOTICE": 60
+		"TEST": 40,
+		"DEPRECATED": 50,
+		"DISABLED": 60,
+		"NOTICE": 70
 	},
 	"exclude_folders": [
 		"*.git*",
