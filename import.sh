@@ -44,6 +44,9 @@ rm -f ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/PHP/codingStandar
 rm -f ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/PHP/codingStandardsIgnore-20.sublime-snippet
 rm -f ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/PHP/codingStandardsIgnore-30.sublime-snippet
 rm -f ~/bin/mirrors_add
+rm -f ~/bin/install_php55.sh
+rm -f ~/bin/install_php56.sh
+rm -f ~/bin/install_php71.sh
 
 
 echo 'import default files'
