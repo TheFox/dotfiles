@@ -6,7 +6,7 @@ name_file=$1
 name_title=$2
 path=${3:-.}
 
-if [ -z ${name_file} ] || [ -z ${name_title} ]; then
+if [ -z "${name_file}" ] || [ -z "${name_title}" ]; then
 	echo "Usage: ${SCRIPT_BASENAME} <name_file> <name_title>"
 	exit 3
 fi
@@ -24,4 +24,4 @@ echo "{
 		\"tab_size\": 4,
 		\"translate_tabs_to_spaces\": false
 	}
-}" > ${name_file}.sublime-project
+}" > "${name_file}".sublime-project
