@@ -30,6 +30,7 @@ brew install bash
 brew install cmake
 brew install curl
 #brew install ffmpeg
+#brew install gnuplot --with-cairo --with-pdflib-lite --with-qt --with-x11
 brew install gnu-sed
 brew install gpg2
 brew install gpg-agent
