@@ -67,6 +67,12 @@ brew install xz
 
 brew install composer
 
+# DBUS
+# brew install dbus
+# cp /usr/local/Cellar/d-bus/1.8.8/org.freedesktop.dbus-session.plist ~/Library/LaunchAgents
+# Load DBus
+# launchctl load -w ~/Library/LaunchAgents/org.freedesktop.dbus-session.plist
+
 brew install ruby
 gem install bundler
 gem install tmuxinator
