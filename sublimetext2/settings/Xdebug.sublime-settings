@@ -21,7 +21,7 @@
 	],
 	"close_on_stop": true,
 	"max_depth": 2,
-	"max_children": 2,
+	"max_children": 32,
 	"super_globals": false,
 	"debug_layout" : {
 		"cols": [0.0, 1.0, 1.0],
