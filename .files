@@ -5,6 +5,7 @@ git/.gitconfig
 git/.gitignore_global
 git/.tigrc
 lldb/.lldbinit
+mysql/.my.cnf
 shell/common/.bash_profile
 shell/common/.bashrc
 shell/common/.dotfiles_installed
