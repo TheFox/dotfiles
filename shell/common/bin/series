@@ -361,6 +361,17 @@ class TestSeries < Series
 	end
 end
 
+class Westworld < Series
+	def name
+		'westworld_%epi%%ext%'
+	end
+	def patterns
+		[
+			/^Westworld/,
+		]
+	end
+end
+
 classes = [
 	AgentCarterSeries,
 	AgentsOfShieldSeries,
@@ -386,6 +397,7 @@ classes = [
 	TheHundredSeries,
 	TheWalkingDeadSeries,
 	# TestSeries,
+	Westworld,
 ]
 
 dir_paths = ARGV.length > 0 ? ARGV : ['.']
