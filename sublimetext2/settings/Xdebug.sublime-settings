@@ -30,11 +30,11 @@
 	},
 	"breakpoint_group": 1,
     "breakpoint_index": 0,
-    "context_group": 1,
-    "context_index": 2,
     "stack_group": 1,
     "stack_index": 1,
     "watch_group": 1,
-    "watch_index": 3,
+    "watch_index": 2,
+    "context_group": 1,
+    "context_index": 3,
     "debug": true
 }
