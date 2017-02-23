@@ -145,6 +145,17 @@ class BattlestarGalacticaSeries < Series
 	end
 end
 
+class CriminalMinds < Series
+	def name
+		'criminal_minds_%epi%%ext%'
+	end
+	def patterns
+		[
+			/^Criminal.Minds/i,
+		]
+	end
+end
+
 class ElementarySeries < Series
 	def name
 		'elementary_%epi%%ext%'
@@ -344,6 +355,7 @@ classes = [
 	AgentsOfShieldSeries,
 	AmericanDadSeries,
 	BattlestarGalacticaSeries,
+	CriminalMinds,
 	BlackMirrorSeries,
 	ElementarySeries,
 	FamilyGuySeries,
