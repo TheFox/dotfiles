@@ -62,8 +62,8 @@ brew install xz
 
 # PHP 7.1
 # brew install php71 --with-thread-safety --without-snmp --with-imap --with-httpd24
-# brew install php71-mcrypt
-# brew install php71-xdebug
+# brew install mcrypt --build-from-source php71-mcrypt --build-from-source
+# brew install php71-xdebug --build-from-source
 
 brew install composer
 
