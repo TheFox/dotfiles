@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+# Uninstall MacTex
 # https://www.tug.org/mactex/uninstalling.html
 
 

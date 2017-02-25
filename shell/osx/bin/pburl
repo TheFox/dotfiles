@@ -1,12 +1,19 @@
 #!/usr/bin/env bash
 
+# Read the macOS clipboard every 0.2 seconds and detect URLs.
+# Print only URLs to stdout. So you can start this script and
+# just need to mark the URL and hit CMD+c. This is good for
+# fast collecting URLs.
+
 url=""
 
 while true; do
 	paste=$(pbpaste)
 	
+	# Take only URLs.
 	if echo "${paste}" | grep -q '^http'; then
 		
+		# Print only if the URL has changed.
 		if [ "${paste}" != "${url}" ]; then
 			echo "${paste}"
 		fi

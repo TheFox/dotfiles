@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
-# https://www.tug.org/mactex/uninstalling.html
-# See 'Uninstalling Ghostscript'
+# Uninstall Ghostscript
+
+# See 'Uninstalling Ghostscript' on
+#   https://www.tug.org/mactex/uninstalling.html
 
 
 RM="rm -rfd"

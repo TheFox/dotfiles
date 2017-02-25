@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Remove a file from Git History
+# Remove a file from Git History.
 
 # http://dound.com/2009/04/git-forever-remove-files-or-folders-from-history/
 # http://stackoverflow.com/a/14728706

@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# Start Apache2 Server under macOS.
+
 sudo apachectl start
 sleep 2
 ps aux | grep -v grep | grep httpd

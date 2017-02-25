@@ -3,6 +3,7 @@
 # Create Bootable ISO from Mavericks App
 # Original: http://thezinx.com/2013/10/29/create-bootable-dmg-iso-mavericks-app.html
 # 2014-01-06 https://gist.github.com/TheFox/8281265
+# 2017-02-12 https://github.com/TheFox/dotfiles/blob/2f842d75aa68299276b01fdd72d5233e45f5e3b5/shell/osx/bin/mavericks_bootable_iso.sh
 
 V_BUILD=/Volumes/install_build
 V_APP=/Volumes/install_app

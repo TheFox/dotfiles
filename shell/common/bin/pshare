@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# Alias for Picture Share script.
+
 base_dir=~/work/dev/pshare
 
 if [[ ! -d ${base_dir} ]]; then

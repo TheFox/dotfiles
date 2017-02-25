@@ -2,7 +2,7 @@
 
 # Search for '#RN' (Release Note) in commit messages
 # between tags and write the output to CHANGELOG-x.txt.
-
+# https://blog.fox21.at/2015/06/19/generate-changelogs.html
 
 set -e
 

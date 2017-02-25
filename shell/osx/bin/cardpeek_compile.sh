@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
+# Compile Cardpeek
 # 2015-01-13 https://gist.github.com/TheFox/efb21bb9ed6ff4f2a725
+# 2017-02-12 https://github.com/TheFox/dotfiles/blob/3bf969a039f91d0aa6d245fe72dedf7341e03db9/shell/osx/bin/cardpeek_compile.sh
 
 # https://code.google.com/p/cardpeek/
 # You also need to install DBus.

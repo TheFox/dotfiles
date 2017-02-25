@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# Decrypt GPG files.
+
 set -e
 
 for file in $*; do

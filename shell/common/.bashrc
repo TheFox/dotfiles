@@ -23,7 +23,7 @@ EDITOR="/usr/bin/vi"
 HISTSIZE=5000
 HISTFILESIZE=10000
 
-export PS1 PATH EDITOR
+export PATH PS1 EDITOR
 
 shopt -s histappend
 set -o vi

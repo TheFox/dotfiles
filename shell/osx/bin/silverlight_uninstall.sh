@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+# Uninstall Microsoft Silverlight under macOS.
 # https://social.msdn.microsoft.com/Forums/silverlight/en-US/2c317f5e-ded5-4ba6-b730-f11771b8cfd9/uninstall-silverlight-on-mac-os-x?forum=silverlightinstall
 
 

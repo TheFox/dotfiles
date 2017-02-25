@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# Edit the ID3 tags of a .mp3 file with id3dit.
+
 # Usage:
 #	edittags '*.mp3'
 

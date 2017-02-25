@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# Generate a README.html from a README.md file.
+
 which pandoc &> /dev/null || { echo 'pandoc not installed'; exit 1; }
 set -x
 pandoc -s -f markdown_github -t html -c http://fox21.at/style.css -o README.html README.md

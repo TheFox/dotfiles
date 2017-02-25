@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-# Make screenshot under OS X interactively.
+
+# Make a screenshot under OS X interactively.
 
 set -e
 DATE=$(date +"%Y%m%d_%H%M%S")

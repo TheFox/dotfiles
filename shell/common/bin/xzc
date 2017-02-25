@@ -1,8 +1,17 @@
 #!/usr/bin/env bash
 
+# Compress a file with xz.
+
 set -e
 inputfile=$1
 
+# -z    Compress
+# -k    Don't delete the input files.
+# -f    Force (see man)
+# -9    Compression Level (high)
+# -e    extreme
+# -T 5  Use 5 threads.
+# -v    Be verbose.
 xz -z -k -f -9 -e -T 5 -v $inputfile
 
 exit $?

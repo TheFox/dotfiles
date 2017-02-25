@@ -2,7 +2,6 @@
 
 # Set the author of the latest commit.
 
-
 name="$1"
 email="$2"
 

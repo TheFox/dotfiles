@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+# Uninstall Flip4Mac
 # http://www.telestream.net/flip4mac/overview.htm
 
 

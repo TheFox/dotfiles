@@ -47,7 +47,7 @@ brew install tig
 brew install tmux
 brew install tree
 # brew install w3m
-#brew install watch
+brew install watch
 brew install wget
 brew install xz
 #brew install youtube-dl

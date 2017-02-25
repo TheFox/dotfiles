@@ -1,5 +1,9 @@
 #!/usr/bin/env ruby
 
+# Rename tv series files to a common format.
+# I don't care about titles in file names.
+# Just make the long file name shorter, readable.
+
 # require 'pp'
 require 'pathname'
 require 'io/console'

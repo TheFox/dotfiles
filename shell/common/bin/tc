@@ -1,10 +1,12 @@
 #!/usr/bin/env ruby
 
 # Rename files to title case.
-# Example: 'artist - xyz.mp3' to 'Artist - Xyz.mp3'
+# For example, rename the file
+#   'artist - xyz.mp3'
+# to
+#   'Artist - Xyz.mp3'
 
 require 'thefox-ext'
-
 
 ARGV.each do |file_path_old|
 	dir_name_old = File.dirname(file_path_old)

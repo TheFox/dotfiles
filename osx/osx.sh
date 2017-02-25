@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# Set up macOS.
+
 DATE=$(date +"%Y%m%d-%H%M%S")
 LOG="old_${DATE}.log"
 

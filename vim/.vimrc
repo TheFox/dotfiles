@@ -1,3 +1,5 @@
+" Global VIM Config
+
 syntax on
 
 set cursorline

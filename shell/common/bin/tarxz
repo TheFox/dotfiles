@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
-# Created @ 16.07.2015 by Christian Mayer <http://fox21.at>
+
 # Create a .tar.xz file from a file or directory.
+# Created @ 16.07.2015 by Christian Mayer <http://fox21.at>
 
 SCRIPT_BASEDIR=$(dirname $0)
 

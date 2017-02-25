@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# Move and resize the Terminal window.
+
 # Move Terminal
 printf '\e[3;0;0t'
 

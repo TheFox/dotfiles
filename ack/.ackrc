@@ -3,8 +3,10 @@
 
 --with-filename
 
+# Sublime Text
 --type-set=sblws:ext:sublime-workspace
 --type=nosblws
 
+# PHP Archive
 --type-set=phar:ext:phar
 --type=nophar

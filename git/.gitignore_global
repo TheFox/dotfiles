@@ -1,3 +1,5 @@
+# Global Git Ignore
+
 *~
 .DS_Store
 *.sublime-workspace

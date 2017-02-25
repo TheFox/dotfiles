@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
-# Created @ 2009-05-30 by Christian Mayer <http://fox21.at>
+
+# Split environment $PATH paths into lines.
+# 2009-05-30 Created by Christian Mayer <https://fox21.at>
 
 perl -e 'map print("$_\n"), sort split(/:/, $ENV{PATH})'

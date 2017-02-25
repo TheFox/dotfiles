@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+# Upload a file to
 # https://transfer.sh/
 
 SCRIPT_BASEDIR=$(dirname $0)

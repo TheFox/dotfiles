@@ -3,4 +3,5 @@
 #sudo chown -R _mysql:_mysql /usr/local/var/mysql
 #sudo rm -f /usr/local/var/mysql/*.err /usr/local/var/mysql/*.pid
 
+# Start the MySQL Server under macOS.
 sudo mysql.server start

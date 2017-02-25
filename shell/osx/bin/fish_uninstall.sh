@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+# Uninstall the Fish Shell.
 # http://fishshell.com/
 
 

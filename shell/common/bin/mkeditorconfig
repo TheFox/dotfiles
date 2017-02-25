@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
-if [[ -f ~/work/dev/dotfiles/.editorconfig.tpl ]]; then
-	cp ~/work/dev/dotfiles/.editorconfig.tpl .editorconfig
+# Copy the EditorConfig template to the current directory.
+
+TPL_PATH=~/work/dev/dotfiles/.editorconfig.tpl
+
+if [[ -f "${TPL_PATH}" ]] && [[ ! -f .editorconfig ]]; then
+	cp "${TPL_PATH}" .editorconfig
 fi

@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+# Uninstall Tracktor
 # http://www.native-instruments.com/en/products/traktor/
 
 

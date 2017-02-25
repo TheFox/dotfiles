@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
-# Created @ 03.04.2013 by Christian Mayer <http://fox21.at>
+# Created @ 03.04.2013 by Christian Mayer <https://fox21.at>
+
+# Standby macOS
 
 timeout=$1
 exec_s="$2"

@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
-# Created @ 07.01.2014 by Christian Mayer <http://fox21.at>
+
 # Create a .tar.xz.gpg file from a file or directory.
+# Created @ 07.01.2014 by Christian Mayer <https://fox21.at>
 
 SCRIPT_BASEDIR=$(dirname $0)
 SCRIPT_BASENAME=$(basename $0)

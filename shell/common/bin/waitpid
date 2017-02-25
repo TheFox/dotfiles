@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
-pids="$*"
+# Wait for proccesses (by their IDs) to finish.
 
+pids="$*"
 while true; do
 	if ! ps -p "$pids" &> /dev/null; then
 		#echo "break"

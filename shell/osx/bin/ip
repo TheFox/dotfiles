@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 
-echo $(curl -s http://tools.fox21.at/ip.php)
+# Print the current public IP address on the internet.
+
+echo $(curl -s https://tools.fox21.at/ip.php)
