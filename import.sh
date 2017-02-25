@@ -69,7 +69,8 @@ rm -f ~/bin/showenv
 rm -f ~/bin/showenvpath
 rm -f ~/bin/sshi
 rm -f ~/bin/upload
-# rm -f ~/bin/psg
+# rm -f ~/bin/psg # deprecated
+# rm -f ~/bin/root # deprecated
 
 
 echo 'import default files'
