@@ -5,3 +5,6 @@
 
 --type-set=sblws:ext:sublime-workspace
 --type=nosblws
+
+--type-set=phar:ext:phar
+--type=nophar
