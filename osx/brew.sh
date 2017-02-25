@@ -30,6 +30,7 @@ brew install bash
 brew install cmake
 brew install curl
 #brew install ffmpeg
+#brew install git-flow
 #brew install gnuplot --with-cairo --with-pdflib-lite --with-qt --with-x11
 brew install gnu-sed
 brew install gpg2
@@ -77,6 +78,7 @@ brew install ruby
 gem install bundler
 gem install tmuxinator
 
+# Git
 which -a git
 git --version
 brew install git
