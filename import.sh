@@ -53,7 +53,23 @@ rm -f ~/bin/gource.sh
 rm -f ~/bin/flac2mp3
 rm -f ~/bin/clock
 rm -f ~/bin/ckcon
-rm -r ~/bin/jekyll_reinstall.sh
+rm -f ~/bin/jekyll_reinstall.sh
+rm -f ~/bin/japh.pl
+rm -f ~/bin/wordpress_update.sh
+rm -f ~/bin/new_processes
+rm -f ~/bin/mp3rn
+rm -f ~/bin/notify
+rm -f ~/bin/cardpeek_compile.sh
+rm -f ~/bin/gpgf
+rm -f ~/bin/pm
+rm -f ~/bin/rar100
+rm -f ~/bin/rar100s
+rm -f ~/bin/unrarpwd.sh
+rm -f ~/bin/showenv
+rm -f ~/bin/showenvpath
+rm -f ~/bin/sshi
+rm -f ~/bin/upload
+# rm -f ~/bin/psg
 
 
 echo 'import default files'
