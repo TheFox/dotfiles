@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-# Created @ 23.06.2009 by Christian Mayer <http://fox21.at>
-
-while true
-do
-	date +"%Y-%m-%d %H:%M:%S %z"
-	sleep 1
-done

@@ -40,6 +40,8 @@ alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias d='date'
 alias tarc='tar -vpc --exclude .DS_Store -f'
+alias gzipc='gzip --best --force --keep'
+alias gpgf='gpg --sign --encrypt'
 alias oo='open .'
 
 # Git Aliases

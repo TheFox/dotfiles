@@ -47,6 +47,13 @@ rm -f ~/bin/mirrors_add
 rm -f ~/bin/install_php55.sh
 rm -f ~/bin/install_php56.sh
 rm -f ~/bin/install_php71.sh
+rm -f ~/bin/gzipc
+rm -f ~/bin/gpggz2gpgxz
+rm -f ~/bin/gource.sh
+rm -f ~/bin/flac2mp3
+rm -f ~/bin/clock
+rm -f ~/bin/ckcon
+rm -r ~/bin/jekyll_reinstall.sh
 
 
 echo 'import default files'
