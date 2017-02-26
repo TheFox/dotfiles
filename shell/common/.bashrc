@@ -36,9 +36,10 @@ else
 	alias ll='ls -la --color=auto'
 fi
 
+alias c='ncal -w'
+alias d='date +"%Y-%m-%d %H:%M:%S %z"'
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
-alias d='date'
 alias tarc='tar -vpc --exclude .DS_Store -f'
 alias gzipc='gzip --best --force --keep'
 alias gpgf='gpg --sign --encrypt'
