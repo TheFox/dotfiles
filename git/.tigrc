@@ -2,6 +2,7 @@ set git-colors = no
 set show-changes = yes
 set commit-order = topo
 set refresh-mode = auto
+
 set main-view = \
 	date:custom \
 	author:abbreviated \
@@ -10,3 +11,6 @@ set main-view = \
 
 set main-view-date-local = true
 set main-view-date-format = "%Y-%m-%d %H:%M"
+
+set diff-view-line-number-display = yes
+set blob-view-line-number-display = yes
