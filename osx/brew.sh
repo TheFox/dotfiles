@@ -56,6 +56,10 @@ brew install xz
 #brew install gettext
 #brew link --force gettext
 
+# PHP 5.5
+# brew install php55 --with-thread-safety --without-snmp --with-imap --with-httpd24
+# brew install php55-xdebug --build-from-source
+
 # PHP 5.6
 # brew install php56 --with-thread-safety --without-snmp --with-imap --with-httpd24
 # brew install mcrypt --build-from-source php56-mcrypt --build-from-source
