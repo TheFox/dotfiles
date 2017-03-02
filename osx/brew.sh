@@ -41,6 +41,7 @@ brew install mutt
 # brew install ninja
 brew install nmap
 brew install npm
+brew install pidof
 brew install pstree
 brew install reattach-to-user-namespace # used by tmux
 brew install rename
