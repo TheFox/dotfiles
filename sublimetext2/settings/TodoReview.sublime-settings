@@ -47,7 +47,9 @@
 		"*.js",
 		"*.css",
 		"*.lock",
-		"*.cache"
+		"*.cache",
+		
+		"README.md"
 	],
 	"render_header_date": "%F %T",
 	"render_folder_depth": 1
