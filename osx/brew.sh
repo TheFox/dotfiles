@@ -58,7 +58,7 @@ brew install xz
 #brew link --force gettext
 
 # PHP 5.5
-# brew install php55 --with-thread-safety --without-snmp --with-imap --with-httpd24
+# brew install php55 --with-thread-safety --with-imap --with-httpd24
 # brew install php55-xdebug --build-from-source
 
 # PHP 5.6
