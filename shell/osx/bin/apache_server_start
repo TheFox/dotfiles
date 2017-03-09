@@ -2,6 +2,14 @@
 
 # Start Apache2 Server under macOS.
 
+APACHECTL_BIN=/usr/sbin/apachectl # macOS
+#APACHECTL_BIN=/usr/local/bin/apachectl # Homebrew
+
+set -e
+which pidof &> /dev/null || { echo 'pidof not found'; exit 1; }
+which ps &> /dev/null || { echo 'ps not found'; exit 1; }
+
 sudo apachectl start
 sleep 2
-ps aux | grep -v grep | grep httpd
+sudo launchctl list | grep http
+ps -p $(pidof httpd)
