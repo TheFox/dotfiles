@@ -160,6 +160,17 @@ class CriminalMinds < Series
 	end
 end
 
+class DarkNet < Series
+	def name
+		'dark_net_%epi%%ext%'
+	end
+	def patterns
+		[
+			/^Dark.Net/i,
+		]
+	end
+end
+
 class ElementarySeries < Series
 	def name
 		'elementary_%epi%%ext%'
@@ -382,6 +393,7 @@ classes = [
 	AmericanDadSeries,
 	BattlestarGalacticaSeries,
 	CriminalMinds,
+	DarkNet,
 	BlackMirrorSeries,
 	ElementarySeries,
 	FamilyGuySeries,
