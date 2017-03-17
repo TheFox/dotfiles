@@ -125,6 +125,17 @@ class AmericanDadSeries < Series
 	end
 end
 
+class Archer < Series
+	def name
+		'archer_%epi%%ext%'
+	end
+	def patterns
+		[
+			/^Archer/,
+		]
+	end
+end
+
 class BlackMirrorSeries < Series
 	def name
 		'black_mirror_%epi%%ext%'
@@ -391,6 +402,7 @@ classes = [
 	AgentCarterSeries,
 	AgentsOfShieldSeries,
 	AmericanDadSeries,
+	Archer,
 	BattlestarGalacticaSeries,
 	CriminalMinds,
 	DarkNet,
