@@ -1,12 +1,12 @@
 {
-	"file_exclude_patterns":[
+	"file_exclude_patterns": [
 		".DS_Store",
 		"*.swp",
 		"*.sublime-workspace",
 		"composer.lock",
 		"composer.phar"
 	],
-	"folder_exclude_patterns":[
+	"folder_exclude_patterns": [
 		".bundle",
 		".git"
 	],
@@ -17,7 +17,7 @@
 	"ignored_packages":[ "Vintage" ],
 	"open_files_in_new_window": false,
 	"detect_indentation": false,
-	"rulers":[ 80, 120 ],
+	"rulers": [ 80, 102, 120 ],
 	"show_full_path": true,
 	"trim_automatic_white_space": false,
 	"auto_complete": true,
