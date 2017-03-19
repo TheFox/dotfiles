@@ -18,7 +18,7 @@ class Series
 	EPISODES = [
 		/S([012][0-9])E([0123][0-9])/i,
 		/S([0-9])E([012][0-9])/i,
-		/S([012][0-9]) E([012][0-9])/i,
+		/S([012][0-9]).E([012][0-9])/i,
 		
 		/_([0-9]{1,2})x([0-9]{1,2})_/,
 		/ ([0-9]{1,2})x([0-9]{1,2}) /,
@@ -372,6 +372,7 @@ class TheWalkingDeadSeries < Series
 	def patterns
 		[
 			/^The.Walking.Dead/i,
+			/^Wal?king?.Dead/i,
 		]
 	end
 end
