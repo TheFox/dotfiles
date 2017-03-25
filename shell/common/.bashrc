@@ -38,6 +38,7 @@ fi
 
 alias c='ncal -w'
 alias d='date +"%Y-%m-%d %H:%M:%S %z"'
+alias t='date +"%H:%M:%S %z"'
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias tarc='tar -vpc --exclude .DS_Store -f'
