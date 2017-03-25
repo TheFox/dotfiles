@@ -109,6 +109,7 @@ brew cask install keepassx
 brew cask install libreoffice
 #brew cask install limechat
 #brew cask install mysqlworkbench
+#brew cask install postman
 #brew cask install sequel-pro
 #brew cask install skype
 brew cask install sublime-text
