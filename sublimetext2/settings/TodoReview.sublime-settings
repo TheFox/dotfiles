@@ -25,6 +25,7 @@
 		"*/cache/*",
 		"components/*",
 		"coverage/*",
+		"doc/*",
 		"docu/*",
 		"documentation/*",
 		"log/*",
