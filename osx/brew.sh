@@ -118,6 +118,7 @@ brew cask install the-unarchiver
 brew cask install thunderbird
 brew cask install tunnelblick
 #brew cask install virtualbox
+#brew cask install visual-studio-code
 #brew cask install vlc
 #brew cask install wkhtmltopdf
 #brew cask install xquartz
