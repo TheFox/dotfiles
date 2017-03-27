@@ -4,8 +4,6 @@
 # https://www.tug.org/mactex/uninstalling.html
 
 
-RM="rm -vrfd"
-LS="ls -lad"
 DIRS="/Applications/TeX.app /Library/TeX /Library/PreferencePanes/TeXDistPrefPane.prefPane /usr/local/texlive /usr/texbin"
 FILES="/etc/paths.d/TeX"
 MAN_FILES_DE=""
@@ -19,11 +17,11 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 for dir in $DIRS; do
-	( $LS $dir 2> /dev/null; [ -d $dir ] && echo sudo $RM $dir && sudo $RM $dir )
+	( ls -lad "$dir" 2> /dev/null; [ -d "$dir" ] && echo sudo rm -vrfd "$dir" && sudo rm -vrfd "$dir" )
 done
 
 for file in $FILES $MAN_FILES_DE $MAN_FILES_C; do
-	( $LS $file 2> /dev/null; [ -f $file ] && echo sudo $RM $file && sudo $RM $file )
+	( ls -lad "$file" 2> /dev/null; [ -f "$file" ] && echo sudo rm -vrfd "$file" && sudo rm -vrfd "$file" )
 done
 
 echo 'done'

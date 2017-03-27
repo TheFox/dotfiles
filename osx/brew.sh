@@ -10,7 +10,7 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Exit when brew is not available.
-which brew &> /dev/null || { echo 'brew not installed'; exit 1; }
+which brew &> /dev/null || { echo 'brew not found in PATH'; exit 1; }
 
 # Make sure we're using the latest Homebrew.
 brew update
@@ -45,6 +45,7 @@ brew install pidof
 brew install pstree
 brew install reattach-to-user-namespace # used by tmux
 brew install rename
+brew install shellcheck
 brew install tig
 brew install tmux
 brew install tree

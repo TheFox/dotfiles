@@ -5,6 +5,6 @@
 set -e
 inputfile=$1
 
-xz --compress --keep --force --best --extreme --threads 5 --verbose $inputfile
+xz --compress --keep --force --best --extreme --threads 5 --verbose "${inputfile}"
 
 exit $?

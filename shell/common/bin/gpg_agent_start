@@ -5,10 +5,10 @@
 if [ -f "${HOME}/.gpg-agent-info" ]; then
 	
 	# Source Agent Info file.
-	. "${HOME}/.gpg-agent-info"
+	source "${HOME}/.gpg-agent-info"
 	
 	# Check if the process with ID in $SSH_AGENT_PID still running.
-	if [[ $(ps -p ${SSH_AGENT_PID} | wc -l) -le 1 ]]; then
+	if [[ $(ps -p "${SSH_AGENT_PID}" | wc -l) -le 1 ]]; then
 		echo "no process with ID ${SSH_AGENT_PID} found"
 		
 		echo "start new gpg agent process"

@@ -6,10 +6,10 @@ APACHECTL_BIN=/usr/sbin/apachectl # macOS
 #APACHECTL_BIN=/usr/local/bin/apachectl # Homebrew
 
 set -e
-which pidof &> /dev/null || { echo 'pidof not found'; exit 1; }
-which ps &> /dev/null || { echo 'ps not found'; exit 1; }
+which pidof &> /dev/null || { echo 'pidof not found in PATH'; exit 1; }
+which ps &> /dev/null || { echo 'ps not found in PATH'; exit 1; }
 
-sudo apachectl start
+sudo "${APACHECTL_BIN}" start
 sleep 2
 sudo launchctl list | grep http
 ps -p $(pidof httpd)

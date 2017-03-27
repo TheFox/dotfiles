@@ -3,17 +3,17 @@
 # Create a .tar.xz.gpg file from a file or directory.
 # Created @ 07.01.2014 by Christian Mayer <https://fox21.at>
 
-SCRIPT_BASEDIR=$(dirname $0)
-SCRIPT_BASENAME=$(basename $0)
+SCRIPT_BASEDIR=$(dirname "$0")
+# SCRIPT_BASENAME=$(basename "$0")
 
 inputfile=$1
-inputfile=$(basename $inputfile)
-tarfile=$inputfile.tar
-xzfile=$tarfile.xz
-gpgfile=$xzfile.gpg
+inputfile=$(basename "${inputfile}")
+tarfile="${inputfile}.tar"
+xzfile="${tarfile}.xz"
+# gpgfile="${xzfile}.gpg"
 
 
 set -e
 
-$SCRIPT_BASEDIR/tarxz $inputfile
-$SCRIPT_BASEDIR/gpgf $xzfile
+"${SCRIPT_BASEDIR}/tarxz" "${inputfile}"
+"${SCRIPT_BASEDIR}/gpgf" "${xzfile}"

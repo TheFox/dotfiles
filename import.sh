@@ -9,7 +9,7 @@ MKDIR="mkdir -p"
 
 
 set -e
-cd $SCRIPT_BASEDIR
+pushd "${SCRIPT_BASEDIR}"
 
 un=$(uname -s)
 script_name="linux"
@@ -83,8 +83,8 @@ if [[ ! -d $HOME/bin ]]; then
 	$MKDIR $HOME/bin
 fi
 
-$RSYNC shell/common/bin/* $HOME/bin/
-$RSYNC gpg/ $HOME/.gnupg/
+$RSYNC shell/common/bin/* "$HOME/bin/"
+$RSYNC gpg/ "$HOME/.gnupg/"
 
 echo "script_name: '${script_name}'"
 ./import_${script_name}.sh

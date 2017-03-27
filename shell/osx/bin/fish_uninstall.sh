@@ -4,8 +4,6 @@
 # http://fishshell.com/
 
 
-RM="rm -vrfd"
-LS="ls -lad"
 DIRS="/usr/local/etc/fish /usr/local/share/fish"
 FILES="/usr/local/bin/fish /usr/local/bin/fish_indent"
 MAN_FILES_DE=""
@@ -19,11 +17,11 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 for dir in $DIRS; do
-	( $LS $dir 2> /dev/null; [ -d $dir ] && sudo $RM $dir )
+	( ls -lad "$dir" 2> /dev/null; [ -d "$dir" ] && sudo rm -vrfd "$dir" )
 done
 
 for file in $FILES $MAN_FILES_DE $MAN_FILES_C; do
-	( $LS $file 2> /dev/null; [ -f $file ] && sudo $RM $file )
+	( ls -lad "$file" 2> /dev/null; [ -f "$file" ] && sudo rm -vrfd "$file" )
 done
 
 echo 'done'

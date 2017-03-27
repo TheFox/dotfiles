@@ -7,16 +7,16 @@ DATE=$(date +"%Y%m%d_%H%M%S")
 EXT="png"
 BASE_PATH="${HOME}/tmp"
 
-format="$1"
-file_name=$(echo "${format}" | sed "s/%D/${DATE}/g;")
+file_format="$1"
+file_name=${file_format//%D/${DATE}}
 file_name="${file_name}.${EXT}"
 file_path="${BASE_PATH}/${file_name}"
 
 echo "date: '$DATE'"
-echo "format: '$format'"
-echo "file name: '$file_name'"
-echo "file path: '$file_path'"
+echo "file format: '$file_format'"
+echo "file name:   '$file_name'"
+echo "file path:   '$file_path'"
 
 #for n in 1 2 3; do printf "$n "; sleep 1; done; echo
 
-screencapture -i -o -a -tpng -x $file_path
+screencapture -i -o -a -tpng -x "$file_path"

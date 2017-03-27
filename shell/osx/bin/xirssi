@@ -2,5 +2,5 @@
 
 # Start irssi in an xterm window.
 
-which irssi &> /dev/null || { echo 'irssi not installed'; exit 1; }
+which irssi &> /dev/null || { echo 'irssi not found in PATH'; exit 1; }
 uxterm -geometry 80x60 -e irssi &

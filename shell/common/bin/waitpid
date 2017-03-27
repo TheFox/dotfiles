@@ -5,7 +5,6 @@
 pids="$*"
 while true; do
 	if ! ps -p "$pids" &> /dev/null; then
-		#echo "break"
 		break
 	fi
 	sleep 1

@@ -2,12 +2,14 @@
 
 # Create a signed commit and a new signed tag.
 
+SCRIPT_BASENAME=$(basename "$0")
+
 version="$1"
 shift
 files="$*"
 
 if [ "$version" = "" ]; then
-	echo "Usage: $(basename $0) VERSION [FILES]"
+	echo "Usage: $SCRIPT_BASENAME VERSION [FILES]"
 	exit 3
 fi
 if [ "${version:0:1}" = "v" ]; then

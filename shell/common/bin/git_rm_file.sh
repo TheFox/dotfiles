@@ -6,7 +6,7 @@
 # http://stackoverflow.com/a/14728706
 # https://gist.github.com/TheFox/62f73dcfbb0ba6593544
 
-files="$@"
+files="$*"
 
 git remote -v
 git remote rm origin

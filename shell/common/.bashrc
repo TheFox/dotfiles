@@ -1,20 +1,20 @@
 
 brew_path=$(brew --prefix 2> /dev/null || true)
 
-if [ -f $brew_path/etc/bash_completion ]; then
-	. $brew_path/etc/bash_completion
+if [ -f "${brew_path}/etc/bash_completion" ]; then
+	source "${brew_path}/etc/bash_completion"
 fi
 
-if [ -f $brew_path/etc/bash_completion.d/git ]; then
-	. $brew_path/etc/bash_completion.d/git
+if [ -f "${brew_path}/etc/bash_completion.d/git" ]; then
+	source "${brew_path}/etc/bash_completion.d/git"
 fi
 
-if [ -f $brew_path/etc/bash_completion.d/git-completion.bash ]; then
-	. $brew_path/etc/bash_completion.d/git-completion.bash
+if [ -f "${brew_path}/etc/bash_completion.d/git-completion.bash" ]; then
+	source "${brew_path}/etc/bash_completion.d/git-completion.bash"
 fi
 
-if [ -f $brew_path/etc/bash_completion.d/youtube-dl.bash-completion ]; then
-	. $brew_path/etc/bash_completion.d/youtube-dl.bash-completion
+if [ -f "${brew_path}/etc/bash_completion.d/youtube-dl.bash-completion" ]; then
+	source "${brew_path}/etc/bash_completion.d/youtube-dl.bash-completion"
 fi
 
 PATH="$HOME/bin:$HOME/.composer/vendor/bin:$HOME/Dropbox/bin:${PATH}"
@@ -78,7 +78,7 @@ export GPG_TTY
 
 if [ -f "${HOME}/.gpg-agent-info" ]; then
 	
-	. "${HOME}/.gpg-agent-info"
+	source "${HOME}/.gpg-agent-info"
 	export GPG_AGENT_INFO
 	export SSH_AUTH_SOCK
 fi

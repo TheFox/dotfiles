@@ -6,7 +6,7 @@
 VERSIONS="2.2.5 2.3.1 2.4.0"
 
 
-which -a rbenv &> /dev/null || { echo 'rbenv not installed'; exit 1; }
+which -a rbenv &> /dev/null || { echo 'rbenv not found in PATH'; exit 1; }
 
 for version in ${VERSIONS}; do
 	echo "install version '${version}'"

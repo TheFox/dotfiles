@@ -2,7 +2,7 @@
 
 # Create a new Sublime Text Project file.
 
-SCRIPT_BASENAME=$(basename $0)
+SCRIPT_BASENAME=$(basename "$0")
 
 name_file=$1
 title=$2

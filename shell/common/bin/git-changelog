@@ -30,16 +30,16 @@ if [[ "$tag_range_begin" = "" ]]; then
 	#tag_range_begin=$(git log --pretty=%H --reverse | head -1)
 	date_range_begin=$(git log --pretty=%cd --reverse | head -1)
 else
-	date_range_begin=$(git log -n 1 --pretty=%cd --reverse $tag_range_begin)
+	date_range_begin=$(git log -n 1 --pretty=%cd --reverse "$tag_range_begin")
 fi
 
-date_range_end=$(git log -n 1 --pretty=%cd $tag_range_end)
+date_range_end=$(git log -n 1 --pretty=%cd "$tag_range_end")
 
 tag_range_total=""
 if [[ "$tag_range_begin" = "" ]]; then
 	tag_range_total="$tag_range_end"
 else
-	tag_range_total="$tag_range_begin..$tag_range_end"
+	tag_range_total="${tag_range_begin}..${tag_range_end}"
 fi
 
 printf "tag begin: %8s    %s\n" "$tag_range_begin" "$date_range_begin"
@@ -47,28 +47,30 @@ printf "tag end:   %8s    %s\n" "$tag_range_end" "$date_range_end"
 echo "tag range: '$tag_range_total'"
 # exit
 
-version=$(echo "$tag_range_end" | sed 's/v//')
+version=${tag_range_end/v/}
+echo "version '$version'"
+
 dst="CHANGELOG-$tag_range_end.txt"
 
-commits_count=$(git log --pretty='- %s' --grep='#RN' $tag_range_total | wc -l | awk '{ print $1}')
+commits_count=$(git log --pretty='- %s' --grep='#RN' "$tag_range_total" | wc -l | awk '{ print $1}')
 echo "commits: $commits_count"
 echo
 
 if [[ $commits_count -gt 0 ]]; then
-	if [[ ! -f $dst ]]; then
-		touch $dst
+	if [[ ! -f "$dst" ]]; then
+		touch "$dst"
 		
-		date +"%Y-%m-%d %H:%M:%S %z" >> $dst
-		echo >> $dst
+		date +"%Y-%m-%d %H:%M:%S %z" >> "$dst"
+		echo >> "$dst"
 		
-		echo "Version $version" >> $dst
-		echo >> $dst
+		echo "Version $version" >> "$dst"
+		echo >> "$dst"
 		
 		if [[ "$tag_range_begin" != "" ]]; then
-			echo "Changes since $tag_range_begin" | tee -a $dst
+			echo "Changes since $tag_range_begin" | tee -a "$dst"
 		fi
 		
-		git log --pretty='- %s' --grep='#RN' -i --reverse $tag_range_total | sed 's/ #[Rr][Nn]//' | uniq | tee -a $dst
+		git log --pretty='- %s' --grep='#RN' -i --reverse "$tag_range_total" | sed 's/ #[Rr][Nn]//' | uniq | tee -a "$dst"
 		
 		echo
 		echo "new file: $dst"

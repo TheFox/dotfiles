@@ -4,10 +4,10 @@
 
 base_dir=~/work/dev/pshare
 
-if [[ ! -d ${base_dir} ]]; then
+if [[ ! -d "${base_dir}" ]]; then
 	echo 'base dir not available'
 	exit 1
 fi
 
-${base_dir}/bin/pshare $*
+"${base_dir}/bin/pshare" "$@"
 exit $?

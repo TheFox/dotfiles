@@ -13,25 +13,26 @@ set -e
 brew install swig
 
 mkdir llvm
-cd llvm
+pushd llvm
 
 git clone http://llvm.org/git/llvm.git llvm-src
-cd llvm-src
+pushd llvm-src
 
-cd projects
+pushd projects
 git clone http://llvm.org/git/compiler-rt.git
-cd ..
+popd
 
-cd tools
+pushd tools
 git clone http://llvm.org/git/clang.git
 
 git clone http://llvm.org/git/lldb.git
-cd lldb
+pushd lldb
 # First codesign: https://gist.github.com/thlorenz/a068c202f2487ec13809
 xcodebuild -configuration Release
-ln -s $(pwd)/build/Release/lldb /usr/local/bin/lldb
-cd .. # lldb
-cd .. # tools
+ln -s "$PWD/build/Release/lldb" /usr/local/bin/lldb
+popd # lldb
+
+popd # tools
 
 #mkdir build
 #cd ../build
