@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+# Pomodoro Timer
+
+echo "start $(date +'%F %T %z')"
+
+for step in $(seq 25 1); do
+	printf '%d ' "$step"
+	sleep 60
+done
+echo
+
+echo "end $(date +'%F %T %z')"
