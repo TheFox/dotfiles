@@ -12,4 +12,4 @@ which ps &> /dev/null || { echo 'ps not found in PATH'; exit 1; }
 sudo "${APACHECTL_BIN}" start
 sleep 2
 sudo launchctl list | grep http
-ps -p $(pidof httpd)
+ps -p "$(pidof httpd)"

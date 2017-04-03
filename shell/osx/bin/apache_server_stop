@@ -9,9 +9,9 @@ set -e
 which pidof &> /dev/null || { echo 'pidof not found in PATH'; exit 1; }
 which ps &> /dev/null || { echo 'ps not found in PATH'; exit 1; }
 
-ps -p $(pidof httpd)
+ps -p "$(pidof httpd)"
 sudo launchctl list | grep http
 sudo "${APACHECTL_BIN}" stop
 sleep 2
 sudo launchctl list | grep http
-ps -p $(pidof httpd)
+ps -p "$(pidof httpd)"
