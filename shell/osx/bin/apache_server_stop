@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+# Stop Apache2 Server under macOS.
+
+APACHECTL_BIN=/usr/sbin/apachectl # macOS
+#APACHECTL_BIN=/usr/local/bin/apachectl # Homebrew
+
+set -e
+which pidof &> /dev/null || { echo 'pidof not found in PATH'; exit 1; }
+which ps &> /dev/null || { echo 'ps not found in PATH'; exit 1; }
+
+ps -p $(pidof httpd)
+sudo launchctl list | grep http
+sudo "${APACHECTL_BIN}" stop
+sleep 2
+sudo launchctl list | grep http
+ps -p $(pidof httpd)
